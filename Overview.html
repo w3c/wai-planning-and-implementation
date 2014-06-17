@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="Web Accessibility Initiative, web accessibility, WAI, W3C, World Wide Web, Web, WWW, Consortium, computer, access, accessibility, disability, disabilities, worldwide, international, W3, standard, technology, free, open source, software" />
+<title>Implementation Plan for Web Accessibility</title>
+<!-- This should be removed when moving to the live environment. Also any anchor links should have 
+     the absolute link (http://w3c.github.io/wai-planning-impl/Overview.html) on anchor tags removed. -->
+<base href="http://www.w3.org/WAI/impl/" />
+<link href="../wai-main.css" rel="stylesheet" type="text/css" />
+<!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
+</head>
+<body>
+<div id="controls"><ul>
+      <li><a href="http://w3c.github.io/wai-planning-impl/Overview.html#skip" shape="rect"><img src="/Icons/downinpage.png" alt="" /> Skip to Content </a></li>
+      <li><a href="/WAI/changedesign.html" shape="rect"> | Change 
+         text size or colors </a> </li>
+   </ul></div>
+<div id="masthead"><p id="logos"><a href="http://www.w3.org/" title="W3C Home" shape="rect"><img alt="W3C logo" src="/Icons/w3c_home" /></a><a href="http://www.w3.org/WAI/" title="WAI Home" shape="rect"><img alt="Web Accessibility initiative" src="/WAI/images/wai-temp" /></a></p></div>
+<div id="tagline"><p>WAI: Strategies, guidelines, resources to make the
+      Web accessible to people with disabilities</p></div>
+<div id="nav"><h2>Site Navigation</h2><p id="w3cnav"><a href="http://www.w3.org/">W3C Home</a></p><p id="subhomenav"><a href="/WAI/">Web Accessibility Initiative (WAI) Home</a></p><ol id="nav1" type="A"><li><a href="../gettingstarted/Overview.html" shape="rect">Getting Started</a></li><li><a href="../users/Overview.html" shape="rect">Designing for Inclusion</a></li><li><a href="../guid-tech.html" shape="rect">Guidelines &amp; 
+            Techniques</a></li><li class="current-nav "><a href="../managing.html" shape="rect">Planning &amp; Implementing</a><ul><li class="nav-head">Policy Resources
+                  
+               <ol><li><a href="../Policy/harmon.html" shape="rect">Standards Harmonization</a></li><li><a href="../Policy/Overview.html" shape="rect">International Policies</a></li><li><a href="pol.html" shape="rect">Organizational Policies</a></li></ol></li><li class="current-nav nav-head">Managing Accessibility
+                  
+               <ol><li id="current-node" class="current-nav "><span class="label"><span id="current-icon">»</span>Implementation Plan</span></li><li><a href="improving.html" shape="rect">Improving Existing Sites</a></li><li><a href="../users/involving.html" shape="rect">Involving Users in Web Projects</a></li><li><a href="software.html" shape="rect">Selecting Authoring Tools</a></li></ol></li></ul></li><li><a href="../eval/Overview.html" shape="rect">Evaluating Accessibility</a></li><li><a href="../train.html" shape="rect">Presentations &amp; Tutorials</a></li><li><a href="../about-links.html" shape="rect">Getting Involved with WAI</a></li></ol><div id="nav-static"><div class="nav-discover">
+         <p><a href="http://www.w3.org/WAI/yourWAI" shape="rect"><strong><u>Discover new resources</u></strong> for people with disabilities, policy makers, managers, and you!</a></p>
+      </div><p class="translations"><a href="http://www.w3.org/WAI/wai-translations" shape="rect"><img src="http://www.w3.org/WAI/images/translations-med-1" alt="characters from different languages" /> Translations</a></p></div></div>
+<div id="main">
+   <div id="skipwrapper"><a id="skip" shape="rect">-</a></div>
+   <h1>Implementation Plan for Web Accessibility</h1>
+   <div id="contents">
+      <h2>Page Contents</h2>
+      <ul>
+         <li><a href="http://w3c.github.io/wai-planning-impl/Overview.html#intro" title="Introduction" shape="rect">Introduction</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-impl/Overview.html#resp" title="Establish responsibilities" shape="rect">Establish Responsibilities</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-impl/Overview.html#assess" title="Conduct initial assessment" shape="rect">Conduct Initial Assessment</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-impl/Overview.html#policy" title="Develop organizational policy" shape="rect">Develop Organizational Policy</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-impl/Overview.html#sw" title="Select software" shape="rect">Select Software</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-impl/Overview.html#train" title="Provide training" shape="rect">Provide Training</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-impl/Overview.html#develop" title="Develop accessible Web site" shape="rect">Develop Accessible Website</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-impl/Overview.html#promote" title="Promote organizational awareness" shape="rect">Promote Organizational Awareness</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-impl/Overview.html#monitor" title="Monitor Web site accessibility" shape="rect">Monitor Website Accessibility</a></li>
+      </ul>
+      <!-- end (page) contents (list)-->
+   </div>
+   <h2><a id="intro" name="intro" shape="rect">Introduction</a></h2>
+   <p id="intro1">After an organization makes a commitment to make its website accessible, 
+      it is important to plan for implementation of accessibility. This page lists <span id="detail">detailed</span> considerations for the planning process, 
+      followed by resource pages with more information. Actual implementation plans, 
+      as well as the optimal order of the steps, will vary from organization to 
+      organization.</p>
+   <p><a href="http://www.w3.org/WAI/impl/improving.html" shape="rect">Improving the Accessibility of Your Website</a> provides additional guidance for organizations that already have a website.</p>
+   <h2><a id="resp" name="resp" shape="rect">Establish Responsibilities</a></h2>
+   <ul>
+      <li>Establish a coordination team with a communication plan.
+         <ul>
+            <li>Identify representatives from key departments such as marketing,
+               web development, technical support, usability, etc.</li>
+            <li>In decentralized organizations, include representatives from
+               different regions or jurisdictions.</li>
+            <li>Designate a team member to track new techniques for
+               accessibility.</li>
+         </ul>
+      </li>
+      <li>Identify a high-level champion or spokesperson for web accessibility.
+         <ul>
+            <li>Champions can reinforce an organization's commitment while
+               implementation progresses.</li>
+            <li>Accessibility champions are most effective if they are within upper
+               administration.</li>
+         </ul>
+      </li>
+   </ul>
+   <h2><a id="assess" name="assess" shape="rect">Conduct Initial Assessment</a></h2>
+   <ul>
+      <li>Find out whether the organization is subject to external requirements
+         regarding web accessibility.
+         <ul>
+            <li>Check requirements early in the process, particularly for
+               government and commercial sites.</li>
+         </ul>
+      </li>
+      <li>Conduct an initial assessment of the organization's website, using the
+         Preliminary Review method.
+         <ul>
+            <li>A quick review of the website can provide information about the
+               potential extent of the problems.</li>
+         </ul>
+      </li>
+      <li>Assess current awareness of the need for web accessibility by survey or
+         interviews within the organization.
+         <ul>
+            <li>In large organizations, survey individuals in departments with
+               different roles relating to the website.</li>
+         </ul>
+      </li>
+      <li>Assess expertise of the organization's web developers with regard to
+         accessible web design.
+         <ul>
+            <li>Self-reporting can be adequate for initial assessment.</li>
+         </ul>
+      </li>
+      <li>Assess suitability of current software to support development of
+         accessible websites.
+         <ul>
+            <li>Organizations with decentralized software procurement practices
+               will need to review more products.</li>
+         </ul>
+      </li>
+      <li>Estimate resources required to address the needs identified in the
+         initial assessment.
+         <ul>
+            <li>Include software replacement, staff training, retrofitting of site,
+               monitoring of site, etc., as needed.</li>
+         </ul>
+      </li>
+   </ul>
+   <p class="listintro"><strong>Key resources:</strong></p>
+         <ul class="listafterpul">
+            <li><a href="http://www.w3.org/WAI/eval/preliminary.html" shape="rect">Preliminary Review of Websites for Accessibility</a></li>
+   </ul>
+   <h2><a id="policy" name="policy" shape="rect">Develop Organizational Policy</a></h2>
+   <ul>
+      <li>Find out whether the organization has an existing policy on website
+         design and technologies.
+         <ul>
+            <li>In large organizations, note whether some department is already
+               developing a general policy for website management, and if so what
+               their timeline is.</li>
+         </ul>
+      </li>
+      <li>Establish an organizational policy on web accessibility.
+         <ul>
+            <li>Address issues such as conformance level, scope of site, use of
+               proprietary formats, milestones, etc.</li>
+            <li>The organizational policy should reflect at least the minimum
+               accessibility requirements mandated by relevant government policies
+               or industry associations, but preferably the internationally
+               recognized Web Content Accessibility Guidelines (WCAG) from the World Wide
+               Web Consortium (W3C).</li>
+            <li>For organizations that have a general website policy, integrate an
+               accessibility section into the existing policy.</li>
+            <li>Both a concise high-level statement of commitment, plus a
+               comprehensive implementation-oriented statement, may be useful,
+               particularly in large organizations.</li>
+         </ul>
+      </li>
+      <li>Develop initial and ongoing promotion plans to increase awareness of
+         the organization's policy, internally and externally.
+         <ul>
+            <li>Plan for ongoing internal promotion of web accessibility as staff
+               and responsibilities change over time.</li>
+         </ul>
+      </li>
+      <li>Announce the new organizational policy.
+         <ul>
+            <li>Distribute materials about the new policy, including briefings,
+               press releases, and in-house papers.</li>
+            <li>Organize promotional events around the new accessibility policy,
+               such as an accessibility promotion day.</li>
+            <li>Large organizations may need to provide executive briefings.</li>
+         </ul>
+      </li>
+   </ul>
+   <p class="listintro"><strong>Key resources:</strong></p>
+         <ul class="listafterpul">
+            <li><a href="/WAI/impl/pol.html" shape="rect">Developing Organizational Policies on Web
+               Accessibility</a></li>
+            <li> <a href="http://www.w3.org/WAI/intro/wcag.php" shape="rect">Web Content Accessibility Guidelines (WCAG)</a></li>
+            <li><a href="/WAI/Policy/" shape="rect">Policies Relating to Web Accessibility</a></li>
+         </ul>
+   <h2><a id="sw" name="sw" shape="rect">Select Software</a></h2>
+   <ul>
+      <li>Select authoring software most conformant to Authoring Tool
+         Accessibility Guidelines (ATAG).
+         <ul>
+            <li>Until fully ATAG-compliant software is available, at minimum,
+               select authoring software that does not impede your ability to design
+               accessible sites (for example, software that does not overwrite
+               accessible markup introduced by the author).</li>
+            <li>If current authoring software does not support production of
+               accessible sites, ask vendors when it will.</li>
+            <li>If you are not in a position to make a choice about software, then
+               provide guidance and explain requirements to the agency that is in
+               charge of procurement.</li>
+         </ul>
+      </li>
+      <li>Install using recommended configurations which support production of
+         accessible content.</li>
+      <li>Select software for evaluating and repairing web accessibility.
+         <ul>
+            <li>A centralized web page with evaluation resources may be useful,
+               particularly within decentralized organizations.</li>
+         </ul>
+      </li>
+      <li>Develop a web publishing process to counter any shortcomings of
+         selected software.
+      </li>
+   </ul>
+
+   <p class="listintro"><strong>Key resources:</strong></p>
+         <ul class="listafterpul">
+            <li><a href="http://www.w3.org/WAI/intro/atag.php" shape="rect">Authoring Tool Accessibility Guidelines (ATAG)</a></li>
+            <li><a href="/WAI/impl/software.html" shape="rect">Selecting Authoring Tools for
+               Accessible Websites</a></li>
+         </ul>
+   <h2><a id="train" name="train" shape="rect">Provide Training</a></h2>
+   <ul>
+      <li>Plan a range of training options to meet the needs of people with
+         different roles in the organization.
+         <ul>
+            <li>Conduct training sessions for webmasters and web content
+               developers.</li>
+            <li>Develop a website with accessibility information and resources for
+               both in-house and external needs.</li>
+            <li>If in-house training is not feasible, arrange outside training
+               resources.</li>
+            <li>For web design businesses, staff training should include how to
+               present a business case on web accessibility to clients as well as
+               technical training.</li>
+         </ul>
+      </li>
+      <li>Offer repeated training opportunities as staff and responsibilities
+         change.
+      </li>
+   </ul>
+
+         <p class="listintro"><strong>Key resources:</strong></p>
+         <ul class="listafterpul">
+            <li><a href="/WAI/training/" shape="rect">Developing Web Accessibility Presentations and Training</a></li>
+   </ul>
+   <h2><a id="develop" name="develop" shape="rect">Develop Accessible Website</a></h2>
+   <ul>
+      <li>Make accessibility a priority throughout the development process.
+         <ul>
+            <li>For new or redesigned sites, build accessibility in starting with
+               the first draft.</li>
+            <li>For existing sites, implement necessary modifications and
+               revisions.</li>
+            <li>Verify accessibility at key stages.</li>
+         </ul>
+      </li>
+      <li>Provide the development team with tools to ensure accessibility.
+         <ul>
+            <li>Develop accessibility checklists applicable to each development
+               area, such as a checklist for web design, usability, content
+               development, programming, etc.</li>
+            <li>Develop and distribute accessible templates usable with the
+               organization's authoring software.</li>
+            <li>Provide access to a selection of evaluation and validation
+               tools.</li>
+         </ul>
+      </li>
+   </ul>
+
+   <p class="listintro"><strong>Key resources:</strong></p>
+         <ul class="listafterpul">
+            <li> <a href="http://www.w3.org/WAI/intro/wcag.php" shape="rect">Web Content Accessibility Guidelines (WCAG)</a></li>
+            <li><a href="http://www.w3.org/WAI/WCAG20/quickref/" shape="rect">How to Meet WCAG 2.0: 
+            A customizable quick reference to Web Content Accessibility Guidelines 2.0 requirements (success criteria) and techniques</a></li>
+            <li><a href="http://www.w3.org/WAI/users/involving.html" shape="rect">Involving Users in Web Projects for Better, Easier Accessibility</a></li>
+            <li><a href="http://www.w3.org/WAI/impl/improving.html" shape="rect">Improving the Accessibility of Your Website</a><br clear="none" />
+            </li>
+         </ul>
+   <h2><a id="promote" name="promote" shape="rect">Promote Organizational Awareness</a></h2>
+   <ul>
+      <li>Incorporate the organization's web accessibility policy into key
+         documents where appropriate.</li>
+      <li>Regularly reinforce the organization's policy on web accessibility.
+         <ul>
+            <li>Establish forums for exchange among web developers, such as regular
+               meetings and mailing lists.</li>
+            <li>Organize accessibility events featuring internal and invited
+               accessibility experts.</li>
+            <li>Provide updates and briefings for all personnel on the
+               organization's progress toward web accessibility.</li>
+         </ul>
+      </li>
+   </ul>
+            <p class="listintro"><strong>Key resources:</strong></p>
+         <ul class="listafterpul">
+            <li><a href="http://www.w3.org/standards/webdesign/accessibility" shape="rect">W3C- Accessibility introduction</a></li>
+         </ul>
+
+   <h2><a id="monitor" name="monitor" shape="rect">Monitor Website Accessibility</a></h2>
+   <ul>
+      <li>Specify the evaluation process to be used for website accessibility,
+         and ensure quality of the process.</li>
+      <li>Conduct ongoing monitoring of organization's website.
+         <ul>
+            <li>If using accessibility logos, monitoring should include
+               verification of logo use.</li>
+            <li>Decentralized organizations may need some kind of centralized
+               accountability or enforcement.</li>
+         </ul>
+      </li>
+      <li>Invite and respond to user feedback on organization's website.
+         <ul>
+            <li>Provide feedback mechanisms for users both within and external to
+               the organization.</li>
+            <li>Feedback pertaining to accessibility must be made available to
+               responsible team member.</li>
+         </ul>
+      </li>
+      <li>Periodically review all aspects of implementation plan for
+         effectiveness.
+         <ul>
+            <li>Escalate to champion and/or reinforcing organizational policy as
+               needed.</li>
+         </ul>
+      </li>
+   </ul>
+
+            <p class="listintro"><strong>Key resources:</strong></p>
+         <ul class="listafterpul">
+      <li><a href="/WAI/eval/" shape="rect">Evaluating Websites for Accessibility</a></li>
+      <li><a href="http://www.w3.org/WAI/eval/considerations.html#ongoing" shape="rect">On-going monitoring section of Evaluation Approaches for Specific Contexts</a>
+      </li>
+   </ul>
+         <!-- end main -->
+</div>
+<div id="footer">
+   <h2><strong>Document Information</strong></h2>
+   <p><strong>Status:</strong> Published: October 2002, minor updates in November 2011 (mostly just links to new resources; main content not edited).<br clear="none" />
+      Editors: Judy Brewer, Sarah Horton, and <a href="/WAI/EO/EOWG-members.html" shape="rect">Participants</a> of the <a href="/WAI/EO/" shape="rect">Education and Outreach Working Group.</a></p>
+   <div class="footer-nav"><p>[<a href="http://www.w3.org/WAI/sitemap.html" shape="rect">WAI Site Map</a>] [<a href="http://www.w3.org/WAI/sitehelp.html" shape="rect">Help with WAI Website</a>] [<a href="http://www.w3.org/WAI/search.php" shape="rect">Search</a>] [<a href="/WAI/contacts" shape="rect">Contacting WAI</a>]<br clear="none" />
+         <strong>Feedback welcome to <a href="mailto:wai-eo-editors@w3.org" shape="rect">wai-eo-editors@w3.org</a></strong> (a publicly archived list) or <a href="mailto:wai@w3.org" shape="rect">wai@w3.org</a> (a WAI staff-only list).</p></div>
+   <div class="copyright"><p><a rel="Copyright" href="/Consortium/Legal/ipr-notice#Copyright" shape="rect">Copyright</a> © 1994-2012 <a href="/" shape="rect"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/" shape="rect"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/" shape="rect"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/" shape="rect">Keio</a>), All Rights Reserved. W3C <a href="/Consortium/Legal/ipr-notice#Legal_Disclaimer" shape="rect">liability</a>, <a href="/Consortium/Legal/ipr-notice#W3C_Trademarks" shape="rect">trademark</a>, <a rel="Copyright" href="/Consortium/Legal/copyright-documents" shape="rect">document use</a> and <a rel="Copyright" href="/Consortium/Legal/copyright-software" shape="rect">software
+         licensing</a> rules apply. Your interactions with this site are in
+         accordance with our <a href="/Consortium/Legal/privacy-statement#Public" shape="rect">public</a> and <a href="/Consortium/Legal/privacy-statement#Members" shape="rect">Member</a> privacy
+         statements.</p></div>
+   <!-- end footer -->
+</div>
+</body>
+</html>
