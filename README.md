@@ -1,6 +1,6 @@
 # WAI Planning and Implementation
 
-This is the repository for the WAI Planning and Implementation materials review, see [current draft][LivePage].
+This is the repository for the WAI Planning and Implementation materials review, see [current pages][LivePage].
 
 You can find the current draft state of the document on [this Github Pages site][GHPage]
 
