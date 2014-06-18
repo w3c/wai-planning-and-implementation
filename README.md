@@ -1,8 +1,12 @@
 # WAI Planning and Implementation
 
-This is the repository for the WAI Planning and Implementation materials review, see [current pages][LivePage].
+This is the repository for the WAI Planning and Implementation materials review, see [current pages][LivePage]. This review is part of a larger, ongoing effort to [improve these resources][ProjectPage].
 
-You can find the current draft state of the document on [this Github Pages site][GHPage]
+The following draft documents are available in this project:
+
+* [Planning for Web Accessibility][PlanningPage]
+* [Improving the Accessibility of your Website][ImprovingPage]
+* [Developing Organizational Policies on Web Accessibility][PoliciesPage]
 
 ## How to contribute
 
@@ -23,5 +27,9 @@ Don’t forget to add some descriptive text at the bottom that comments your cha
 Note that the changes are not immediately reflected on any page. If you want to see your changes there is a "Preview" button.
 
 [LivePage]:http://www.w3.org/WAI/managing.html
+[ProjectPage]:https://www.w3.org/WAI/EO/wiki/Planning_and_Managing_Web_Accessibility
 [GHPage]:https://github.com/w3c/wai-planning-and-implementation
 [MarkdownSyntax]:http://daringfireball.net/projects/markdown/syntax
+[PlanningPage]:http://w3c.github.io/wai-planning-and-implementation/Overview.html
+[ImprovingPage]:http://w3c.github.io/wai-planning-and-implementation/improving.html
+[PoliciesPage]:http://w3c.github.io/wai-planning-and-implementation/pol.html

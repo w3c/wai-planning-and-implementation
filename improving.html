@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Improving the Accessibility of Your Web Site</title>
+
+  <!-- This should be removed when moving to the live environment. Also any anchor links should have 
+       the absolute link (http://w3c.github.io/wai-planning-and-implementation/Overview.html) on anchor tags removed. -->
+  <base href="http://www.w3.org/WAI/impl/" />
+
+  <link rel="stylesheet" href="../wai-main.css" type="text/css" />
+<!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]--></head>
+
+<body>
+
+<div id="controls"><ul>
+      <li><a href="#skip" shape="rect"><img src="/Icons/downinpage.png" alt="" /> Skip to Content </a></li>
+      <li><a href="/WAI/changedesign.html" shape="rect"> | Change 
+         text size or colors </a> </li>
+   </ul></div>
+
+<div id="masthead"><p id="logos"><a href="http://www.w3.org/" title="W3C Home" shape="rect"><img alt="W3C logo" src="/Icons/w3c_home" /></a><a href="http://www.w3.org/WAI/" title="WAI Home" shape="rect"><img alt="Web Accessibility initiative" src="/WAI/images/wai-temp" /></a></p></div>
+
+<div id="tagline"><p>WAI: Strategies, guidelines, resources to make the
+      Web accessible to people with disabilities</p></div>
+
+<div id="nav"><h2>Site Navigation</h2><p id="w3cnav"><a href="http://www.w3.org/">W3C Home</a></p><p id="subhomenav"><a href="/WAI/">Web Accessibility Initiative (WAI) Home</a></p><ol id="nav1" type="A"><li><a href="../gettingstarted/Overview.html" shape="rect">Getting Started</a></li><li><a href="../users/Overview.html" shape="rect">Designing for Inclusion</a></li><li><a href="../guid-tech.html" shape="rect">Guidelines &amp; 
+            Techniques</a></li><li class="current-nav "><a href="../managing.html" shape="rect">Planning &amp; Implementing</a><ul><li class="nav-head">Policy Resources
+                  
+               <ol><li><a href="../Policy/harmon.html" shape="rect">Standards Harmonization</a></li><li><a href="../Policy/Overview.html" shape="rect">International Policies</a></li><li><a href="pol.html" shape="rect">Organizational Policies</a></li></ol></li><li class="current-nav nav-head">Managing Accessibility
+                  
+               <ol><li><a href="Overview.html" shape="rect">Implementation Plan</a></li><li id="current-node" class="current-nav "><span class="label"><span id="current-icon">»</span>Improving Existing Sites</span></li><li><a href="../users/involving.html" shape="rect">Involving Users in Web Projects</a></li><li><a href="software.html" shape="rect">Selecting Authoring Tools</a></li></ol></li></ul></li><li><a href="../eval/Overview.html" shape="rect">Evaluating Accessibility</a></li><li><a href="../train.html" shape="rect">Presentations &amp; Tutorials</a></li><li><a href="../about-links.html" shape="rect">Getting Involved with WAI</a></li></ol><div id="nav-static"><div class="nav-discover">
+         <p><a href="http://www.w3.org/WAI/yourWAI" shape="rect"><strong><u>Discover new resources</u></strong> for people with disabilities, policy makers, managers, and you!</a></p>
+      </div><p class="translations"><a href="http://www.w3.org/WAI/wai-translations" shape="rect"><img src="http://www.w3.org/WAI/images/translations-med-1" alt="characters from different languages" /> Translations</a></p></div></div>
+
+<div id="main"><div id="skipwrapper"><a id="skip" shape="rect">-</a></div>
+<a name="startcontent" id="startcontent" shape="rect"></a>
+
+<!-- Remove this when moving to live environment -->
+<p class="highlight-version"><strong>This is an internal Editor's Draft. The main page is at <a href="http://www.w3.org/WAI/impl/improving.html">www.w3.org/WAI/impl/improving.html</a><br>
+    Please send any suggestions, edits, or comments</strong> to the publicly-archived list: <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a>
+</p>
+
+<h1>Improving the Accessibility of Your Website</h1>
+
+<div id="contents">
+<h2>Page Contents</h2>
+<ul>
+  <li><a href="#intro" shape="rect">Introduction</a></li>
+  <li><a href="#start" shape="rect">Getting Started</a></li>
+  <li><a href="#eval" shape="rect">Evaluating to Identify the Issues</a></li>
+  <li><a href="#retro" shape="rect">Optimizing Your Retrofitting</a></li>
+  <li><a href="#prior" shape="rect">Prioritizing the Repairs</a></li>
+  <li><a href="#next" shape="rect">Next: Strategic Planning</a></li>
+</ul>
+</div>
+
+<h2><a name="intro" id="intro" shape="rect">Introduction</a></h2>
+
+  <p>Most organizations already have a website, and most of those sites were
+developed without considering accessibility. Thus most websites today have
+accessibility barriers that make it difficult or impossible for some people
+with disabilities to use the site. Some sites have several significant
+barriers; others have only a few minor barriers. Sites developed to meet
+ web standards such as <acronym title="Extensible HyperText Markup Language">XHTML</acronym> and <acronym title="Cascading Style Sheets">CSS</acronym> usually have fewer barriers.</p>
+
+  <p>
+ While implementing accessibility on an existing website may seem
+overwhelming at first, there are  approaches to make the process
+more efficient and effective. This document provides guidance for fixing accessibility barriers in
+existing websites; in other words, repairing accessibility problems, or
+retrofitting a site to improve accessibility. It provides approaches and tips
+for:</p>
+<ul>
+    <li>Getting started understanding the issues, and communicating your
+    commitment to improve the accessibility of your site</li>  <li>Developing a retrofitting plan by identifying accessibility barriers
+    and prioritizing repairs</li>  <li>Repairing accessibility barriers on your site efficiently and
+    effectively</li>
+  <li>Addressing next steps after initial retrofitting</li>
+</ul>
+
+<p><a href="http://www.w3.org/WAI/impl/Overview.html" shape="rect">Implementation Planning
+for Web Accessibility</a> is a related document that provides additional
+relevant information. It is primarily for organizations just starting web
+accessibility with a new site. Many of the issues addressed in that document
+apply to retrofitting an existing site as well.</p>
+
+<h2><a name="start" id="start" shape="rect">Getting Started</a></h2>
+
+<h3>Understanding the Basics</h3>
+
+<p>A first step in retrofitting your site is understanding the basics of web
+accessibility.</p>
+<ul>
+  <li><a href="http://www.w3.org/standards/webdesign/accessibility" shape="rect">W3C - Accessibility</a> briefly introduces web accessibility and links to
+    additional resources.</li>
+  <li><a href="http://www.w3.org/WAI/intro/components.php" shape="rect">Essential
+    Components of Web Accessibility</a> shows how web accessibility depends
+    on several components of web development and interaction working together
+    and shows the relationship between the WAI guidelines: Web Content
+    Accessibility Guidelines (<a href="../intro/wcag.php" shape="rect">WCAG</a>), Authoring Tool Accessibility Guidelines (<a href="../intro/atag.php" shape="rect">ATAG</a>), and User Agent
+    Accessibility Guidelines (<a href="../intro/uaag.php" shape="rect">UAAG</a>).</li>
+    <li>
+      <a href="http://www.w3.org/WAI/intro/people-use-web" shape="rect">How People with Disabilities Use the
+    Web</a> describes how different disabilities affect web use and
+    accessibility requirements for people with different kinds of
+    disabilities, and includes scenarios of people with disabilities using
+    the Web.</li>
+</ul>
+
+<p>To get a rough idea of the type and amount of accessibility barriers on
+your website, you can do some initial evaluation.</p>
+<ul>
+  <li><a href="http://www.w3.org/WAI/eval/preliminary.html" shape="rect">Preliminary
+    Review</a> of Websites for Accessibility describes an approach to
+    quickly identify some potential accessibility barriers on a website.</li>
+  <li><a href="http://www.w3.org/WAI/eval/users.html" shape="rect">Involving Users in Web
+    Accessibility Evaluation</a> provides guidance on including people with
+    disabilities ("users") in accessibility evaluation throughout web
+    development. In addition to helping identify and prioritize accessibility barriers,
+    watching people struggle to use your site can be a powerful motivator for
+    your retrofitting project team.</li>
+</ul>
+
+<h3>Setting the Target</h3>
+
+<p>Many organizations use <a href="/WAI/intro/wcag.php" shape="rect">WCAG</a>
+as a target for accessibility. For example, an organization sets its target
+to meet WCAG 2.0 Level A and Level AA success criteria.</p>
+
+<p>The motivations and pressures for your retrofitting project will likely
+influence your target. For example, if customers told you about an
+accessibility barrier that prevents them from using your external website,
+you probably want to fix that first. If you are legally required to meet a
+certain level of accessibility in your internal website ("intranet"), your
+target will be at least that level.</p>
+  <p>In some retrofitting situations, organizations define a multi-tiered
+target with different dates for different levels: 
+            For example, meet WCAG 2.0 Level A success criteria in key
+web pages within 2 months, and meet Level AA success criteria  in all pages
+within 9 months.</p>
+
+  <p>Developing an accessibility policy is a good way to clarify and
+communicate your target.
+Note that developing and adopting policies can take a while, and retrofitting need not
+wait for an official policy. The <a href="#next" shape="rect">Addressing Next Steps</a> section below provides links
+to information on legal requirements and organizational policies.</p>
+
+<h3>Communicating the Status of Your Retrofitting Project</h3>
+
+<p>Once you have determined that there are accessibility barriers on your website that you are fixing, communicate that to your users, for example,
+through an accessibility statement. An accessibility statement can
+include:</p>
+<ul>
+    <li>A brief description of the major accessibility barriers on your site,
+    so that users with disabilities know what to expect</li>  <li>A statement of your commitment to fix the accessibility barriers on
+    your website</li>
+</ul>
+
+  <p>Make links to the accessibility statement easy to find; for example, put
+it as the first link in your home page markup (code). If some parts of
+    your site are inaccessible, provide alternative ways for users to get the
+    information or interaction; for example, contact phone numbers and
+    mailing addresses. </p>
+
+<h2><a name="eval" id="eval" shape="rect">Evaluating to Identify the Issues</a></h2>
+
+<p>It is usually most efficient to first identify all of the accessibility
+barriers on your site. However, if you have a few serious accessibility
+barriers that are fairly easy to repair, it may be best to repair those right
+away before going further.</p>
+
+  <p>
+ The goal of evaluating before retrofitting is to define the accessibility
+barriers on your site and gather  information to plan an efficient
+retrofitting project. Rather than  thoroughly evaluating every page on your
+site, you can focus  on representative areas in order to get
+more valuable information with less effort. For example, templates, style
+sheets, and any elements that are the same across pages, such as navigation
+bars and footers, only need to be evaluated once and can then be skipped on
+pages where they are repeated. The  areas listed in the <a href="#area" shape="rect">Prioritizing by Area</a> section below also apply to focusing
+evaluation. Ensure that your evaluation covers each feature and functionality (for
+example, data tables, forms, scripts)  from each developer or development
+group. </p>
+  <p>Evaluation can focus on specific points to help guide your retrofitting
+plan, such as determining if  a particular accessibility barrier is
+widespread or isolated. For example, if only a few of your data tables are missing necessary markup, your
+retrofitting plan would include adding table markup to quality assurance
+(QA) processes. However, if none of the tables are
+properly marked up, you would add data table markup  to your education plan. If  tables from one development group are done properly
+but from another development group are not, this further clarifies
+where education is needed.
+
+</p>
+<p>The following resources help evaluate a website for accessibility
+barriers:</p>
+<ul>
+  <li><a href="http://www.w3.org/WAI/WCAG20/quickref/" shape="rect">How to Meet WCAG 2.0: 
+     A customizable quick reference to Web Content Accessibility Guidelines 2.0 requirements (success criteria) and techniques</a> can be used as a checklist</li>
+  <li><a href="http://www.w3.org/WAI/eval/conformance" shape="rect">Conformance Evaluation
+     of Websites for Accessibility</a> describes an approach for determining
+     if a website meets accessibility standards, including using evaluation
+     tools and manually evaluating pages.</li>
+  <li><a href="/WAI/eval/reviewteams" shape="rect">Using Combined Expertise to Evaluate Web Accessibility</a>
+    describes  recommended expertise and considerations for effective
+    collaboration to evaluate web accessibility.</li>
+  <li>See also <a href="#ertools" shape="rect">Evaluation and Repair Tools</a> below.</li>
+</ul>
+
+<p>Many organizations hire accessibility specialists to evaluate their website. Accessibility specialists can also provide guidance on retrofitting
+your site, including general recommendations on approach and priorities, 
+specific recommendations for repairing each barrier identified, and guidance
+on the knowledge and skills needed for the repairs.</p>
+
+<h2><a name="retro" id="retro" shape="rect">Optimizing Your Retrofitting</a></h2>
+  <p>The following  tips on knowledge and skills, processes, and tools help optimize  retrofitting; that is, make it more efficient.</p>
+
+<h3><a name="skills" id="skills" shape="rect">Optimizing Knowledge and Skills</a></h3>  <p>
+Depending on your project staff and the type of accessibility barriers on
+your site, you might need to acquire additional knowledge and skills in order
+to repair your site. At a minimum, those involved in web development will
+need to understand how to fix the accessibility barriers on your site,  as well as how to avoid introducing new barriers.</p>
+
+  <p class="listintro">
+ It is often best to combine educating existing staff with bringing in
+outside expertise, either hiring additional staff or engaging consultants. A
+qualified accessibility expert can save time and effort in the long run by
+providing:</p>
+<ul class="listafterpul">
+    <li>The latest best practices for accessibility solutions</li>
+    <li>First-hand experience of how people with disabilities interact with the
+    Web</li>
+</ul>
+
+<p>In addition to accessibility expertise, you may need other web development
+skills. The <a href="/WAI/eval/reviewteams" shape="rect">Using Combined Expertise to Evaluate Web Accessibility</a> document lists skills needed to evaluate web accessibility,
+which are similar to the skills needed for repair.</p>
+
+<h3><a name="tools" id="tools" shape="rect">Optimizing Processes</a></h3>
+
+<h4><strong>Distributing tasks</strong></h4>
+
+<p>Accessibility repairs can be distributed among different people based on
+their skills and other factors. For example, making link text clear requires
+some knowledge of the content and usually only minor skills with the
+authoring tool. Whereas repairing scripts that generate dynamic content
+requires programming skills. By distributing tasks effectively, you can get
+more barriers fixed faster with less effort.</p>
+
+<h4>Clarifying requirements</h4>
+
+<p>One of the causes of accessibility barriers is that those in web
+development did not know that they should make the website accessible. To
+avoid this problem in your retrofitting project, ensure that everyone knows
+that accessibility is a requirement, even if you do not yet have an official
+policy. Include accessibility in development guidelines, quality assurance
+processes, project sign-offs, etc.</p>
+
+<h4><strong>Validating solutions before implementing them</strong></h4>
+
+<p>Retrofitting projects typically involve identifying a barrier, developing
+a solution to the barrier, and implementing that solution throughout the website.  Before you implement an accessibility solution, validate that it is
+effective.</p>
+
+  <p><a href="http://www.w3.org/WAI/users/involving" shape="rect">Involving users
+with disabilities</a> and having accessibility specialists evaluate your
+planned repairs can catch any problems before they are propagated throughout
+your site.</p>
+
+<h3>Optimizing Tools</h3>
+
+<p>Which authoring tools and evaluation tools you use and how they are
+configured can impact your retrofitting efforts, as explained below.</p>
+
+<h4>Authoring Tools</h4>
+
+<p><a href="http://www.w3.org/WAI/intro/atag.php" shape="rect">Authoring tools</a> are
+software or services used to create or modify websites, such as web page
+editors and content management systems (CMS). Some authoring tools provide
+better accessibility support than others. Thus, your authoring tool can help
+or hinder your retrofitting efforts. The document <a href="http://www.w3.org/WAI/intro/components.php" shape="rect">Essential Components of Web
+Accessibility</a> describes the role of authoring tools and the effect of
+insufficient support for accessibility.</p>
+
+<p class="listintro">You might be able to improve accessibility support in your authoring tool
+by:</p>
+<ul class="listafterpul">
+  <li>Configuring your tools, for example, sometimes accessibility features
+    in authoring tools are disabled by default and need to be turned on</li>
+  <li>Using plug-ins or other add-on software to extend the accessibility
+    support of your tools</li>
+  <li>Upgrading your existing tools to the latest version, if they have
+    better accessibility support</li>
+  <li>Purchasing different tools with better accessibility support</li>
+</ul>
+
+<p>The <a href="http://www.w3.org/WAI/impl/software" shape="rect">Selecting and Using
+Authoring Tools for Web Accessibility</a> document includes questions to ask
+software vendors regarding accessibility support in current and upcoming
+versions.</p>
+
+<h4><a name="ertools" id="ertools" shape="rect">Evaluation and Repair Tools</a></h4>
+
+<p>Web accessibility evaluation tools are software programs and online
+services that help determine if a website meets accessibility guidelines.
+There are also tools that help repair accessibility barriers. Some repair
+functions are built into evaluation tools, and some tools focus only on
+repair, such as <a href="http://sourceforge.net/projects/tidy" shape="rect">HTML Tidy</a>.</p>
+<ul>
+  <li><a href="http://www.w3.org/WAI/eval/selectingtools" shape="rect">Selecting Web
+    Accessibility Evaluation Tools</a> provides guidance on choosing tools
+    based on parameters such as your development environment, and the tool
+    functionality.</li>
+    <li><a href="http://www.w3.org/WAI/ER/existingtools.html" shape="rect">Web Accessibility
+    Evaluation Tools</a> is a  database of  over 100 tools that can be
+    searched by different tool features.</li>
+</ul>
+
+<p>Some evaluation tools can be configured to be more useful to your specific
+project. For example, once you figure out which accessibility barriers you
+are going to address on which pages, you can configure the tool to only
+evaluate those barriers and pages. This speeds up the evaluation and
+simplifies the report.</p>
+
+<h2><a name="prior" id="prior" shape="rect">Prioritizing the Repairs</a></h2>
+
+<p>Most sites developed without consideration for accessibility and other web
+standards have many accessibility barriers that need to be repaired.
+Prioritizing by barrier and by area, as explained below, makes the project
+more manageable and ensures that the more important repairs get done
+first.</p>
+
+<h3>Prioritizing by Barriers</h3>
+
+<p>One approach to retrofitting is to fix all of the Level A barriers
+first, and then fix lower level barriers later. There are several
+disadvantages to this approach: you have to go back over templates, style
+sheets, and pages multiple times;  you will miss  easy-to-do, lower priority
+items; and you can get hung up on a few hard problems, instead of  getting
+lots of easy things done quickly.</p>
+
+<p>A more effective approach in most cases is to do all of the high impact
+<em>and</em> easy repairs while you are working on a page, template, style
+sheet, etc. Then address harder problems later. This approach has several
+advantages: it  usually takes less time overall, and  you get lots of changes
+done quickly. This helps demonstrate your commitment to improving the
+accessibility of your website as soon as is feasible.</p>
+
+<p>To plan for retrofitting, consider two parameters for prioritizing the
+order in which to address accessibility barriers: impact and effort. For each
+accessibility barrier, determine:</p>
+<ol>
+  <li><strong>Impact on people with disabilities.</strong> Accessibility
+    barriers are often identified by <a href="http://www.w3.org/WAI/intro/wcag.php#whatis2" shape="rect">WCAG 2.0
+success criteria</a>. Each success criteria has a Level (A, AA, AAA) that helps
+    determine the impact of a particular accessibility barrier. The actual
+    impact on users of a specific barrier depends on the context of your
+    site. For example, poor color contrast in the main content has high impact on
+    some people with disabilities, whereas in generic footers it may have low
+    impact.<br clear="none" />
+      
+     <a href="../eval/users" shape="rect">Evaluating with users with disabilities</a> also
+    helps determine the impact of accessibility barriers in your website.</li>
+  <li><strong>Effort required for repair.</strong> The time, cost, and skills
+    to repair a barrier varies greatly based on parameters such as the type
+    of repair and your development environment.<br clear="none" />
+    For example, repairing barriers in footers could require a simple change
+    to the template that is automatically propagated throughout the website,
+    or could require changing every page manually. Repairing missing
+    alternative text equivalents requires knowing the content and
+    understanding how the text is used; whereas, changing a site to
+    effectively use style sheets requires CSS skills.</li>
+</ol>
+
+<h3><a name="area" id="area" shape="rect">Prioritizing by Area</a></h3>
+
+<p class="listintro">Another aspect of prioritizing retrofitting is determining which areas to
+work on first. It is usually best to first repair those areas that have the
+greatest impact on users' experience with your website. Depending on how
+your site is developed, you may be able to repair many barriers through:</p>
+<ul class="listafterpul">
+  <li>Templates that impact many pages</li>
+  <li>Style sheets that impact many pages</li>
+  <li>Elements that impact many pages, such as navigation bars and
+  scripts</li>
+</ul>
+
+<p class="listintro">Certain pages may have higher priority, such as:</p>
+<ul class="listafterpul">
+  <li>The home page, which is often the first entry point to the site</li>
+  <li>The main pages and functionality based on the purpose of the site,
+    including
+    <ul>
+      <li>The path to get there from the common entry points</li>
+      <li>The path to complete  transactions, such as ordering products</li>
+    </ul>
+  </li>
+  <li>Frequently-used (high traffic) pages and functionality, including the
+    path to get there and complete transactions</li>
+</ul>
+
+<h2><a name="next" id="next" shape="rect">Next: Strategic Planning</a></h2>
+
+  <p>After you have repaired the major accessibility barriers on your website,
+there are several things you can do to help avoid creating new barriers and to continue
+improving the accessibility of your site.</p>
+<ul>
+  <li>Integrate accessibility throughout your web development. See <a href="http://www.w3.org/WAI/impl/Overview.html" shape="rect">Implementation Plan for
+    Web Accessibility</a>. Ensure that when redesigns or updates are planned,
+    accessibility in included from the onset of the project. Accessibility is
+    much less costly and time-consuming when implemented from the beginning
+    of a project, rather than the end.</li>
+  <li>Ensure that you have an effective accessibility policy in place that
+    specifies that your website meet or exceed legal requirements.
+    <ul>
+      <li><a href="http://www.w3.org/WAI/impl/pol" shape="rect">Developing Organizational
+        Policies on Web Accessibility</a> describes considerations when
+        making simple or comprehensive policies for organizations.</li>
+      <li><a href="http://www.w3.org/WAI/bcase/pol" shape="rect">Legal and Policy Factors
+        in Developing a Web Accessibility Business Case for Your
+        Organization</a> helps determine what requirements apply to your
+        organization.</li>
+      <li><a href="http://www.w3.org/WAI/Policy/" shape="rect">International Policies
+        Relating to Web Accessibility</a> links to information on government
+        policies relating to web accessibility in countries around the
+      world.</li>
+    </ul>
+  </li>
+  <li>Continue to evaluate accessibility in updated pages to ensure that new
+    barriers are not introduced. See the <a href="/WAI/eval/considerations#ongoing" shape="rect">Ongoing
+    monitoring</a> section of the Evaluation Approaches for Specific Contexts
+    document.</li>
+</ul>
+</div>
+
+<div id="footer">
+  <h2>Document Information</h2>
+
+  <p><strong>Status:</strong> First published March 2006. Updated  November 2011.  [<a href="/WAI/EO/changelogs/cl-retrofit" shape="rect">changelog</a>]<br clear="none" />
+     
+Editors: Shawn Lawton Henry, Shadi Abou-Zahra, and Education and Outreach
+Working Group (<a href="/WAI/EO/" shape="rect">EOWG</a>) <a href="http://www.w3.org/WAI/EO/EOWG-members.html" shape="rect">participants</a>. Developed with support from <a href="http://www.w3.org/WAI/TIES/" shape="rect"><acronym title="Web Accessibility Initiative: Training, Implementation, Education, Support">WAI-TIES</acronym></a>, a project of the European Commission <acronym title="Information Society Technologies">IST</acronym> Programme.</p>
+
+<div class="footer-nav"><p>[<a href="http://www.w3.org/WAI/sitemap.html" shape="rect">WAI Site Map</a>] [<a href="http://www.w3.org/WAI/sitehelp.html" shape="rect">Help with WAI Website</a>] [<a href="http://www.w3.org/WAI/search.php" shape="rect">Search</a>] [<a href="/WAI/contacts" shape="rect">Contacting WAI</a>]<br clear="none" />
+         <strong>Feedback welcome to <a href="mailto:wai-eo-editors@w3.org" shape="rect">wai-eo-editors@w3.org</a></strong> (a publicly archived list) or <a href="mailto:wai@w3.org" shape="rect">wai@w3.org</a> (a WAI staff-only list).</p></div><div class="copyright"><p><a rel="Copyright" href="/Consortium/Legal/ipr-notice#Copyright" shape="rect">Copyright</a> © 1994-2012 <a href="/" shape="rect"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/" shape="rect"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/" shape="rect"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/" shape="rect">Keio</a>), All Rights Reserved. W3C <a href="/Consortium/Legal/ipr-notice#Legal_Disclaimer" shape="rect">liability</a>, <a href="/Consortium/Legal/ipr-notice#W3C_Trademarks" shape="rect">trademark</a>, <a rel="Copyright" href="/Consortium/Legal/copyright-documents" shape="rect">document use</a> and <a rel="Copyright" href="/Consortium/Legal/copyright-software" shape="rect">software
+         licensing</a> rules apply. Your interactions with this site are in
+         accordance with our <a href="/Consortium/Legal/privacy-statement#Public" shape="rect">public</a> and <a href="/Consortium/Legal/privacy-statement#Members" shape="rect">Member</a> privacy
+         statements.</p></div>
+</div>
+</body>
+</html>
