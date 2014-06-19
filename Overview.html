@@ -8,6 +8,28 @@
   <!-- This should be removed when moving to the live environment. Also any anchor links should have 
        the absolute link (http://w3c.github.io/wai-planning-and-implementation/Overview.html) on anchor tags removed. -->
   <base href="http://www.w3.org/WAI/impl/" />
+  <!-- Remove this when moving to the live environment -->
+  <style>
+    .draft.note {
+      background-color: #FFDAC7;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      margin: 1em;
+      padding: 5px 10px 8px;
+    }
+    .draft.note::before {
+      content: "Notes:";
+      font-weight: bold;
+    }
+    .draft.note p:first-child {
+      margin-top: 0;
+    }
+    .draft.note p:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+  
   <link href="../wai-main.css" rel="stylesheet" type="text/css" />
   <!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
   </head>
@@ -54,80 +76,103 @@
         <!-- end (page) contents (list)-->
      </div>
      <h2><a id="intro" name="intro">Introduction</a></h2>
-     <p id="intro1" class="quiet">
+     <!-- Remove any 'draft note's when moving to live environment -->
+     <div class="draft note">
+     <p id="intro1">
        This section needs to introduce who this is for, what they will get (and not get) and a summary of the structure. As in the existing document there is a need to point people who are working at improving an existing service to the right place.
      </p>
-     <p id="intro2" class="quiet">
+     <p id="intro2">
        It may be useful to touch on the getting started resources as a reminder, but this should be light - as for other sections assume that people have reviewed this material?
      </p>
-     <p id="intro3" class="quiet">
+     <p id="intro3">
        Need to consider budgeting for accessibility - not straight forward as every project is different. Maybe some guidelines on what activities are required would give direction. In that case, adding to the Project life cycle section would be appropriate. Or it may be that there is a separate section entirely for this.
      </p>
+     </div>
 
      <h2><a id="aware" name="aware">Exploring your organizational awareness</a></h2>
-     <p id="aware1" class="quiet">
+     <div class="draft note">
+     <p id="aware1">
        Need to discuss where the organisation is in terms of general understanding. What are the drivers (could be people, could be external pressure) for incorporating accessibility? How much influence and budget control do these drivers exert? Is there sufficient drive to incorporate accessibility into the project without problems or is there a need to make a business case to allocate more budget?
      </p>
+     </div>
 
      <h2><a id="scope" name="scope">Determine scope</a></h2>
-     <p id="scope1" class="quiet">
+     <div class="draft note">
+     <p id="scope1">
        Is this for one website, or is the aim to use this as an opportunity to build a generally more aware team. Scope may feed into the project requirements specification or, more broadly, serve as a starting point for developing broader policies. Key at this point to be clear about what is to be achieved. Be realistic. Need to include audience or platform discussion at this point as well e.g. known internal audience or unknown external.
      </p>
+     </div>
 
      <h2><a id="policy" name="policy">Develop organizational policy</a></h2>
-     <p id="policy1" class="quiet">
+     <div class="draft note">
+     <p id="policy1">
        Consider the development of an organizational policy. For smaller organizations this need not be an involved activity. Should this also be something more than a conformance statement? Should there be something about how to deal with accessibility concerns? What about communicating any issues with the organization?
-     <p id="policy2" class="quiet">
+     </p>
+     <p id="policy2">
        Needs to also look at whether there are existing policies. If there are, how are they implemented? do they work? if not, why not?
      </p>
-     <p id="policy3" class="quiet">
+     <p id="policy3">
        For existing policies are these goals incorporated into any brand, style or coding guidelines or code libraries?
      </p>
-     <p id="policy4" class="quiet">
+     <p id="policy4">
        Consider how this policy is to be communicated internally and externally. Is it written in such a way as to be meaningful to non-technical teams? Should it be?
      </p>
+     </div>
 
      <h2><a id="resource" name="resource">Review available resources</a></h2>
-     <p id="resource1" class="quiet">
+     <div class="draft note">
+     <p id="resource1">
        What resources are important when creating an accessible websites: designers, developers, content creators, others? This is predominantly a review of available project resources internal and external and their understanding of and skills with creating accessible websites. This is predominantly a review of available project resources internal and external and their understanding of and skills with creating accessible websites. What external resources might be required - for training, testing, auditing.
      </p>
-     <p id="resource2" class="quiet">
+     <p id="resource2">
        Rather than discuss guidelines and libraries above, these could be explored here.
-     <p id="resource3" class="quiet">
+     </p>
+     <p id="resource3">
        Developing a training plan for internal staff would be important at this point. Important to try to instill enthusiasm for the challenge of accessibility within technical teams at this point.
      </p>
+     </div>
 
      <h2><a id="procure" name="procure">Procurement and commissioning</a></h2>
-     <p id="procure1" class="quiet">
+     <div class="draft note">
+     <p id="procure1">
        Need to incorporate the organizational policy into any procurement process. For large organizations they are likely to have some clout with small suppliers but may run into specific problems with suppliers of specialist software. Large organizations may also have difficulty with trying to change their procurement process depending on how much influence those pushing for accessibility have.
      </p>
-     <p id="procure2" class="quiet">
+     <p id="procure2">
        For smaller organisations there needs to be some discussion about the commissioning process. How do they know what to ask of their supplier? How do they know that they have received what they asked for?
      </p>
+     </div>
 
      <h2><a id="team" name="team">Building an accessibility team</a></h2>
-     <p id="team1" class="quiet">
+     <div class="draft note">
+     <p id="team1">
        For larger organizations with multiple teams building web services and sites is there an opportunity to build a cross-organizational team that can support accessibility? How are identified barriers tracked?
      </p>
+     </div>
 
      <h2><a id="project" name="project">Project life cycle</a></h2>
-     <p id="project1" class="quiet">
+     <div class="draft note">
+     <p id="project1">
        Start early to avoid locking into inaccessible solutions. What activities can realistically be performed?
        Testing late in the process often leaves little time for fixes to be implemented. Need to ensure that there is time available to address these. Consider what happens if a supplier fails to meet the standards requested. May be a need to consider prioritization of identified barriers.
      </p>
-     <p id="project2" class="quiet">
+     <p id="project2">
        Consider types of development approaches; waterfall, agile, test driven, incremental. What can be done depending on differing types?
      </p>
+     </div>
 
      <h2><a id="comms" name="comms">Communicating and sharing</a></h2>
-     <p id="comms1" class="quiet">
+     <div class="draft note">
+     <p id="comms1">
        This is something that is both a PR exercise and an exercise in capturing and sharing learning. Need to ensure that people are aware that this is important and achievable. Need to share the experience and knowledge for future projects. For larger organizations, need to provide resources, howtos, training and best practice for addressing accessibility to a wider audience.
      </p>
+     </div>
 
      <h2><a id="maint" name="maint">Maintenance and monitoring</a></h2>
-     <p id="maint1" class="quiet">
+     <div class="draft note">
+     <p id="maint1">
        Who is responsible for this once the development team and project manager have moved onto something else? How often should this occur, what should be checked? What opportunity is there to try to ensure that problems do not creep in? What QA process is in place for change requests - is accessibility included at this point? How is policy monitored? Changes in guidelines and technology?
      </p>
+     </div>
            <!-- end main -->
   </div>
 
