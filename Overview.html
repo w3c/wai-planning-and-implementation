@@ -29,9 +29,47 @@
       margin-bottom: 0;
     }
   </style>
-  
+
   <link href="../wai-main.css" rel="stylesheet" type="text/css" />
+  <!-- When moving to live environment this needs to move to wai-main.css -->
+  <style>
+    .has-aside {
+      float: left;
+      width: 60%;
+    }
+  
+    .aside {
+      float: right;
+      width: 35%;
+      border: 1px solid #930;
+      background-color: #ffc;
+      padding: 1em;
+      margin-top: 1em;
+    }
+  
+    .aside h4 {
+      margin: 0;
+    }
+    .aside ul {
+      list-style: disc outside url("../images/bullet-c60.gif");
+      padding-left: 1.3em;
+      margin-bottom: 0;
+    }
+
+    /* ex-col jumping with hover/focus temp fix */
+    .f_panelHead {
+    	border-bottom: solid #fffaf5;
+    }
+    .f_panelHead.fs_hover, .f_panelHead.fs_focus {
+    	border-bottom: solid #993300;
+    }
+    .f_panelHead.fs_selected {
+    	border-bottom: solid #993300;
+    }
+  </style>
   <!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
+  <link href="http://www.w3.org/WAI/style/excol.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="http://www.w3.org/WAI/scripts/excol/excol.js" xml:space="preserve"></script>
   </head>
   <body>
   <div id="controls"><ul>
@@ -44,149 +82,159 @@
         Web accessible to people with disabilities</p></div>
   <div id="nav"><h2>Site Navigation</h2><p id="w3cnav"><a href="http://www.w3.org/">W3C Home</a></p><p id="subhomenav"><a href="/WAI/">Web Accessibility Initiative (WAI) Home</a></p><ol id="nav1" type="A"><li><a href="../gettingstarted/Overview.html" shape="rect">Getting Started</a></li><li><a href="../users/Overview.html" shape="rect">Designing for Inclusion</a></li><li><a href="../guid-tech.html" shape="rect">Guidelines &amp; 
               Techniques</a></li><li class="current-nav "><a href="../managing.html" shape="rect">Planning &amp; Implementing</a><ul><li class="nav-head">Policy Resources
-                  
+
                  <ol><li><a href="../Policy/harmon.html" shape="rect">Standards Harmonization</a></li><li><a href="../Policy/Overview.html" shape="rect">International Policies</a></li><li><a href="pol.html" shape="rect">Organizational Policies</a></li></ol></li><li class="current-nav nav-head">Managing Accessibility
-                  
+
                  <ol><li id="current-node" class="current-nav "><span class="label"><span id="current-icon">»</span>Planning</span></li><li><a href="improving.html" shape="rect">Improving Existing Sites</a></li><li><a href="../users/involving.html" shape="rect">Involving Users in Web Projects</a></li><li><a href="software.html" shape="rect">Selecting Authoring Tools</a></li></ol></li></ul></li><li><a href="../eval/Overview.html" shape="rect">Evaluating Accessibility</a></li><li><a href="../train.html" shape="rect">Presentations &amp; Tutorials</a></li><li><a href="../about-links.html" shape="rect">Getting Involved with WAI</a></li></ol><div id="nav-static"><div class="nav-discover">
            <p><a href="http://www.w3.org/WAI/yourWAI" shape="rect"><strong><u>Discover new resources</u></strong> for people with disabilities, policy makers, managers, and you!</a></p>
         </div><p class="translations"><a href="http://www.w3.org/WAI/wai-translations" shape="rect"><img src="http://www.w3.org/WAI/images/translations-med-1" alt="characters from different languages" /> Translations</a></p></div></div>
   <div id="main">
-     <div id="skipwrapper"><a id="skip" shape="rect">-</a></div>
+    <div id="skipwrapper"><a id="skip" shape="rect">-</a></div>
 
     <!-- Remove this when moving to live environment -->
-     <p class="highlight-version"><strong>This is an internal Editor's Draft. The main page is at <a href="http://www.w3.org/WAI/impl/Overview.html">www.w3.org/WAI/impl/Overview.html</a><br>
-        Please send any suggestions, edits, or comments</strong> to the publicly-archived list: <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a>
-     </p>
+    <p class="highlight-version"><strong>This is an internal Editor's Draft. The main page is at <a href="http://www.w3.org/WAI/impl/Overview.html">www.w3.org/WAI/impl/Overview.html</a><br>
+       Please send any suggestions, edits, or comments</strong> to the publicly-archived list: <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a>
+    </p>
 
-     <h1>Planning for Web Accessibility</h1>
-     <div id="contents">
-        <h2>Page Contents</h2>
-        <ul>
-           <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#intro" shape="rect">Introduction</a></li>
-           <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#aware" shape="rect">Exploring your organizational awareness</a></li>
-           <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#scope" shape="rect">Determine scope</a></li>
-           <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#policy" shape="rect">Develop Organizational Policy</a></li>
-           <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#resource" shape="rect">Review available resources</a></li>
-           <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#procure" shape="rect">Procurement and commissioning</a></li>
-           <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#team" shape="rect">Building an accessibility team</a></li>
-           <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#project" shape="rect">Project life cycle</a></li>
-           <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#comms" shape="rect">Communicating and sharing</a></li>
-           <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#monitor" shape="rect">Maintenance and monitoring</a></li>
-        </ul>
-        <!-- end (page) contents (list)-->
-     </div>
-     <h2><a id="intro" name="intro">Introduction</a></h2>
-     <!-- Remove any 'draft note's when moving to live environment -->
-     <div class="draft note">
-     <p id="intro1">
-       This section needs to introduce who this is for, what they will get (and not get) and a summary of the structure. As in the existing document there is a need to point people who are working at improving an existing service to the right place.
-     </p>
-     <p id="intro2">
-       It may be useful to touch on the getting started resources as a reminder, but this should be light - as for other sections assume that people have reviewed this material?
-     </p>
-     <p id="intro3">
-       Need to consider budgeting for accessibility - not straight forward as every project is different. Maybe some guidelines on what activities are required would give direction. In that case, adding to the Project life cycle section would be appropriate. Or it may be that there is a separate section entirely for this.
-     </p>
-     </div>
+    <h1>Planning for Web Accessibility</h1>
+    <div id="contents">
+       <h2>Page Contents</h2>
+       <ul>
+         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#intro" shape="rect">Introduction</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#aware" shape="rect">Exploring your organizational awareness</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#scope" shape="rect">Determine scope</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#policy" shape="rect">Develop Organizational Policy</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#resource" shape="rect">Review available resources</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#procure" shape="rect">Procurement and commissioning</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#team" shape="rect">Building an accessibility team</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#project" shape="rect">Project life cycle</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#comms" shape="rect">Communicating and sharing</a></li>
+         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#monitor" shape="rect">Maintenance and monitoring</a></li>
+       </ul>
+       <!-- end (page) contents (list)-->
+    </div>
 
-     <h2><a id="aware" name="aware">Exploring your organizational awareness</a></h2>
-     <div class="draft note">
-     <p id="aware1">
-       Need to discuss where the organisation is in terms of general understanding. What are the drivers (could be people, could be external pressure) for incorporating accessibility? How much influence and budget control do these drivers exert? Is there sufficient drive to incorporate accessibility into the project without problems or is there a need to make a business case to allocate more budget?
-     </p>
-     </div>
 
-     <h2><a id="scope" name="scope">Determine scope</a></h2>
-     <div class="draft note">
-     <p id="scope1">
-       Is this for one website, or is the aim to use this as an opportunity to build a generally more aware team. Scope may feed into the project requirements specification or, more broadly, serve as a starting point for developing broader policies. Key at this point to be clear about what is to be achieved. Be realistic. Need to include audience or platform discussion at this point as well e.g. known internal audience or unknown external.
-     </p>
-     </div>
+    <h2 id="intro">Introduction</h2>
+    <p id="intro-1">Planning to incorporate accessibility into your project or organization is as straight forward as any other planning task. This document aims to provide you with guidance, actions, questions and a framework for how to approach planning for accessibility. Your actual approach will vary depending the size of your organization, what you are aiming to achieve and where you are in the development process.</p>
+    <p id="intro2">Additional guidance is available if you are looking at <a href="http://www.w3.org/WAI/impl/improving.html">Improving the Accessibility of Your Website</a>.</p>
+    <p id="intro-3">This document is for project managers, project team leaders, and small business owners seeking to ensure a more accessible website or service. It will also benefit accessibility consultants who are engaged in supporting a project or broader organizational change.</p>
 
-     <h2><a id="policy" name="policy">Develop organizational policy</a></h2>
-     <div class="draft note">
-     <p id="policy1">
-       Consider the development of an organizational policy. For smaller organizations this need not be an involved activity. Should this also be something more than a conformance statement? Should there be something about how to deal with accessibility concerns? What about communicating any issues with the organization?
-     </p>
-     <p id="policy2">
-       Needs to also look at whether there are existing policies. If there are, how are they implemented? do they work? if not, why not?
-     </p>
-     <p id="policy3">
-       For existing policies are these goals incorporated into any brand, style or coding guidelines or code libraries?
-     </p>
-     <p id="policy4">
-       Consider how this policy is to be communicated internally and externally. Is it written in such a way as to be meaningful to non-technical teams? Should it be?
-     </p>
-     </div>
+    <h3 id="intro--driver">Driver for accessibility</h3>
+    <p id="intro--driver-1">Understanding why you or your organization are seeking to incorporate accessibility allows you to identify activities that might be important to the success of the project. For example, if senior management have directed that all new websites must be accessible, then there is a need to ensure that the accessibility of the website is reported to them regularly. If you are responding to national legislation it may be beneficial to convince your project team and stakeholders that accessibility is something more than simply a legal burden and it may be appropriate to seek external validation to the websites accessibility claims.</p>
+    <p id="intro--driver-2">The rationale for accessibility should be recorded as part of the broader project scope. This makes sure that everyone is clear why accessibility is important within this particular project. It also ensures that any further developments to the website include the same accessibility considerations.</p>
 
-     <h2><a id="resource" name="resource">Review available resources</a></h2>
-     <div class="draft note">
-     <p id="resource1">
-       What resources are important when creating an accessible websites: designers, developers, content creators, others? This is predominantly a review of available project resources internal and external and their understanding of and skills with creating accessible websites. This is predominantly a review of available project resources internal and external and their understanding of and skills with creating accessible websites. What external resources might be required - for training, testing, auditing.
-     </p>
-     <p id="resource2">
-       Rather than discuss guidelines and libraries above, these could be explored here.
-     </p>
-     <p id="resource3">
-       Developing a training plan for internal staff would be important at this point. Important to try to instill enthusiasm for the challenge of accessibility within technical teams at this point.
-     </p>
-     </div>
+    <h3 id="intro--identify-goal">Identify your goal</h3>
+    <p id="intro--identify-goal-1">What you are aiming to achieve is important in understanding what activities are required. It could be that you are seeking to bring about more accessibility thinking within all aspects of your organization. Perhaps you are a project manager seeking to understand what activities and questions are important to plan for when creating a new accessible web service. Or you may be part of a small organization seeking to ensure that the new website you are commissioning is as accessible as possible.</p>
+    <p id="intro--identify-goal-2">Understanding your goal allows you to ensure that the activities you undertake are appropriate. For example, if you are seeking to bring about organizational change then there will be a need to plan broader activities such as reviewing purchasing procedures, recruitment criteria or training provision.</p>
+    <p id="intro--identify-goal-3">As with the driver for accessibility, the goal should be recorded in the project scope.</p>
 
-     <h2><a id="procure" name="procure">Procurement and commissioning</a></h2>
-     <div class="draft note">
-     <p id="procure1">
-       Need to incorporate the organizational policy into any procurement process. For large organizations they are likely to have some clout with small suppliers but may run into specific problems with suppliers of specialist software. Large organizations may also have difficulty with trying to change their procurement process depending on how much influence those pushing for accessibility have.
-     </p>
-     <p id="procure2">
-       For smaller organisations there needs to be some discussion about the commissioning process. How do they know what to ask of their supplier? How do they know that they have received what they asked for?
-     </p>
-     </div>
+    <h3 id="intro--influence">Organizational influence</h3>
+    <p id="intro--influence-1">Possibly one of the most important factors when considering what is achievable as a goal is what influence you have within your organization. It may be that, while you as the project manager do not have significant capacity to influence change, you have the backing of senior management who see what you are doing as the first steps in organization wide improvement. In this case you will need to consider what upward reporting is required and how to manage project legacy, such as changes in organizational design guidelines, procurement process or content management system recommendations.</p>
+    <p id="intro--influence-2">It could also be that your organization has not yet embraced accessibility and you are keen to promote the value of such an approach. In this case activities such as setting out a business case to stakeholders will be of importance, particularly if there is a need to secure additional project funds.</p>
 
-     <h2><a id="team" name="team">Building an accessibility team</a></h2>
-     <div class="draft note">
-     <p id="team1">
-       For larger organizations with multiple teams building web services and sites is there an opportunity to build a cross-organizational team that can support accessibility? How are identified barriers tracked?
-     </p>
-     </div>
+    <h3 id="intro--other-factors">Other important factors</h3>
+    <ul id="intro--other-factors-1">
+      <li>Size of organization - Larger organizations are likely to have more developed and structured procedures, and will have many more websites and online services. Smaller organizations may have limited resources to draw on, limiting what activities are possible.</li>
+      <li>Outsourcing - Ensuring that sub-contractors are aware of your expectations and how to check that they delivered to the requested standard</li>
+      <li>Personnel skills - Depending on how knowledgeable your team is you may have to schedule in and budget for additional training. For ongoing content management there may be a need to put in place training for new staff.</li>
+      <li>Development process - Your development methodology may impact on when and what activities you can schedule. For example, agile process may allow for earlier feedback on individual components as they are developed. A waterfall approach will have a more defined testing phase which would focus accessibility testing resources. A test-driven approach would require, where possible, work to unpack the standards into automated tests.</li>
+      <li>Content management system (CMS) - Are you using a CMS? How supportive of accessibility is it? Do you have scope to change this? Where a CMS is less supportive, there may be a need to write more proprietary code to address 'off-the-shelf' issues. </li>
+    </ul>
 
-     <h2><a id="project" name="project">Project life cycle</a></h2>
-     <div class="draft note">
-     <p id="project1">
-       Start early to avoid locking into inaccessible solutions. What activities can realistically be performed?
-       Testing late in the process often leaves little time for fixes to be implemented. Need to ensure that there is time available to address these. Consider what happens if a supplier fails to meet the standards requested. May be a need to consider prioritization of identified barriers.
-     </p>
-     <p id="project2">
-       Consider types of development approaches; waterfall, agile, test driven, incremental. What can be done depending on differing types?
-     </p>
-     </div>
+    <h3 id="intro--related">Related resources</h3>
+    <ul id="intro--related-1">
+      <li><a rel="nofollow" class="external text" href="http://www.w3.org/WAI/bcase/Overview.html">Developing a Web Accessibility Business Case</a> - Provides a outline of how incorporating accessibility can benefit your business or organization.</li>
+    </ul>
 
-     <h2><a id="comms" name="comms">Communicating and sharing</a></h2>
-     <div class="draft note">
-     <p id="comms1">
-       This is something that is both a PR exercise and an exercise in capturing and sharing learning. Need to ensure that people are aware that this is important and achievable. Need to share the experience and knowledge for future projects. For larger organizations, need to provide resources, howtos, training and best practice for addressing accessibility to a wider audience.
-     </p>
-     </div>
+<p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>    
+    
+    <h2 id="resp">Establish Responsibilities</h2>
+    <p id="resp-1">Identify and appoint individuals who are responsible for accessibility within your project team or organization, and outline what the roles entail.</p>
+    
+    <h3 id="resp--actions">Key actions</h3>
+    <ul>
+      <li>Assign responsibilities across different areas of the project, such as design, content creation, development and quality assurance</li>
+      <li>Consider what organizational areas might impact on the accessibility of the project, such as human resources, procurement, marketing, organizational executive, legal</li>
+      <li>Communicate up and down within the organization who the responsible parties are</li>
+      <li>If using a external company or organization, ensure that they are aware of their responsibility to deliver an accessible solution, be that a whole website or one part of it, for example the content</li>
+      <li>For websites with an international presence, ensure responsibility is assigned for each region</li>
+      <li>Plan to communicate successes throughout the organization and share knowledge between responsible parties</li>
+      <li>Put in place systems to capture and manage identified issues, possibly across projects</li>
+    </ul>
 
-     <h2><a id="maint" name="maint">Maintenance and monitoring</a></h2>
-     <div class="draft note">
-     <p id="maint1">
-       Who is responsible for this once the development team and project manager have moved onto something else? How often should this occur, what should be checked? What opportunity is there to try to ensure that problems do not creep in? What QA process is in place for change requests - is accessibility included at this point? How is policy monitored? Changes in guidelines and technology?
-     </p>
-     </div>
-           <!-- end main -->
+    <div id="accordion" class="accordionWrapper">
+      <h3 id="resp--resp" class="f_panelHead">Responsibilities</h3>
+      <div>
+        <div class="has-aside">
+          <p id="resp--resp-1">Identifying and appointing individuals responsible for accessibility is an important part of the successful delivery of accessible websites and in bringing about organizational change. They ensure that any accessibility project issues are not neglected and that everyone on the team knows where to take accessibility questions.</p>
+          <p id="resp--resp-2">Being responsible for the accessibility on a project involves a range of activities. What it does not mean is that you must enact appropriate solutions and policies yourself.</p>
+          <p id="resp--resp-3">Depending on your goals and the size of your organization, the responsibilities might extend throughout your organization and include many people, or be confined to your project team.</p>
+          <p id="resp--resp-4">One of the key responsibilities is to track and communicate the progress of the project. For single websites this may be as simple as maintaining a list of identified accessibility issues as part of the broader QA issue tracking activities. For larger projects or where the goal includes an element of organizational change there is a need for broader communication and coordination.</p>
+          <p id="resp--resp-5">The following list provides examples of other activities that might be important to consider:</p>
+          <ul id="resp--resp-6">
+            <li>Executive presentations of progress and business value of accessibility</li>
+            <li>Regular communication between regional and departmental accessibility teams</li>
+            <li>Ongoing review and sharing of new accessibility techniques</li>
+            <li>Review and revision of policies and processes </li>
+            <li>Sharing project successes throughout the organization</li>
+            <li>Identify and respond to accessibility training needs</li>
+            <li>Manage and procure accessibility audits and testing</li>
+          </ul>
+        </div>
+
+        <div class="aside">
+          <h4 id="resp--resp--examples">Example responsible roles</span></h4>
+          <ul id="resp--resp--examples-1">
+            <li><b>Design manager</b> has a responsibility for ensuring that any accessibility barriers identified within the visual designs are tracked and addressed. They may also have responsibility for incorporating good accessibility practice within the brand or design guidelines.</li>
+            <li><b>Website developer</b> assigned to test for and track accessibility issues within the code and maintaining code libraries with accessible components.</li>
+            <li><b>Procurement manager</b> is responsible for ensuring that organizational accessibility policy is incorporated within procurement processes.</li>
+            <li><b>Managing director</b> for small company would be responsible for ensuring that any agency delivered website meets your desired level of accessibility.</li>
+          </ul>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+
+      <h3 id="resp--outsource" class="f_panelHead">Accessible outsourcing</h3>
+      <div>
+        <p id="resp--outsource-1">For some organizations much of the responsibility is often placed in the hands of an external company selected to create your website or a part of it, such as the visual design. In this case it is important to ensure that you, as the purchaser, are clearly communicating what you expect in terms of accessibility. Your accessibility policy could be incorporated into any purchasing process or into the contract with the supplier.</p>
+        <p id="resp--outsource-2">You also need to be clear with your supplier what acceptance testing will be performed in order to ensure that they are meeting the accepted accessibility standard. For smaller projects or teams it may be that some internal checks are run, for larger projects it may be that a more formal audit or accessibility testing forms part of the acceptance criteria.</p>
+      </div>
+    
+      <h3 id="resp--small" class="f_panelHead">Smaller teams</h3>
+      <div>
+        <p id="resp--small-1">In smaller teams it is likely that one individual will be responsible for several or all aspects of accessibility planning. In this case it is important that sufficient resources, such as time and training, are provided to ensure the role can be performed along with any other responsibilities.</p>
+      </div>
+    
+      <h3 id="resp--international" class="f_panelHead">International websites</h3>
+      <div>
+        <p id="resp--international-1">If your website or service spans a number of international legal jurisdictions, you are likely to need to be aware of different national standards or legal obligations.</p>
+        <p id="resp--international-2">In this case it is important to ensure that there are identified individuals and/or teams who have responsibility for accessibility in the different regions. This could be individuals from different regional offices or could be someone within central office who has web responsibilities stretching across multiple regions.</p>
+        <p id="resp--international-3">As WCAG 2.0 is the internationally recognized standard for web accessibility, your organizational policy will benefit from referencing it as the basis. In some situations local policies may reference additional requirements or particular accommodations that you will need to be aware of.</p>
+      </div>
+    </div>
+
+    <h3 id="resp--related">Related resources</h3>
+    <ul id="resp--related-1">
+      <li><a rel="nofollow" class="external text" href="http://www.w3.org/community/wai-engage/wiki/Accessibility_Responsibility_Breakdown">Accessibility Responsibility Breakdown</a> - Explores WCAG 2.0 success criteria by project role.</li>
+    </ul>
+
+<p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+    <!-- end main -->
   </div>
 
   <div id="footer">
-     <h2><strong>Document Information</strong></h2>
-     <p><strong>Status:</strong> Published: October 2002, minor updates in November 2011 (mostly just links to new resources; main content not edited).<br clear="none" />
-        Editors: Judy Brewer, Sarah Horton, and <a href="/WAI/EO/EOWG-members.html" shape="rect">Participants</a> of the <a href="/WAI/EO/" shape="rect">Education and Outreach Working Group.</a></p>
-     <div class="footer-nav"><p>[<a href="http://www.w3.org/WAI/sitemap.html" shape="rect">WAI Site Map</a>] [<a href="http://www.w3.org/WAI/sitehelp.html" shape="rect">Help with WAI Website</a>] [<a href="http://www.w3.org/WAI/search.php" shape="rect">Search</a>] [<a href="/WAI/contacts" shape="rect">Contacting WAI</a>]<br clear="none" />
-           <strong>Feedback welcome to <a href="mailto:wai-eo-editors@w3.org" shape="rect">wai-eo-editors@w3.org</a></strong> (a publicly archived list) or <a href="mailto:wai@w3.org" shape="rect">wai@w3.org</a> (a WAI staff-only list).</p></div>
-     <div class="copyright"><p><a rel="Copyright" href="/Consortium/Legal/ipr-notice#Copyright" shape="rect">Copyright</a> © 1994-2012 <a href="/" shape="rect"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/" shape="rect"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/" shape="rect"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/" shape="rect">Keio</a>), All Rights Reserved. W3C <a href="/Consortium/Legal/ipr-notice#Legal_Disclaimer" shape="rect">liability</a>, <a href="/Consortium/Legal/ipr-notice#W3C_Trademarks" shape="rect">trademark</a>, <a rel="Copyright" href="/Consortium/Legal/copyright-documents" shape="rect">document use</a> and <a rel="Copyright" href="/Consortium/Legal/copyright-software" shape="rect">software
-           licensing</a> rules apply. Your interactions with this site are in
-           accordance with our <a href="/Consortium/Legal/privacy-statement#Public" shape="rect">public</a> and <a href="/Consortium/Legal/privacy-statement#Members" shape="rect">Member</a> privacy
-           statements.</p></div>
-     <!-- end footer -->
+    <h2><strong>Document Information</strong></h2>
+    <p><strong>Status:</strong> Published: October 2002, minor updates in November 2011 (mostly just links to new resources; main content not edited).<br clear="none" />
+       Editors: Judy Brewer, Sarah Horton, and <a href="/WAI/EO/EOWG-members.html" shape="rect">Participants</a> of the <a href="/WAI/EO/" shape="rect">Education and Outreach Working Group.</a></p>
+    <div class="footer-nav"><p>[<a href="http://www.w3.org/WAI/sitemap.html" shape="rect">WAI Site Map</a>] [<a href="http://www.w3.org/WAI/sitehelp.html" shape="rect">Help with WAI Website</a>] [<a href="http://www.w3.org/WAI/search.php" shape="rect">Search</a>] [<a href="/WAI/contacts" shape="rect">Contacting WAI</a>]<br clear="none" />
+         <strong>Feedback welcome to <a href="mailto:wai-eo-editors@w3.org" shape="rect">wai-eo-editors@w3.org</a></strong> (a publicly archived list) or <a href="mailto:wai@w3.org" shape="rect">wai@w3.org</a> (a WAI staff-only list).</p></div>
+    <div class="copyright"><p><a rel="Copyright" href="/Consortium/Legal/ipr-notice#Copyright" shape="rect">Copyright</a> © 1994-2012 <a href="/" shape="rect"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/" shape="rect"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/" shape="rect"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/" shape="rect">Keio</a>), All Rights Reserved. W3C <a href="/Consortium/Legal/ipr-notice#Legal_Disclaimer" shape="rect">liability</a>, <a href="/Consortium/Legal/ipr-notice#W3C_Trademarks" shape="rect">trademark</a>, <a rel="Copyright" href="/Consortium/Legal/copyright-documents" shape="rect">document use</a> and <a rel="Copyright" href="/Consortium/Legal/copyright-software" shape="rect">software
+         licensing</a> rules apply. Your interactions with this site are in
+         accordance with our <a href="/Consortium/Legal/privacy-statement#Public" shape="rect">public</a> and <a href="/Consortium/Legal/privacy-statement#Members" shape="rect">Member</a> privacy
+         statements.</p></div>
+    <!-- end footer -->
   </div>
   </body>
   </html>
