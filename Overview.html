@@ -5,9 +5,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="Keywords" content="Web Accessibility Initiative, web accessibility, WAI, W3C, World Wide Web, Web, WWW, Consortium, computer, access, accessibility, disability, disabilities, worldwide, international, W3, standard, technology, free, open source, software" />
   <title>Planning for Web Accessibility</title>
-  <!-- This should be removed when moving to the live environment. Also any anchor links should have 
-       the absolute link (http://w3c.github.io/wai-planning-and-implementation/Overview.html) on anchor tags removed. -->
-  <base href="http://www.w3.org/WAI/impl/" />
+  <!-- When moving to the live environment any file or image links should have the following
+       removed from it:
+         http://www.w3.org/WAI/impl/
+   -->
   <!-- Remove this when moving to the live environment -->
   <style>
     .draft.note {
@@ -30,7 +31,7 @@
     }
   </style>
 
-  <link href="../wai-main.css" rel="stylesheet" type="text/css" />
+  <link href="http://www.w3.org/WAI/impl/../wai-main.css" rel="stylesheet" type="text/css" />
   <!-- When moving to live environment this needs to move to wai-main.css -->
   <style>
     .has-aside {
@@ -51,7 +52,8 @@
       margin: 0;
     }
     .aside ul {
-      list-style: disc outside url("../images/bullet-c60.gif");
+      /* This will need adjusted when moving to live */
+      list-style: disc outside url("http://www.w3.org/WAI/impl/../images/bullet-c60.gif");
       padding-left: 1.3em;
       margin-bottom: 0;
     }
@@ -69,15 +71,18 @@
   </style>
   <!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
   <link href="http://www.w3.org/WAI/style/excol.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="http://www.w3.org/WAI/scripts/excol/excol.js" xml:space="preserve"></script>
+  <!-- This should be used when the page goes live
+     <script type="text/javascript" src="http://www.w3.org/WAI/scripts/excol/excol.js" xml:space="preserve"></script> -->
+  <!-- This should be removed with the page goes live -->
+  <script type="text/javascript" src="excol.js" xml:space="preserve"></script>
   </head>
   <body>
   <div id="controls"><ul>
-        <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#skip" shape="rect"><img src="/Icons/downinpage.png" alt="" /> Skip to Content </a></li>
+        <li><a href="#skip" shape="rect"><img src="http://www.w3.org/WAI/impl/../../Icons/downinpage.png" alt="" /> Skip to Content </a></li>
         <li><a href="/WAI/changedesign.html" shape="rect"> | Change 
            text size or colors </a> </li>
      </ul></div>
-  <div id="masthead"><p id="logos"><a href="http://www.w3.org/" title="W3C Home" shape="rect"><img alt="W3C logo" src="/Icons/w3c_home" /></a><a href="http://www.w3.org/WAI/" title="WAI Home" shape="rect"><img alt="Web Accessibility initiative" src="/WAI/images/wai-temp" /></a></p></div>
+  <div id="masthead"><p id="logos"><a href="http://www.w3.org/" title="W3C Home" shape="rect"><img alt="W3C logo" src="http://www.w3.org/WAI/impl/../../Icons/w3c_home" /></a><a href="http://www.w3.org/WAI/" title="WAI Home" shape="rect"><img alt="Web Accessibility initiative" src="http://www.w3.org/WAI/impl/../../WAI/images/wai-temp" /></a></p></div>
   <div id="tagline"><p>WAI: Strategies, guidelines, resources to make the
         Web accessible to people with disabilities</p></div>
   <div id="nav"><h2>Site Navigation</h2><p id="w3cnav"><a href="http://www.w3.org/">W3C Home</a></p><p id="subhomenav"><a href="/WAI/">Web Accessibility Initiative (WAI) Home</a></p><ol id="nav1" type="A"><li><a href="../gettingstarted/Overview.html" shape="rect">Getting Started</a></li><li><a href="../users/Overview.html" shape="rect">Designing for Inclusion</a></li><li><a href="../guid-tech.html" shape="rect">Guidelines &amp; 
@@ -100,16 +105,16 @@
     <div id="contents">
        <h2>Page Contents</h2>
        <ul>
-         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#intro" shape="rect">Introduction</a></li>
-         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#aware" shape="rect">Exploring your organizational awareness</a></li>
-         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#scope" shape="rect">Determine scope</a></li>
-         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#policy" shape="rect">Develop Organizational Policy</a></li>
-         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#resource" shape="rect">Review available resources</a></li>
-         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#procure" shape="rect">Procurement and commissioning</a></li>
-         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#team" shape="rect">Building an accessibility team</a></li>
-         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#project" shape="rect">Project life cycle</a></li>
-         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#comms" shape="rect">Communicating and sharing</a></li>
-         <li><a href="http://w3c.github.io/wai-planning-and-implementation/Overview.html#monitor" shape="rect">Maintenance and monitoring</a></li>
+         <li><a href="#intro" shape="rect">Introduction</a></li>
+         <li><a href="#aware" shape="rect">Exploring your organizational awareness</a></li>
+         <li><a href="#scope" shape="rect">Determine scope</a></li>
+         <li><a href="#policy" shape="rect">Develop Organizational Policy</a></li>
+         <li><a href="#resource" shape="rect">Review available resources</a></li>
+         <li><a href="#procure" shape="rect">Procurement and commissioning</a></li>
+         <li><a href="#team" shape="rect">Building an accessibility team</a></li>
+         <li><a href="#project" shape="rect">Project life cycle</a></li>
+         <li><a href="#comms" shape="rect">Communicating and sharing</a></li>
+         <li><a href="#monitor" shape="rect">Maintenance and monitoring</a></li>
        </ul>
        <!-- end (page) contents (list)-->
     </div>
