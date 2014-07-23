@@ -9,6 +9,15 @@
        removed from it:
          http://www.w3.org/WAI/impl/
    -->
+  <link href="http://www.w3.org/WAI/style/excol.css" rel="stylesheet" type="text/css" />
+  <!-- This should be used when the page goes live
+     <script type="text/javascript" src="http://www.w3.org/WAI/scripts/excol/excol.js" xml:space="preserve"></script> -->
+  <!-- This should be removed with the page goes live -->
+  <script type="text/javascript" src="excol.js" xml:space="preserve"></script>
+
+  <link href="http://www.w3.org/WAI/impl/../wai-main.css" rel="stylesheet" type="text/css" />
+  <!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
+
   <!-- Remove this when moving to the live environment -->
   <style>
     .draft.note {
@@ -31,7 +40,6 @@
     }
   </style>
 
-  <link href="http://www.w3.org/WAI/impl/../wai-main.css" rel="stylesheet" type="text/css" />
   <!-- When moving to live environment this needs to move to wai-main.css -->
   <style>
     .has-aside {
@@ -68,13 +76,31 @@
     .f_panelHead.fs_selected {
     	border-bottom: solid #993300;
     }
+    
+    /* It may be better not to add this to the core wai-main.css as it would make more
+       widespread changes to how expand/collapse sections look. */
+    .f_panelHead + * {
+      margin-left: 0.5em;
+      padding-left: inherit;
+    }
+    
+    /* It may be better not to add this to the core wai-main.css as it would make more
+       widespread changes to how to top links would look. */
+    p.totop {
+      background-color: transparent;
+    }
+    p.totop a {
+      background: url("http://www.w3.org/Icons/topofpage.png") no-repeat scroll 10px center #eff5fb;
+      display: inline-block;
+      padding: 0.2em 0.7em 0.2em 2em;
+      text-decoration: none;
+    }
+    p.totop a:hover, p.totop a:focus {
+      text-decoration: underline;
+      background-color: #DAE4E9;
+    }
   </style>
-  <!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
-  <link href="http://www.w3.org/WAI/style/excol.css" rel="stylesheet" type="text/css" />
-  <!-- This should be used when the page goes live
-     <script type="text/javascript" src="http://www.w3.org/WAI/scripts/excol/excol.js" xml:space="preserve"></script> -->
-  <!-- This should be removed with the page goes live -->
-  <script type="text/javascript" src="excol.js" xml:space="preserve"></script>
+
   </head>
   <body>
   <div id="controls"><ul>
@@ -106,14 +132,12 @@
        <h2>Page Contents</h2>
        <ul>
          <li><a href="#intro" shape="rect">Introduction</a></li>
-         <li><a href="#aware" shape="rect">Exploring your organizational awareness</a></li>
-         <li><a href="#scope" shape="rect">Determine scope</a></li>
+         <li><a href="#resp" shape="rect">Establish Responsibilities</a></li>
          <li><a href="#policy" shape="rect">Develop Organizational Policy</a></li>
-         <li><a href="#resource" shape="rect">Review available resources</a></li>
-         <li><a href="#procure" shape="rect">Procurement and commissioning</a></li>
-         <li><a href="#team" shape="rect">Building an accessibility team</a></li>
-         <li><a href="#project" shape="rect">Project life cycle</a></li>
-         <li><a href="#comms" shape="rect">Communicating and sharing</a></li>
+         <li><a href="#resource" shape="rect">Review Available Resources</a></li>
+         <li><a href="#train" shape="rect">Skills and Training</a></li>
+         <li><a href="#project" shape="rect">Project Life Cycle</a></li>
+         <li><a href="#promte" shape="rect">Promote Organizational Awareness</a></li>
          <li><a href="#monitor" shape="rect">Maintenance and monitoring</a></li>
        </ul>
        <!-- end (page) contents (list)-->
@@ -152,8 +176,9 @@
       <li><a rel="nofollow" class="external text" href="http://www.w3.org/WAI/bcase/Overview.html">Developing a Web Accessibility Business Case</a> - Provides a outline of how incorporating accessibility can benefit your business or organization.</li>
     </ul>
 
-<p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>    
-    
+    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>    
+
+
     <h2 id="resp">Establish Responsibilities</h2>
     <p id="resp-1">Identify and appoint individuals who are responsible for accessibility within your project team or organization, and outline what the roles entail.</p>
     
@@ -227,7 +252,37 @@
       <li><a rel="nofollow" class="external text" href="http://www.w3.org/community/wai-engage/wiki/Accessibility_Responsibility_Breakdown">Accessibility Responsibility Breakdown</a> - Explores WCAG 2.0 success criteria by project role.</li>
     </ul>
 
-<p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+    <h2 id="policy">Develop Accessibility Policy</h2>
+    <p id="policy-1">Create or review your organizational or project accessibility policy. This should outline your commitment to accessibility, relevant standards or legislation, and contact information. There is likely to be an internal and external version of this document.</p>
+    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+    <h2 id="resource">Review Available Resources</h2>
+    <p id="resource-1">Identify and review what internal design and development resources are available and how they already support the project goals and accessibility policy. Resources could include design guidelines, templates, coding standards, coding libraries, content management systems or content strategies. You may also be able to review other organizational sites to identify common accessible solutions or barriers.</p>
+    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+    <h2 id="train">Skills and Training</h2>
+    <p id="train-1">Assess expertise and motivation of design, development and content personnel. Identify and plan for training key personnel within the project or organization. Secure external training resources to create and/or deliver traing options. Consider what additional recruitment needs might be required and how recruitment might change to respond to your organizational policy.</p>
+    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+    <h2 id="project">Project Life Cycle</h2>
+    <p id="project-1">Start early. Review each stage of the project considering where and what accessibility checks could be incorporated. Continually promote accessibility as a positive challenge within the team to encourage creative thinking of accessible solutions.</p>
+    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+    <h2 id="promte">Promote Organizational Awareness</h2>
+    <p id="promote-1">Consider how the project success or difficulties need to be feedback to stakeholders, the wider organization and the website audiences. Plan for ongoing issue tracking of website, organizational assets, such as design guidelines, and policies and procedures.</p>
+    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+    <h2 id="monitor">Maintenance and monitoring</h2>
+    <p id="monitor">Plan for regular content reviews and ensure the accessibility policy is incorporated into maintenance activities. Provide an appropriate feedback mechanism for users with accessibility issues.</p>
+    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
 
     <!-- end main -->
   </div>
