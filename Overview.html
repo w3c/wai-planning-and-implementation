@@ -49,11 +49,12 @@
   
     .aside {
       float: right;
-      width: 35%;
+      width: 34%;
       border: 1px solid #930;
       background-color: #ffc;
       padding: 1em;
       margin-top: 1em;
+      margin-left: 0.5em;
     }
   
     .aside h4 {
@@ -78,26 +79,12 @@
     }
     
     /* It may be better not to add this to the core wai-main.css as it would make more
-       widespread changes to how expand/collapse sections look. */
-    .f_panelHead + * {
-      margin-left: 0.5em;
-      padding-left: inherit;
-    }
-    
-    /* It may be better not to add this to the core wai-main.css as it would make more
        widespread changes to how to top links would look. */
-    p.totop {
-      background-color: transparent;
-    }
     p.totop a {
-      background: url("http://www.w3.org/Icons/topofpage.png") no-repeat scroll 10px center #eff5fb;
-      display: inline-block;
-      padding: 0.2em 0.7em 0.2em 2em;
       text-decoration: none;
     }
     p.totop a:hover, p.totop a:focus {
       text-decoration: underline;
-      background-color: #DAE4E9;
     }
   </style>
 
@@ -144,58 +131,68 @@
     </div>
 
 
-    <h2 id="intro">Introduction</h2>
-    <p id="intro-1">Planning to incorporate accessibility into your project or organization is as straight forward as any other planning task. This document aims to provide you with guidance, actions, questions and a framework for how to approach planning for accessibility. Your actual approach will vary depending the size of your organization, what you are aiming to achieve and where you are in the development process.</p>
-    <p id="intro2">Additional guidance is available if you are looking at <a href="http://www.w3.org/WAI/impl/improving.html">Improving the Accessibility of Your Website</a>.</p>
-    <p id="intro-3">This document is for project managers, project team leaders, and small business owners seeking to ensure a more accessible website or service. It will also benefit accessibility consultants who are engaged in supporting a project or broader organizational change.</p>
-
-    <h3 id="intro--driver">Driver for accessibility</h3>
-    <p id="intro--driver-1">Understanding why you or your organization are seeking to incorporate accessibility allows you to identify activities that might be important to the success of the project. For example, if senior management have directed that all new websites must be accessible, then there is a need to ensure that the accessibility of the website is reported to them regularly. If you are responding to national legislation it may be beneficial to convince your project team and stakeholders that accessibility is something more than simply a legal burden and it may be appropriate to seek external validation to the websites accessibility claims.</p>
-    <p id="intro--driver-2">The rationale for accessibility should be recorded as part of the broader project scope. This makes sure that everyone is clear why accessibility is important within this particular project. It also ensures that any further developments to the website include the same accessibility considerations.</p>
-
-    <h3 id="intro--identify-goal">Identify your goal</h3>
-    <p id="intro--identify-goal-1">What you are aiming to achieve is important in understanding what activities are required. It could be that you are seeking to bring about more accessibility thinking within all aspects of your organization. Perhaps you are a project manager seeking to understand what activities and questions are important to plan for when creating a new accessible web service. Or you may be part of a small organization seeking to ensure that the new website you are commissioning is as accessible as possible.</p>
-    <p id="intro--identify-goal-2">Understanding your goal allows you to ensure that the activities you undertake are appropriate. For example, if you are seeking to bring about organizational change then there will be a need to plan broader activities such as reviewing purchasing procedures, recruitment criteria or training provision.</p>
-    <p id="intro--identify-goal-3">As with the driver for accessibility, the goal should be recorded in the project scope.</p>
-
-    <h3 id="intro--influence">Organizational influence</h3>
-    <p id="intro--influence-1">Possibly one of the most important factors when considering what is achievable as a goal is what influence you have within your organization. It may be that, while you as the project manager do not have significant capacity to influence change, you have the backing of senior management who see what you are doing as the first steps in organization wide improvement. In this case you will need to consider what upward reporting is required and how to manage project legacy, such as changes in organizational design guidelines, procurement process or content management system recommendations.</p>
-    <p id="intro--influence-2">It could also be that your organization has not yet embraced accessibility and you are keen to promote the value of such an approach. In this case activities such as setting out a business case to stakeholders will be of importance, particularly if there is a need to secure additional project funds.</p>
-
-    <h3 id="intro--other-factors">Other important factors</h3>
-    <ul id="intro--other-factors-1">
-      <li>Size of organization - Larger organizations are likely to have more developed and structured procedures, and will have many more websites and online services. Smaller organizations may have limited resources to draw on, limiting what activities are possible.</li>
-      <li>Outsourcing - Ensuring that sub-contractors are aware of your expectations and how to check that they delivered to the requested standard</li>
-      <li>Personnel skills - Depending on how knowledgeable your team is you may have to schedule in and budget for additional training. For ongoing content management there may be a need to put in place training for new staff.</li>
-      <li>Development process - Your development methodology may impact on when and what activities you can schedule. For example, agile process may allow for earlier feedback on individual components as they are developed. A waterfall approach will have a more defined testing phase which would focus accessibility testing resources. A test-driven approach would require, where possible, work to unpack the standards into automated tests.</li>
-      <li>Content management system (CMS) - Are you using a CMS? How supportive of accessibility is it? Do you have scope to change this? Where a CMS is less supportive, there may be a need to write more proprietary code to address 'off-the-shelf' issues. </li>
-    </ul>
-
-    <h3 id="intro--related">Related resources</h3>
-    <ul id="intro--related-1">
-      <li><a rel="nofollow" class="external text" href="http://www.w3.org/WAI/bcase/Overview.html">Developing a Web Accessibility Business Case</a> - Provides a outline of how incorporating accessibility can benefit your business or organization.</li>
-    </ul>
-
-    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>    
-
-
-    <h2 id="resp">Establish Responsibilities</h2>
-    <p id="resp-1">Identify and appoint individuals who are responsible for accessibility within your project team or organization, and outline what the roles entail.</p>
-    
-    <h3 id="resp--actions">Key actions</h3>
-    <ul>
-      <li>Assign responsibilities across different areas of the project, such as design, content creation, development and quality assurance</li>
-      <li>Consider what organizational areas might impact on the accessibility of the project, such as human resources, procurement, marketing, organizational executive, legal</li>
-      <li>Communicate up and down within the organization who the responsible parties are</li>
-      <li>If using a external company or organization, ensure that they are aware of their responsibility to deliver an accessible solution, be that a whole website or one part of it, for example the content</li>
-      <li>For websites with an international presence, ensure responsibility is assigned for each region</li>
-      <li>Plan to communicate successes throughout the organization and share knowledge between responsible parties</li>
-      <li>Put in place systems to capture and manage identified issues, possibly across projects</li>
-    </ul>
-
     <div class="applicationNaviWrapper">
       <div class="f_controls_accordion f_fileToLoad_accordionControls"></div>
       <div id="accordion" class="accordionWrapper">
+
+      <h2 id="intro">Introduction</h2>
+      <p id="intro-1">Planning to incorporate accessibility into your project or organization is as straight forward as any other planning task. This document aims to provide you with guidance, actions, questions and a framework for how to approach planning for accessibility. Your actual approach will vary depending the size of your organization, what you are aiming to achieve and where you are in the development process.</p>
+      <p id="intro2">Additional guidance is available if you are looking at <a href="http://www.w3.org/WAI/impl/improving.html">Improving the Accessibility of Your Website</a>.</p>
+      <p id="intro-3">This document is for project managers, project team leaders, and small business owners seeking to ensure a more accessible website or service. It will also benefit accessibility consultants who are engaged in supporting a project or broader organizational change.</p>
+
+      <h3 id="intro--driver" class="f_panelHead">Driver for accessibility</h3>
+      <div>
+        <p id="intro--driver-1">Understanding why you or your organization are seeking to incorporate accessibility allows you to identify activities that might be important to the success of the project. For example, if senior management have directed that all new websites must be accessible, then there is a need to ensure that the accessibility of the website is reported to them regularly. If you are responding to national legislation it may be beneficial to convince your project team and stakeholders that accessibility is something more than simply a legal burden and it may be appropriate to seek external validation to the websites accessibility claims.</p>
+        <p id="intro--driver-2">The rationale for accessibility should be recorded as part of the broader project scope. This makes sure that everyone is clear why accessibility is important within this particular project. It also ensures that any further developments to the website include the same accessibility considerations.</p>
+      </div>
+
+      <h3 id="intro--identify-goal" class="f_panelHead">Identify your goal</h3>
+      <div>
+        <p id="intro--identify-goal-1">What you are aiming to achieve is important in understanding what activities are required. It could be that you are seeking to bring about more accessibility thinking within all aspects of your organization. Perhaps you are a project manager seeking to understand what activities and questions are important to plan for when creating a new accessible web service. Or you may be part of a small organization seeking to ensure that the new website you are commissioning is as accessible as possible.</p>
+        <p id="intro--identify-goal-2">Understanding your goal allows you to ensure that the activities you undertake are appropriate. For example, if you are seeking to bring about organizational change then there will be a need to plan broader activities such as reviewing purchasing procedures, recruitment criteria or training provision.</p>
+        <p id="intro--identify-goal-3">As with the driver for accessibility, the goal should be recorded in the project scope.</p>
+      </div>
+
+      <h3 id="intro--influence" class="f_panelHead">Organizational influence</h3>
+      <div>
+        <p id="intro--influence-1">Possibly one of the most important factors when considering what is achievable as a goal is what influence you have within your organization. It may be that, while you as the project manager do not have significant capacity to influence change, you have the backing of senior management who see what you are doing as the first steps in organization wide improvement. In this case you will need to consider what upward reporting is required and how to manage project legacy, such as changes in organizational design guidelines, procurement process or content management system recommendations.</p>
+        <p id="intro--influence-2">It could also be that your organization has not yet embraced accessibility and you are keen to promote the value of such an approach. In this case activities such as setting out a business case to stakeholders will be of importance, particularly if there is a need to secure additional project funds.</p>
+      </div>
+
+      <h3 id="intro--other-factors" class="f_panelHead">Other important factors</h3>
+      <div>
+        <ul id="intro--other-factors-1">
+          <li>Size of organization - Larger organizations are likely to have more developed and structured procedures, and will have many more websites and online services. Smaller organizations may have limited resources to draw on, limiting what activities are possible.</li>
+          <li>Outsourcing - Ensuring that sub-contractors are aware of your expectations and how to check that they delivered to the requested standard</li>
+          <li>Personnel skills - Depending on how knowledgeable your team is you may have to schedule in and budget for additional training. For ongoing content management there may be a need to put in place training for new staff.</li>
+          <li>Development process - Your development methodology may impact on when and what activities you can schedule. For example, agile process may allow for earlier feedback on individual components as they are developed. A waterfall approach will have a more defined testing phase which would focus accessibility testing resources. A test-driven approach would require, where possible, work to unpack the standards into automated tests.</li>
+          <li>Content management system (CMS) - Are you using a CMS? How supportive of accessibility is it? Do you have scope to change this? Where a CMS is less supportive, there may be a need to write more proprietary code to address 'off-the-shelf' issues. </li>
+        </ul>
+      </div>
+
+      <h3 id="intro--related">Related resources</h3>
+      <ul id="intro--related-1">
+        <li><a rel="nofollow" class="external text" href="http://www.w3.org/WAI/bcase/Overview.html">Developing a Web Accessibility Business Case</a> - Provides a outline of how incorporating accessibility can benefit your business or organization.</li>
+      </ul>
+
+      <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>    
+
+
+      <h2 id="resp">Establish Responsibilities</h2>
+      <p id="resp-1">Identify and appoint individuals who are responsible for accessibility within your project team or organization, and outline what the roles entail.</p>
+    
+      <h3 id="resp--actions">Key actions</h3>
+      <ul>
+        <li>Assign responsibilities across different areas of the project, such as design, content creation, development and quality assurance</li>
+        <li>Consider what organizational areas might impact on the accessibility of the project, such as human resources, procurement, marketing, organizational executive, legal</li>
+        <li>Communicate up and down within the organization who the responsible parties are</li>
+        <li>If using a external company or organization, ensure that they are aware of their responsibility to deliver an accessible solution, be that a whole website or one part of it, for example the content</li>
+        <li>For websites with an international presence, ensure responsibility is assigned for each region</li>
+        <li>Plan to communicate successes throughout the organization and share knowledge between responsible parties</li>
+        <li>Put in place systems to capture and manage identified issues, possibly across projects</li>
+      </ul>
+
+
         <h3 id="resp--resp" class="f_panelHead">Responsibilities</h3>
         <div>
           <div class="has-aside">
@@ -244,46 +241,47 @@
           <p id="resp--international-2">In this case it is important to ensure that there are identified individuals and/or teams who have responsibility for accessibility in the different regions. This could be individuals from different regional offices or could be someone within central office who has web responsibilities stretching across multiple regions.</p>
           <p id="resp--international-3">As WCAG 2.0 is the internationally recognized standard for web accessibility, your organizational policy will benefit from referencing it as the basis. In some situations local policies may reference additional requirements or particular accommodations that you will need to be aware of.</p>
         </div>
+
+      <h3 id="resp--related">Related resources</h3>
+      <ul id="resp--related-1">
+        <li><a rel="nofollow" class="external text" href="http://www.w3.org/community/wai-engage/wiki/Accessibility_Responsibility_Breakdown">Accessibility Responsibility Breakdown</a> - Explores WCAG 2.0 success criteria by project role.</li>
+      </ul>
+
+      <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+      <h2 id="policy">Develop Accessibility Policy</h2>
+      <p id="policy-1">Create or review your organizational or project accessibility policy. This should outline your commitment to accessibility, relevant standards or legislation, and contact information. There is likely to be an internal and external version of this document.</p>
+      <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+      <h2 id="resource">Review Available Resources</h2>
+      <p id="resource-1">Identify and review what internal design and development resources are available and how they already support the project goals and accessibility policy. Resources could include design guidelines, templates, coding standards, coding libraries, content management systems or content strategies. You may also be able to review other organizational sites to identify common accessible solutions or barriers.</p>
+      <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+      <h2 id="train">Skills and Training</h2>
+      <p id="train-1">Assess expertise and motivation of design, development and content personnel. Identify and plan for training key personnel within the project or organization. Secure external training resources to create and/or deliver traing options. Consider what additional recruitment needs might be required and how recruitment might change to respond to your organizational policy.</p>
+      <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+      <h2 id="project">Project Life Cycle</h2>
+      <p id="project-1">Start early. Review each stage of the project considering where and what accessibility checks could be incorporated. Continually promote accessibility as a positive challenge within the team to encourage creative thinking of accessible solutions.</p>
+      <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+      <h2 id="promte">Promote Organizational Awareness</h2>
+      <p id="promote-1">Consider how the project success or difficulties need to be feedback to stakeholders, the wider organization and the website audiences. Plan for ongoing issue tracking of website, organizational assets, such as design guidelines, and policies and procedures.</p>
+      <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
+      <h2 id="monitor">Maintenance and Monitoring</h2>
+      <p id="monitor">Plan for regular content reviews and ensure the accessibility policy is incorporated into maintenance activities. Provide an appropriate feedback mechanism for users with accessibility issues.</p>
+      <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
+
+
       </div>
     </div>
-
-    <h3 id="resp--related">Related resources</h3>
-    <ul id="resp--related-1">
-      <li><a rel="nofollow" class="external text" href="http://www.w3.org/community/wai-engage/wiki/Accessibility_Responsibility_Breakdown">Accessibility Responsibility Breakdown</a> - Explores WCAG 2.0 success criteria by project role.</li>
-    </ul>
-
-    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
-
-
-    <h2 id="policy">Develop Accessibility Policy</h2>
-    <p id="policy-1">Create or review your organizational or project accessibility policy. This should outline your commitment to accessibility, relevant standards or legislation, and contact information. There is likely to be an internal and external version of this document.</p>
-    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
-
-
-    <h2 id="resource">Review Available Resources</h2>
-    <p id="resource-1">Identify and review what internal design and development resources are available and how they already support the project goals and accessibility policy. Resources could include design guidelines, templates, coding standards, coding libraries, content management systems or content strategies. You may also be able to review other organizational sites to identify common accessible solutions or barriers.</p>
-    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
-
-
-    <h2 id="train">Skills and Training</h2>
-    <p id="train-1">Assess expertise and motivation of design, development and content personnel. Identify and plan for training key personnel within the project or organization. Secure external training resources to create and/or deliver traing options. Consider what additional recruitment needs might be required and how recruitment might change to respond to your organizational policy.</p>
-    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
-
-
-    <h2 id="project">Project Life Cycle</h2>
-    <p id="project-1">Start early. Review each stage of the project considering where and what accessibility checks could be incorporated. Continually promote accessibility as a positive challenge within the team to encourage creative thinking of accessible solutions.</p>
-    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
-
-
-    <h2 id="promte">Promote Organizational Awareness</h2>
-    <p id="promote-1">Consider how the project success or difficulties need to be feedback to stakeholders, the wider organization and the website audiences. Plan for ongoing issue tracking of website, organizational assets, such as design guidelines, and policies and procedures.</p>
-    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
-
-
-    <h2 id="monitor">Maintenance and Monitoring</h2>
-    <p id="monitor">Plan for regular content reviews and ensure the accessibility policy is incorporated into maintenance activities. Provide an appropriate feedback mechanism for users with accessibility issues.</p>
-    <p class="totop"><a href="#toc" shape="rect">back to page contents</a></p>
-
     <!-- end main -->
   </div>
 
