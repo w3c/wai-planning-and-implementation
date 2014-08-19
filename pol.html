@@ -2,321 +2,440 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="Keywords" content="Web Accessibility Initiative, web accessibility, WAI, W3C, World Wide Web, Web, WWW, Consortium, computer, access, accessibility, disability, disabilities, worldwide, international, W3, standard, technology, free, open source, software" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Keywords" content="Web Accessibility Initiative, web accessibility, WAI, W3C, World Wide Web, Web, WWW, Consortium, computer, access, accessibility, disability, disabilities, worldwide, international, W3, standard, technology, free, open source, software" />
 
-  <title>Developing Organizational Policies on Web Accessibility</title>
+	<title>Developing Organizational Policies on Web Accessibility</title>
+	<!-- When moving to the live environment any file or image links should have the following
+			removed from it:
+				http://www.w3.org/WAI/impl/
+	-->
+	<link href="http://www.w3.org/WAI/style/excol.css" rel="stylesheet" type="text/css" />
+	<!-- This should be used when the page goes live
+		<script type="text/javascript" src="http://www.w3.org/WAI/scripts/excol/excol.js" xml:space="preserve"></script> -->
+	<!-- This should be removed with the page goes live -->
+	<script type="text/javascript" src="excol.js" xml:space="preserve"></script>
+	
+	<link href="http://www.w3.org/WAI/impl/../wai-main.css" rel="stylesheet" type="text/css" />
+	<!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
 
-  <!-- This should be removed when moving to the live environment. Also any anchor links should have 
-       the absolute link (http://w3c.github.io/wai-planning-and-implementation/Overview.html) on anchor tags removed. -->
-  <base href="http://www.w3.org/WAI/impl/" />
-  
-  <link href="/WAI/wai-main.css" rel="stylesheet" type="text/css" media="screen" />
+	<!-- Remove this when moving to the live environment -->
+	<style>
+		.draft.note {
+			background-color: #FFE6DA;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			margin: 1em;
+			padding: 5px 10px 8px;
+		}
+		.draft.note::before {
+			content: "Notes:";
+			font-weight: bold;
+		}
+		.draft.note p:first-child {
+			margin-top: 0;
+		}
+		.draft.note p:last-child {
+			margin-bottom: 0;
+		}
+	</style>
 
-  <!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
+	<!-- When moving to live environment this needs to move to wai-main.css -->
+	<style>
+		.has-aside {
+			float: left;
+			width: 60%;
+		}
+	
+		.aside {
+			float: right;
+			width: 40%;
+			margin: 0 0 1em 1em;
+		}
+	
+		.aside h4 {
+			margin: 0;
+		}
+		.aside ul {
+			/* This will need adjusted when moving to live */
+			list-style: disc outside url("http://www.w3.org/WAI/impl/../images/bullet-c60.gif");
+			padding-left: 1.3em;
+			margin-bottom: 0;
+		}
+		
+		#subtitle {
+			font-weight: bold;
+			font-size: 130%;
+			margin: 0.5em 0 1.5em 0;
+			color: #930;
+		}
+
+		/* ex-col jumping with hover/focus temp fix. Ideally this should be incorporated
+			into /WAI/style/excol.css to address this issue throughout the site */
+		.f_panelHead {
+			border-bottom: solid #fffaf5;
+		}
+		.f_panelHead.fs_hover, .f_panelHead.fs_focus {
+			border-bottom: solid #993300;
+		}
+		.f_panelHead.fs_selected {
+			border-bottom: solid #993300;
+		}
+		
+		/* It may be better not to add this to the core wai-main.css as it would make more
+			widespread changes to how to top links would look. */
+		p.totop a {
+			text-decoration: none;
+		}
+		p.totop a:hover, p.totop a:focus {
+			text-decoration: underline;
+		}
+		
+		/* Again, it may be beneficial to move these classes into wai-main.css */
+		.example-bar {
+			border-left: solid 2px #930;
+			margin-left: 3em;
+			padding-left: 10px;
+		}
+		.eg {
+			color: #930;
+			font-size: 135%;
+			float:left;
+			padding-top: 0;
+			margin-top: 0;
+		}
+	</style>
 </head>
 
 <body>
-  <div id="controls"><ul>
-        <li><a href="#skip" shape="rect"><img src="/Icons/downinpage.png" alt="" /> Skip to Content </a></li>
-        <li><a href="/WAI/changedesign.html" shape="rect"> | Change 
-           text size or colors </a> </li>
-     </ul></div>
+	<div id="controls"><ul>
+		<li><a href="#skip"><img src="http://www.w3.org/WAI/impl/../../Icons/downinpage.png" alt="" /> Skip to Content</a></li>
+		<li> | <a href="/WAI/changedesign.html">Change text size or colors</a></li>
+	</ul></div>
 
-  <div id="masthead"><p id="logos"><a href="http://www.w3.org/" title="W3C Home" shape="rect"><img alt="W3C logo" src="/Icons/w3c_home" /></a><a href="http://www.w3.org/WAI/" title="WAI Home" shape="rect"><img alt="Web Accessibility initiative" src="/WAI/images/wai-temp" /></a></p></div>
+	<div id="masthead"><p id="logos"><a href="http://www.w3.org/" title="W3C Home"><img alt="W3C logo" src="http://www.w3.org/WAI/impl/../../Icons/w3c_home" /></a><a href="http://www.w3.org/WAI/" title="WAI Home"><img alt="Web Accessibility initiative" src="http://www.w3.org/WAI/impl/../../WAI/images/wai-temp" /></a></p></div>
 
-      <div id="tagline"><p>WAI: Strategies, guidelines, resources to make the
-        Web accessible to people with disabilities</p></div>
+	<div id="tagline"><p>WAI: Strategies, guidelines, resources to make the Web accessible to people with disabilities</p></div>
 
+	<div id="nav">
+		<h2>Site Navigation</h2>
+		<p id="w3cnav"><a href="http://www.w3.org/">W3C Home</a></p>
+		<p id="subhomenav"><a href="/WAI/">Web Accessibility Initiative (WAI) Home</a></p>
+		<ol id="nav1" type="A">
+			<li><a href="../gettingstarted/Overview.html">Getting Started</a></li>
+			<li><a href="../users/Overview.html">Designing for Inclusion</a></li>
+			<li><a href="../guid-tech.html">Guidelines &amp; Techniques</a></li>
+			<li class="current-nav "><a href="../managing.html">Planning &amp; Implementing</a>
+				<ul>
+					<li class="current-nav nav-head">Policy Resources
+						<ol>
+							<li><a href="../Policy/harmon.html">Standards Harmonization</a></li>
+							<li><a href="../Policy/Overview.html">International Policies</a></li>
+							<li id="current-node" class="current-nav"><span class="label"><span id="current-icon">»</span>Organizational Policies</span></li>
+						</ol>
+					</li>
+					<li class="nav-head">Managing Accessibility
+						<ol>
+							<li><a href="Overview.html">Planning</a></li>
+							<li><a href="improving.html">Improving Existing Sites</a></li>
+							<li><a href="../users/involving.html">Involving Users in Web Projects</a></li>
+							<li><a href="software.html">Selecting Authoring Tools</a></li>
+						</ol>
+					</li>
+				</ul>
+			</li>
+			<li><a href="../eval/Overview.html">Evaluating Accessibility</a></li>
+			<li><a href="../train.html">Presentations &amp; Tutorials</a></li>
+			<li><a href="../about-links.html">Getting Involved with WAI</a></li>
+		</ol>
+		
+		<div id="nav-static">
+			<div class="nav-discover">
+				<p><a href="http://www.w3.org/WAI/yourWAI"><strong><u>Discover new resources</u></strong> for people with disabilities, policy makers, managers, and you!</a></p>
+			</div>
+				
+			<p class="translations"><a href="http://www.w3.org/WAI/wai-translations"><img src="http://www.w3.org/WAI/images/translations-med-1" alt="characters from different languages" /> Translations</a></p>
+		</div>
+	</div>
 
-  <div id="nav"><h2>Site Navigation</h2><p id="w3cnav"><a href="http://www.w3.org/">W3C Home</a></p><p id="subhomenav"><a href="/WAI/">Web Accessibility Initiative (WAI) Home</a></p><ol id="nav1" type="A"><li><a href="../gettingstarted/Overview.html" shape="rect">Getting Started</a></li><li><a href="../users/Overview.html" shape="rect">Designing for Inclusion</a></li><li><a href="../guid-tech.html" shape="rect">Guidelines &amp; 
-              Techniques</a></li><li class="current-nav "><a href="../managing.html" shape="rect">Planning &amp; Implementing</a><ul><li class="current-nav nav-head">Policy Resources
-                
-                 <ol><li><a href="../Policy/harmon.html" shape="rect">Standards Harmonization</a></li><li><a href="../Policy/Overview.html" shape="rect">International Policies</a></li><li id="current-node" class="current-nav "><span class="label"><span id="current-icon">»</span>Organizational Policies</span></li></ol></li><li class="nav-head">Managing Accessibility
-                
-                 <ol><li><a href="Overview.html" shape="rect">Implementation Plan</a></li><li><a href="improving.html" shape="rect">Improving Existing Sites</a></li><li><a href="../users/involving.html" shape="rect">Involving Users in Web Projects</a></li><li><a href="software.html" shape="rect">Selecting Authoring Tools</a></li></ol></li></ul></li><li><a href="../eval/Overview.html" shape="rect">Evaluating Accessibility</a></li><li><a href="../train.html" shape="rect">Presentations &amp; Tutorials</a></li><li><a href="../about-links.html" shape="rect">Getting Involved with WAI</a></li></ol><div id="nav-static"><div class="nav-discover">
-           <p><a href="http://www.w3.org/WAI/yourWAI" shape="rect"><strong><u>Discover new resources</u></strong> for people with disabilities, policy makers, managers, and you!</a></p>
-        </div><p class="translations"><a href="http://www.w3.org/WAI/wai-translations" shape="rect"><img src="http://www.w3.org/WAI/images/translations-med-1" alt="characters from different languages" /> Translations</a></p></div></div>
+	<div id="main">
+		<div id="skipwrapper"><a id="skip">-</a></div>
 
-  <div id="main">
+		<!-- Remove this when moving to live environment -->
+		<p class="highlight-version"><strong>This is an internal Editor's Draft. The main page is at <a href="http://www.w3.org/WAI/impl/pol.html">www.w3.org/WAI/impl/pol.html</a><br>
+			Please send any suggestions, edits, or comments</strong> to the publicly-archived list: <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a>
+		</p>
 
-    <!-- Remove this when moving to live environment -->
-    <p class="highlight-version"><strong>This is an internal Editor's Draft. The main page is at <a href="http://www.w3.org/WAI/impl/pol.html">www.w3.org/WAI/impl/pol.html</a><br>
-        Please send any suggestions, edits, or comments</strong> to the publicly-archived list: <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a>
-    </p>
+		<h1>Developing Organizational Policies on Web Accessibility</h1>
+		<div id="contents"> 
+			<h2>Page Contents</h2>
+			<ul>
+				<li><a href="#intro">Introduction</a></li>
+				<li><a href="#refer">Reference guidelines clearly</a></li>
+				<li><a href="#confm">Specify conformance level</a></li>
+				<li><a href="#scope">Define scope of website(s)</a></li>
+				<li><a href="#miles">Set milestones</a></li>
+				<li><a href="#monit">Define monitoring, conformance claims, and follow-up process</a></li>
+				<li><a href="#integ">Provide for integration and updating of policy</a></li>
+				<li><a href="#examples">Example policies</a></li>
+			</ul>
+		</div>
 
-  <h1>Developing Organizational Policies on Web Accessibility</h1>
-  <div id="contents"> 
-      <h2>Page Contents</h2>
-  <ul>
-  <li><a href="#intro" shape="rect">Introduction</a></li>
-  <li><a href="#refer" shape="rect">Reference guidelines clearly</a></li>
-  <li><a href="#confm" shape="rect">Specify conformance level</a></li>
-  <li><a href="#scope" shape="rect">Define scope of website(s)</a></li>
-  <li><a href="#miles" shape="rect">Set milestones</a></li>
-  <li><a href="#monit" shape="rect">Define monitoring, conformance claims, and
-  follow-up process</a></li>
-  <li><a href="#integ" shape="rect">Provide for integration and updating of
-  policy</a></li>
-  </ul>
-      <!-- end (page) contents (list)-->
-  </div>
+		<h2><a name="intro" id="intro" class="no-display">Introduction</a></h2>
 
+		<p>Whether it is simple, or comprehensive your organizational policy captures your aims in creating accessible online resources.</p>
+		 
+		<p>This document addresses considerations that can arise when developing organizational policies on web accessibility.</p>
 
-  <h2><a name="intro" id="intro" shape="rect">Introduction</a></h2>
+		<p>Organizational policies can be very simple, or very comprehensive.</p>
 
-  <p>This document addresses considerations that can arise when developing
-  organizational policies on web accessibility. <br clear="none" />
-  </p>
+		<p>Since there are <a href="/WAI/Policy/">existing governmental policies</a>
+		which apply to some kinds of websites in some countries, organizations
+		should ensure that their policies at least require the minimum accessibility
+		mandated by any policies which already apply to their sites.</p>
 
-  <p>Organizational policies can be very simple, or very comprehensive.</p>
+		<p>The following sections address considerations in setting organizational
+		policy in more detail.</p>
 
-  <h3>Example of simple policy:</h3>
-  <ul>
-    <li>"[This organization] is committed to ensuring accessibility of its website for people with disabilities. All the pages on our website will
-      conform to W3C WAI's <a href="/TR/WCAG/" shape="rect">Web Content Accessibility
-      Guidelines</a> 2.0, Level AA conformance."</li>
-  </ul>
+		<h2><a name="refer" id="refer">Reference guidelines clearly</a></h2>
+		<ul>
+			<li>The term "WAI Guidelines" is non-specific, as it can refer to any one
+				of the three accessibility guidelines produced by W3C WAI. Provide a
+				clear reference to the specific guidelines document with which
+				conformance is expected: 
+				<ul>
+					<li>Web Content Accessibility Guidelines (<a href="/WAI/intro/wcag">WCAG</a>) is the
+						W3C WAI specification which explains how to make websites
+					accessible.</li>
+					<li>Authoring Tool Accessibility Guidelines (<a href="/WAI/intro/atag">ATAG</a>) is the
+						W3C WAI specification which explains how to make software better
+						support the production of accessible web content.</li>
+					<li>User Agent Accessibility Guidelines (<a href="/WAI/intro/uaag">UAAG</a>) is the
+						specification which explains how to make accessible browsers and
+						multimedia players.</li>
+				</ul>
+			</li>
+			<li>Organizations wishing to require conformance to the latest version of the standards may specify conformance	without specifying a version number.</li>
+			<li>See <a href="http://www.w3.org/WAI/intro/linking.html">Referencing and Linking to WAI Guidelines and Technical Documents</a> for more information.<br clear="none" />
+			</li>
+		</ul>
 
-  <h3>Example of comprehensive policy:</h3>
-  <ul>
-    <li>"[This organization] is committed to ensuring accessibility of its website for people with disabilities. New and updated web content produced
-      by our organization will conform to W3C WAI's <a href="/TR/WCAG/" shape="rect">Web Content Accessibility Guidelines</a> 2.0, Level A conformance, by [date].
-      Existing web content produced by our organization, and new, updated, and
-      existing web content provided for our site by third-party developers,
-      will conform to Level AA conformance by [date]. We will initiate an
-      internal monitoring program by [date]. Vendors supplying software used to
-      develop our site will be required to provide information by [date] on
-      conformance to W3C WAI's <a href="/TR/ATAG/" shape="rect">Authoring Tool
-      Accessibility Guidelines</a> [latest version], Conformance Level A. Our home page and
-      our 'about this site' page will include links to this policy. We will
-      review this policy in the future to consider updating it to  reference later
-      versions of W3C's accessibility guidelines."</li>
-  </ul>
+		<h2><a name="confm" id="confm">Specify conformance level</a></h2>
+		<ul>
+			<li>Specify an expected level of conformance for website(s). For example: 
+				<ul>
+					<li>"Conformance to WCAG 2.0, Level" sets the expectation that a website would fulfill all Level A success criteria, which address
+						absolute barriers to accessing content on a website.</li>
+					<li>"Conformance to WCAG 2.0, Level AA" sets the expectation that a website would fulfill all Level A and Level AA success criteria,
+						which address absolute and substantial barriers to accessing content
+						on a website.</li>
+					<li>"Conformance to WCAG 2.0, Level AAA" sets the expectation that a website would fulfill all Level A, Level AA, and Level AAA success criteria,
+						which address absolute, substantial, and minor barriers to accessing
+						content on a website.</li>
+				</ul>
+			</li>
+			<li>Specify an expected level of conformance for authoring tools used by
+				the organization, or by third party developers, to produce content for
+				the organization's website. 
+				<ul>
+					<li>"Conformance to ATAG [version number], Level A" sets the expectation that web
+						authoring software acquired by an organization can fulfill all
+						Level A success criteria for accessibility of the software user
+						interface and support for production of accessible content. [See
+						example under "#5 Set milestones" below.]</li>
+					<li>[To add to terms of subcontract]: "[Subcontracted web developer]
+						will consider the use of ATAG	[version number]-conformant software where
+						available. If not using ATAG-conformant authoring tools,
+						[subcontracted web developer] will ensure that all content and
+						templates generated for [this organization's] production of content
+						is WCAG 2.0, Level AA-conformant, and contains no markup that will
+						interfere with generation of WCAG-conformant content.</li>
+					<li>See "<a href="http://www.w3.org/WAI/impl/software.html">Selecting
+						and Using Authoring Tools for Web Accessibility</a>" for additional
+						detail.</li>
+				</ul>
+			</li>
+		</ul>
 
-  <p>Since there are <a href="/WAI/Policy/" shape="rect">existing governmental policies</a>
-  which apply to some kinds of websites in some countries, organizations
-  should ensure that their policies at least require the minimum accessibility
-  mandated by any policies which already apply to their sites.</p>
+		<h2><a name="scope" id="scope">Define scope of website(s)</a></h2>
+		<ul>
+			<li>Specify to what extent this organization's requirements should apply to
+				new, updated, and existing web pages. For example: 
+				<ul>
+					<li>"This policy applies to all new, updated, and existing web
+					pages."</li>
+				</ul>
+			</li>
+			<li>Specify to what extent requirements should apply to web pages provided
+				by a third-party (subcontractor, or other information provider, but as
+				part of main site). The website's users may need access to primary and
+				to third-party content equally. It may take additional effort to educate
+				and get compliance from third-party content developers. For example: 
+				<ul>
+					<li>"This policy applies to all web content produced or updated by
+						[this organization]. In addition, [this organization] is taking the
+						following steps to ensure accessibility of content provided by
+						third-party developers [NOTE that for some sites, accessibility of
+						third-party content may be essential to complying with government
+						policy]: 
+						<ul>
+							<li>informing third-party developers of [this organization's]
+								policy on web accessibility;</li>
+							<li>providing links to information and resources on implementing
+								web accessibility;</li>
+							<li>providing the following incentives to providers of WCAG 2.0 Level AA-conformant content...;</li>
+							<li>monitoring and providing feedback on inaccessible third-party
+								content;</li>
+							<li>seeking alternative third-party content providers where
+								original providers continue to provide non-conformant
+							content.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
 
-  <p>The following sections address considerations in setting organizational
-  policy in more detail.</p>
+		<h2><a name="miles" id="miles">Set milestones</a></h2>
+		<ul>
+			<li>Set a date by which the organizations website(s) will meet a given
+				conformance level. For example: 
+				<ul>
+					<li>"By [date] [this organization's] websites will meet WCAG 2.0, Level AA conformance."</li>
+				</ul>
+			</li>
+			<li>In some cases it may be practical to phase in accessibility by
+				addressing all of level A success criteria rapidly, since these can be
+				absolute barriers if not addressed; then phasing in level AA success criteria with the next round of site improvements [no later than a
+				specified date]; with level AAA success criteria left as optional. For
+				example: 
+				<ul>
+					<li>"By [first date] [this organization's] websites will meet WCAG 2.0, Level A conformance; and by [second date] [this organization's]
+						websites will meet WCAG 2.0, Level AA conformance."</li>
+				</ul>
+			</li>
+			<li>Consider how to address questions of priorities that may arise
+				especially for websites with a large number of pages. Do not make
+				assumptions about which areas of a website or which web services people
+				with disabilities are interested in or not. For example: 
+				<ul>
+					<li>"This policy applies to all areas of this organization's internal
+						and external websites, including legacy content."</li>
+					<li>Or, "This policy applies to all areas of this organization's
+						internal and external websites, with priority to [specify which
+						areas] areas of the site; however, all areas of the site are expected
+						to conform to [specify conformance level] by [second date].</li>
+				</ul>
+			</li>
+			<li>Consider setting date(s) for accessibility support in software. For
+				example:	
+				<ul>
+					<li>"By [first date], all vendors of authoring tools used by [this
+						company] should provide information regarding their plans for ATAG [version number] conformance in future versions of their software. By [second
+						date] [this company] will preferentially purchase ATAG-conformant
+						authoring tools."</li>
+				</ul>
+			</li>
+			<li>Consider setting dates for browser and multimedia conformance, without
+				restricting people's ability to use adaptive browsers. 
+				<ul>
+					<li>"By [date], all vendors of browsers and multimedia players used by
+						[this company] should provide information regarding their plans for
+						UAAG [version number] conformance in future versions of their software. By [second
+						date] [this company] will preferentially purchase UAAG-conformant
+						browsers and multimedia players. <br clear="none" />
+					</li>
+				</ul>
+			</li>
+			<li>Consider setting dates for establishing internal resources for
+				training, technical assistance, monitoring, and/or an internal web page
+				with links to such resources.</li>
+		</ul>
 
-  <h2><a name="refer" id="refer" shape="rect">Reference guidelines clearly</a></h2>
-  <ul>
-    <li>The term "WAI Guidelines" is non-specific, as it can refer to any one
-      of the three accessibility guidelines produced by W3C WAI. Provide a
-      clear reference to the specific guidelines document with which
-      conformance is expected: 
-      <ul>
-        <li>Web Content Accessibility Guidelines (<a href="/WAI/intro/wcag" shape="rect">WCAG</a>) is the
-          W3C WAI specification which explains how to make websites
-        accessible.</li>
-        <li>Authoring Tool Accessibility Guidelines (<a href="/WAI/intro/atag" shape="rect">ATAG</a>) is the
-          W3C WAI specification which explains how to make software better
-          support the production of accessible web content.</li>
-        <li>User Agent Accessibility Guidelines (<a href="/WAI/intro/uaag" shape="rect">UAAG</a>) is the
-          specification which explains how to make accessible browsers and
-          multimedia players.</li>
-      </ul>
-    </li>
-    <li>Organizations wishing to require conformance to the latest version of the standards may specify conformance  without specifying a version number.</li>
-    <li>See <a href="http://www.w3.org/WAI/intro/linking.html" shape="rect">Referencing and Linking to WAI Guidelines and Technical Documents</a> for more information.<br clear="none" />
-    </li>
-  </ul>
+		<h2><a name="monit" id="monit">Define monitoring, conformance claims, and
+		follow-up process</a></h2>
+		<ul>
+			<li>Specify a recommended process and schedule for reviewing the
+				organization's website for accessibility. For example: 
+				<ul>
+					<li>"Each department will review all areas of the organizations' website under its control using the process described at <a href="http://www.w3.org/WAI/eval/">Evaluating Web Sites for
+						Accessibility</a>, and will review all new material that it publishes
+						by using the same process."</li>
+					<li>Each section of the website will include links for feedback on the
+						site; this information will be compiled and considered during the
+						review process."</li>
+				</ul>
+			</li>
+			<li>Specify whether or not conformant pages, or sections of a website,
+				should be labeled as such. For example: 
+				<ul>
+					<li>"The introductory page for sections of the website that have been
+						determined to be conformant according to [link] process should
+						display the [WCAG 2.0 Level	A logo] or bear the following statement
+						["this page conforms to..."]</li>
+				</ul>
+			</li>
+			<li>Consider specifying a periodic review of areas of the website by an
+				internal department with the authority to follow up on non-conformant
+				areas of the website. For example: 
+				<ul>
+					<li>"[This organization] will conduct periodic reviews of the website
+						and any department with non-conforming web pages will be asked to
+						correct the problem within two weeks. Further problems in
+						accessibility of an area will result in [specify as appropriate]"</li>
+				</ul>
+			</li>
+		</ul>
 
-  <h2><a name="confm" id="confm" shape="rect">Specify conformance level</a></h2>
-  <ul>
-    <li>Specify an expected level of conformance for website(s). For example: 
-      <ul>
-        <li>"Conformance to WCAG 2.0, Level" sets the expectation that a website would fulfill all Level A success criteria, which address
-          absolute barriers to accessing content on a website.</li>
-        <li>"Conformance to WCAG 2.0, Level AA" sets the expectation that a website would fulfill all Level A and Level AA success criteria,
-          which address absolute and substantial barriers to accessing content
-          on a website.</li>
-        <li>"Conformance to WCAG 2.0, Level AAA" sets the expectation that a website would fulfill all Level A, Level AA, and Level AAA success criteria,
-          which address absolute, substantial, and minor barriers to accessing
-          content on a website.</li>
-      </ul>
-    </li>
-    <li>Specify an expected level of conformance for authoring tools used by
-      the organization, or by third party developers, to produce content for
-      the organization's website. 
-      <ul>
-        <li>"Conformance to ATAG [version number], Level A" sets the expectation that web
-          authoring software acquired by an organization can fulfill all
-          Level A success criteria for accessibility of the software user
-          interface and support for production of accessible content. [See
-          example under "#5 Set milestones" below.]</li>
-        <li>[To add to terms of subcontract]: "[Subcontracted web developer]
-          will consider the use of ATAG   [version number]-conformant software where
-          available. If not using ATAG-conformant authoring tools,
-          [subcontracted web developer] will ensure that all content and
-          templates generated for [this organization's] production of content
-          is WCAG 2.0, Level AA-conformant, and contains no markup that will
-          interfere with generation of WCAG-conformant content.</li>
-        <li>See "<a href="http://www.w3.org/WAI/impl/software.html" shape="rect">Selecting
-          and Using Authoring Tools for Web Accessibility</a>" for additional
-          detail.</li>
-      </ul>
-    </li>
-  </ul>
+		<h2><a name="integ" id="integ">Provide for integration and updating of
+		policy</a></h2>
+		<ul>
+			<li>If the organization has or is developing an overall policy for websites, for instance establishing best practices for use of web standards,
+				support for a privacy policy, internationalization, use of metadata,
+				usability, etc., it can be useful to incorporate accessibility in the
+				overall policy, rather than to establish accessibility as a stand-alone
+				policy.</li>
+			<li>Organizations referencing a specific version number, such as ATAG 1.0,	may want to incorporate mechanisms
+				to review and update, or to automatically update, their policies when the next version in finalized as a W3C Recommendation.</li>
+		</ul>
+		
+		<h2><a name="examples" id="examples">Example policies</a></h2>
+		<h3>Example of simple policy:</h3>
+		<ul>
+			<li>"[This organization] is committed to ensuring accessibility of its website for people with disabilities. All the pages on our website will
+				conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility
+				Guidelines</a> 2.0, Level AA conformance."</li>
+		</ul>
 
-  <h2><a name="scope" id="scope" shape="rect">Define scope of website(s)</a></h2>
-  <ul>
-    <li>Specify to what extent this organization's requirements should apply to
-      new, updated, and existing web pages. For example: 
-      <ul>
-        <li>"This policy applies to all new, updated, and existing web
-        pages."</li>
-      </ul>
-    </li>
-    <li>Specify to what extent requirements should apply to web pages provided
-      by a third-party (subcontractor, or other information provider, but as
-      part of main site). The website's users may need access to primary and
-      to third-party content equally. It may take additional effort to educate
-      and get compliance from third-party content developers. For example: 
-      <ul>
-        <li>"This policy applies to all web content produced or updated by
-          [this organization]. In addition, [this organization] is taking the
-          following steps to ensure accessibility of content provided by
-          third-party developers [NOTE that for some sites, accessibility of
-          third-party content may be essential to complying with government
-          policy]: 
-          <ul>
-            <li>informing third-party developers of [this organization's]
-              policy on web accessibility;</li>
-            <li>providing links to information and resources on implementing
-              web accessibility;</li>
-            <li>providing the following incentives to providers of WCAG 2.0 Level AA-conformant content...;</li>
-            <li>monitoring and providing feedback on inaccessible third-party
-              content;</li>
-            <li>seeking alternative third-party content providers where
-              original providers continue to provide non-conformant
-            content.</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
+		<h3>Example of comprehensive policy:</h3>
+		<ul>
+			<li>"[This organization] is committed to ensuring accessibility of its website for people with disabilities. New and updated web content produced
+				by our organization will conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility Guidelines</a> 2.0, Level A conformance, by [date].
+				Existing web content produced by our organization, and new, updated, and
+				existing web content provided for our site by third-party developers,
+				will conform to Level AA conformance by [date]. We will initiate an
+				internal monitoring program by [date]. Vendors supplying software used to
+				develop our site will be required to provide information by [date] on
+				conformance to W3C WAI's <a href="/TR/ATAG/">Authoring Tool
+				Accessibility Guidelines</a> [latest version], Conformance Level A. Our home page and
+				our 'about this site' page will include links to this policy. We will
+				review this policy in the future to consider updating it to	reference later
+				versions of W3C's accessibility guidelines."</li>
+		</ul>
+	</div>
 
-  <h2><a name="miles" id="miles" shape="rect">Set milestones</a></h2>
-  <ul>
-    <li>Set a date by which the organizations website(s) will meet a given
-      conformance level. For example: 
-      <ul>
-        <li>"By [date] [this organization's] websites will meet WCAG 2.0, Level AA conformance."</li>
-      </ul>
-    </li>
-    <li>In some cases it may be practical to phase in accessibility by
-      addressing all of level A success criteria rapidly, since these can be
-      absolute barriers if not addressed; then phasing in level AA success criteria with the next round of site improvements [no later than a
-      specified date]; with level AAA success criteria left as optional. For
-      example: 
-       <ul>
-        <li>"By [first date] [this organization's] websites will meet WCAG 2.0, Level A conformance; and by [second date] [this organization's]
-          websites will meet WCAG 2.0, Level AA conformance."</li>
-      </ul>
-    </li>
-    <li>Consider how to address questions of priorities that may arise
-      especially for websites with a large number of pages. Do not make
-      assumptions about which areas of a website or which web services people
-      with disabilities are interested in or not. For example: 
-      <ul>
-        <li>"This policy applies to all areas of this organization's internal
-          and external websites, including legacy content."</li>
-        <li>Or, "This policy applies to all areas of this organization's
-          internal and external websites, with priority to [specify which
-          areas] areas of the site; however, all areas of the site are expected
-          to conform to [specify conformance level] by [second date].</li>
-      </ul>
-    </li>
-    <li>Consider setting date(s) for accessibility support in software. For
-      example:  
-      <ul>
-        <li>"By [first date], all vendors of authoring tools used by [this
-          company] should provide information regarding their plans for ATAG [version number] conformance in future versions of their software. By [second
-          date] [this company] will preferentially purchase ATAG-conformant
-          authoring tools."</li>
-      </ul>
-    </li>
-    <li>Consider setting dates for browser and multimedia conformance, without
-      restricting people's ability to use adaptive browsers. 
-      <ul>
-        <li>"By [date], all vendors of browsers and multimedia players used by
-          [this company] should provide information regarding their plans for
-          UAAG [version number] conformance in future versions of their software. By [second
-          date] [this company] will preferentially purchase UAAG-conformant
-          browsers and multimedia players. <br clear="none" />
-        </li>
-      </ul>
-    </li>
-    <li>Consider setting dates for establishing internal resources for
-      training, technical assistance, monitoring, and/or an internal web page
-      with links to such resources.</li>
-  </ul>
-
-  <h2><a name="monit" id="monit" shape="rect">Define monitoring, conformance claims, and
-  follow-up process</a></h2>
-  <ul>
-    <li>Specify a recommended process and schedule for reviewing the
-      organization's website for accessibility. For example: 
-      <ul>
-        <li>"Each department will review all areas of the organizations' website under its control using the process described at <a href="http://www.w3.org/WAI/eval/" shape="rect">Evaluating Web Sites for
-          Accessibility</a>, and will review all new material that it publishes
-          by using the same process."</li>
-        <li>Each section of the website will include links for feedback on the
-          site; this information will be compiled and considered during the
-          review process."</li>
-      </ul>
-    </li>
-    <li>Specify whether or not conformant pages, or sections of a website,
-      should be labeled as such. For example: 
-      <ul>
-        <li>"The introductory page for sections of the website that have been
-          determined to be conformant according to [link] process should
-          display the [WCAG 2.0 Level  A logo] or bear the following statement
-          ["this page conforms to..."]</li>
-      </ul>
-    </li>
-    <li>Consider specifying a periodic review of areas of the website by an
-      internal department with the authority to follow up on non-conformant
-      areas of the website. For example: 
-      <ul>
-        <li>"[This organization] will conduct periodic reviews of the website
-          and any department with non-conforming web pages will be asked to
-          correct the problem within two weeks. Further problems in
-          accessibility of an area will result in [specify as appropriate]"</li>
-      </ul>
-    </li>
-  </ul>
-
-  <h2><a name="integ" id="integ" shape="rect">Provide for integration and updating of
-  policy</a></h2>
-  <ul>
-    <li>If the organization has or is developing an overall policy for websites, for instance establishing best practices for use of web standards,
-      support for a privacy policy, internationalization, use of metadata,
-      usability, etc., it can be useful to incorporate accessibility in the
-      overall policy, rather than to establish accessibility as a stand-alone
-      policy.</li>
-    <li>Organizations referencing a specific version number, such as ATAG 1.0,  may want to incorporate mechanisms
-      to review and update, or to automatically update, their policies when the next version in finalized as a W3C Recommendation.</li>
-  </ul>
-
-  <!-- end main --></div>
-
-  <div id="footer">
-    <h2>Document Information</h2>
-    <p><strong>Status:</strong> Published: October 2002,  minor updates in September 2011 (to account for WCAG 2.0 language; otherwise, not edited).<br clear="none" />
-      Editor: Judy Brewer and the Education and Outreach Working Group (<a href="/WAI/EO/" shape="rect">EOWG</a>).<br clear="none" />
-    </p>
-    <div class="footer-nav"><p>[<a href="http://www.w3.org/WAI/sitemap.html" shape="rect">WAI Site Map</a>] [<a href="http://www.w3.org/WAI/sitehelp.html" shape="rect">Help with WAI Website</a>] [<a href="http://www.w3.org/WAI/search.php" shape="rect">Search</a>] [<a href="/WAI/contacts" shape="rect">Contacting WAI</a>]<br clear="none" />
-           <strong>Feedback welcome to <a href="mailto:wai-eo-editors@w3.org" shape="rect">wai-eo-editors@w3.org</a></strong> (a publicly archived list) or <a href="mailto:wai@w3.org" shape="rect">wai@w3.org</a> (a WAI staff-only list).</p></div><div class="copyright"><p><a rel="Copyright" href="/Consortium/Legal/ipr-notice#Copyright" shape="rect">Copyright</a> © 1994-2012 <a href="/" shape="rect"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/" shape="rect"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/" shape="rect"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/" shape="rect">Keio</a>), All Rights Reserved. W3C <a href="/Consortium/Legal/ipr-notice#Legal_Disclaimer" shape="rect">liability</a>, <a href="/Consortium/Legal/ipr-notice#W3C_Trademarks" shape="rect">trademark</a>, <a rel="Copyright" href="/Consortium/Legal/copyright-documents" shape="rect">document use</a> and <a rel="Copyright" href="/Consortium/Legal/copyright-software" shape="rect">software
-           licensing</a> rules apply. Your interactions with this site are in
-           accordance with our <a href="/Consortium/Legal/privacy-statement#Public" shape="rect">public</a> and <a href="/Consortium/Legal/privacy-statement#Members" shape="rect">Member</a> privacy
-           statements.</p>
-           </div>
-  <!-- end footer -->
-  </div>
+	<div id="footer">
+		<h2>Document Information</h2>
+		<p><strong>Status:</strong> Published: October 2002,	minor updates in September 2011 (to account for WCAG 2.0 language; otherwise, not edited).<br clear="none" />
+			Editor: Judy Brewer and the Education and Outreach Working Group (<a href="/WAI/EO/">EOWG</a>).<br clear="none" />
+		</p>
+		<div class="footer-nav"><p>[<a href="http://www.w3.org/WAI/sitemap.html">WAI Site Map</a>] [<a href="http://www.w3.org/WAI/sitehelp.html">Help with WAI Website</a>] [<a href="http://www.w3.org/WAI/search.php">Search</a>] [<a href="/WAI/contacts">Contacting WAI</a>]<br clear="none" />
+					<strong>Feedback welcome to <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a></strong> (a publicly archived list) or <a href="mailto:wai@w3.org">wai@w3.org</a> (a WAI staff-only list).</p></div><div class="copyright"><p><a rel="Copyright" href="/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 1994-2012 <a href="/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a rel="Copyright" href="/Consortium/Legal/copyright-documents">document use</a> and <a rel="Copyright" href="/Consortium/Legal/copyright-software">software
+					licensing</a> rules apply. Your interactions with this site are in
+					accordance with our <a href="/Consortium/Legal/privacy-statement#Public">public</a> and <a href="/Consortium/Legal/privacy-statement#Members">Member</a> privacy
+					statements.</p>
+					</div>
+	<!-- end footer -->
+	</div>
 </body>
 </html>
