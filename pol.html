@@ -98,6 +98,40 @@
 			padding-top: 0;
 			margin-top: 0;
 		}
+		
+		/* Over styled document example to avoid the red bordered approach */
+		.drop-shadow {
+	  	background: none repeat scroll 0 0 #fff;
+	    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	    margin: 1em 10px 2em;
+	    padding: 1em 2em;
+	    position: relative;
+		}
+		
+		.lifted {
+			border-radius: 3px;
+		}
+		
+		.drop-shadow:before, .drop-shadow:after {
+			content: "";
+			position: absolute;
+			z-index: -2;
+		}
+		
+		.drop-shadow.lifted:before, .drop-shadow.lifted:after {
+		  bottom: 15px;
+		  box-shadow: 0 13px 10px rgba(0, 0, 0, 0.7);
+		  height: 10%;
+		  left: 5px;
+		  transform: rotate(-3deg);
+		  width: 50%;
+		}
+		
+		.drop-shadow.lifted:after {
+		  left: auto;
+		  right: 5px;
+		  transform: rotate(3deg);
+		}
 	</style>
 </head>
 
@@ -334,29 +368,21 @@
 
 		
 			<h2><a name="examples" id="examples">Example policies</a></h2>
-			<h3>Example of simple policy:</h3>
-			<ul>
-				<li>"[This organization] is committed to ensuring accessibility of its website for people with disabilities. All the pages on our website will
-					conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility
-					Guidelines</a> 2.0, Level AA conformance."</li>
-			</ul>
+			<h3>Example of simple policy</h3>
+			<div class="drop-shadow lifted">
+				<p>ACME Inc. is committed to ensuring accessibility of its website for people with disabilities. All the pages on our website will conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility Guidelines</a> 2.0, Level AA conformance.</p>
+			</div>
 
-			<h3>Example of comprehensive policy:</h3>
-			<ul>
-				<li>"[This organization] is committed to ensuring accessibility of its website for people with disabilities. New and updated web content produced
-					by our organization will conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility Guidelines</a> 2.0, Level A conformance, by [date].
-					Existing web content produced by our organization, and new, updated, and
-					existing web content provided for our site by third-party developers,
-					will conform to Level AA conformance by [date]. We will initiate an
-					internal monitoring program by [date]. Vendors supplying software used to
-					develop our site will be required to provide information by [date] on
-					conformance to W3C WAI's <a href="/TR/ATAG/">Authoring Tool
-					Accessibility Guidelines</a> [latest version], Conformance Level A. Our home page and
-					our 'about this site' page will include links to this policy. We will
-					review this policy in the future to consider updating it to	reference later
-					versions of W3C's accessibility guidelines."</li>
-			</ul>
+			<h3>Example of comprehensive policy</h3>
+			<div class="drop-shadow lifted">
+				<p>ACME Inc. is committed to ensuring accessibility of its website for people with disabilities. New and updated web content produced by our organization will conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility Guidelines</a> 2.0, Level A conformance, by [date].</p>
+				<p>Existing web content produced by our organization, and new, updated, and existing web content provided for our site by third-party developers, will conform to Level AA conformance by [date].</p>
+				<p>We will initiate an internal monitoring program by [date]. Vendors supplying software used to develop our site will be required to provide information by [date] on conformance to W3C WAI's <a href="/TR/ATAG/">Authoring Tool Accessibility Guidelines</a> [latest version], Conformance Level A.</p>
+				<p>Our home page and our 'about this site' page will include links to this policy. We will review this policy in the future to consider updating it to	reference later versions of W3C's accessibility guidelines."</p>
+			</div>
 		</div>
+		
+		<p class="totop"><a href="#contents">back to page contents</a></p>
 	</div>
 
 	<div id="footer">
