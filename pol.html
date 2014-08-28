@@ -99,10 +99,17 @@
 			margin-top: 0;
 		}
 		
+		/* This style comes from the file inaccessible.css. Again, ideally incorporating
+		into wai-main.css would be good practice */
+		.hint {
+		    background-color: #ccffff;
+		    font-style: italic;
+		}
+		
 		/* Over styled document example to avoid the red bordered approach */
 		.drop-shadow {
 	  	background: none repeat scroll 0 0 #fff;
-	    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
 	    margin: 1em 10px 2em;
 	    padding: 1em 2em;
 	    position: relative;
@@ -126,7 +133,7 @@
 		  transform: rotate(-3deg);
 		  width: 50%;
 		}
-		
+
 		.drop-shadow.lifted:after {
 		  left: auto;
 		  right: 5px;
@@ -199,12 +206,13 @@
 			<h2>Page Contents</h2>
 			<ul>
 				<li><a href="#intro">Introduction</a></li>
-				<li><a href="#refer">Reference guidelines and standards</li>
-				<li><a href="#scope">Define scope of policy</a></li>
-				<li><a href="#miles">Set milestones</a></li>
-				<li><a href="#monit">Define monitoring, conformance claims, and follow-up process</a></li>
-				<li><a href="#integ">Integrate into broader website policies</a></li>
-				<li><a href="#examples">Example policies</a></li>
+				<li><a href="#refer">Reference Guidelines and Standards</li>
+				<li><a href="#scope">Define Scope of Policy</a></li>
+				<li><a href="#miles">Set Milestones</a></li>
+				<li><a href="#monit">Define Monitoring, Conformance Claims, and Follow-up Process</a></li>
+				<li><a href="#integ">Integrate and Review Policy</a></li>
+				<li><a href="#examples">Example Policies</a></li>
+				<li><a href="#template">Policy Template</a></li>
 			</ul>
 		</div>
 
@@ -215,11 +223,11 @@
 			<h2><a name="intro" id="intro" class="no-display">Introduction</a></h2>
 
 			<p>An organizational policy on web accessibility sets out your goals, practices, and processes for how your organization will support the creation of accessible websites and services. Your policy will make reference to recognized standards and guidelines, and possibly to national legislation.</p>
-			<p>By creating a policy organizations are taking a proactive step towards providing more inclusive services which is an important component of corporate social responsibility. Making your policy public, or even widely distributed internally, increases the visibility of activities and ensures accessibility is prioritized.</p>
-			<p>An organizational policy outlines what you aim to achieve, where as a conformance statement details what has actually been achieved. While your accessibility policy applies to your whole organization, you may have multiple conformance statements if your organization has many websites.</p>
+			<p>By creating a policy, organizations are taking a proactive step towards providing more inclusive services which is an important component of corporate social responsibility. Making your policy public, or even widely distributed internally, increases the visibility of activities and ensures accessibility is prioritized.</p>
+			<p>An organizational policy outlines what you aim to achieve, where as a conformance statement details what has actually been achieved. While your accessibility policy applies to your whole organization, you may have many conformance statements if your organization has many websites.</p>
 			<p>This document addresses considerations that can arise when developing organizational policies on web accessibility.</p>
 
-			<h2><a name="refer" id="refer">Reference guidelines and standards</a></h2>
+			<h2><a name="refer" id="refer">Reference Guidelines and Standards</a></h2>
 
 			<h3>Key actions</h3>
 			<ul>
@@ -228,12 +236,6 @@
 				<li>Specify what conformance level is to be achieved for each referenced guideline.</li>
 				<li>Assess the applicability of any standards to internal inclusion policies.</li>
 				<li>Consider any relevant legislative and regulatory requirements.</li>
-			</ul>
-
-			<h3>Examples</h3>
-			<ul>
-				<li>"This website aims to conform to <abbr title="Worldwide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> <a href="/WAI/intro/wcag"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></a> Level AA."</li>
-				<li>"At ACME Inc. we seek to ensure all our websites and web applications, both customer facing and for internal use, conform all Level A criteria of the <abbr title="Worldwide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> <a href="/TR/WCAG20/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Version 2.0</a>. We also aim to ensure that our authoring tools conform to all Level A criteria of the <a href="/TR/ATAG20/"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> Version 2.0</a>.</li>
 			</ul>
 
 			<h3 class="f_panelHead">More detail</h3>
@@ -252,9 +254,15 @@
 				</div>
 
 				<p>Authoring tools used to create websites can impact on the accessibility of the final product. You may consider guidelines for your organization's content creation tools as an important part of your policy statement.</p>
-				<p><abbr title="Worldwide Web Consortium">W3C</abbr> Guidelines categorize conformance criterion into levels; A, AA and AAA. Ensure your guideline reference includes an indication of the expected conformance level to be achieved.</p>
+				<p><abbr title="Worldwide Web Consortium">W3C</abbr> Guidelines categorize conformance criterion into levels; A, AA and AAA. The levels of conformance are based on a <a href="/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head">range of factors</a> but broadly indicate increasingly more inclusive websites with fewer barriers. Ensure your guideline reference includes an indication of the expected conformance level to be achieved. Setting an achievable conformance level ensures that internal support and enthusiasm can be maintained. It may be difficult and expensive to set your initial goal at Level AA if there has been little accessibility work done in the past.</p>
 				<p>You may also wish to reference relevant legislation covering inclusion and discrimination. For websites covering multiple legislative regions, it may be necessary to refer to the legislation for each region and possibly even differing standards. Note, you may also be subject to legislation as a result of your organizational domain, for example, education.</p>
 			</div>
+
+			<h3>Examples</h3>
+			<ul>
+				<li>"This website aims to conform to <abbr title="Worldwide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> <a href="/WAI/intro/wcag"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></a> Level AA."</li>
+				<li>"At ACME Inc. we seek to ensure all our websites and web applications, both customer facing and for internal use, conform all Level A criteria of the <abbr title="Worldwide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> <a href="/TR/WCAG20/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Version 2.0</a>. We also aim to ensure that our authoring tools conform to all Level A criteria of the <a href="/TR/ATAG20/"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> Version 2.0</a>.</li>
+			</ul>
 
 			<h3>Related resources</h3>
 			<ul>
@@ -264,7 +272,7 @@
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
-			<h2><a name="scope" id="scope">Define scope of policy</a></h2>
+			<h2><a name="scope" id="scope">Define Scope of Policy</a></h2>
 
 			<h3>Key actions</h3>
 			<ul>
@@ -272,6 +280,12 @@
 				<li>Specify how the policy relates to existing, updated, and new content.</li>
 				<li>Consider how the policy applies to third-party content and code providers.</li>
 			</ul>
+
+			<h3 class="f_panelHead">More detail</h3>
+			<div>
+				<p>You organizational policy should clearly identify what website content it applies to. Consider to what extent the policy applies to new, updated, and existing web pages. Where your organization has multiple websites the policy should make it clear which websites are addressed. The version of your policy for site visitors need not refer to all websites covered but should outline what is covered on the website they are viewing.</p>
+				<p>The policy should specify to what extent it applies to web pages or components are supplied by a third-party. The website's users may need access to primary and to third-party content equally. It may take additional effort to educate and get compliance from third-party content developers.</p>
+			</div>
 
 			<h3>Examples</h3>
 			<ul>
@@ -287,16 +301,10 @@
 				</li>
 			</ul>
 
-			<h3 class="f_panelHead">More detail</h3>
-			<div>
-				<p>You organizational policy should clearly identify what website content it applies to. Consider to what extent the policy applies to new, updated, and existing web pages. Where your organization has multiple websites the policy should make it clear which websites are addressed. The version of your policy for site visitors need not refer to all websites covered but should outline what is covered on the website they are viewing.</p>
-				<p>The policy should specify to what extent it applies to web pages or components are supplied by a third-party. The website's users may need access to primary and to third-party content equally. It may take additional effort to educate and get compliance from third-party content developers.</p>
-			</div>
-
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
-			<h2><a name="miles" id="miles">Set milestones</a></h2>
+			<h2><a name="miles" id="miles">Set Milestones</a></h2>
 
 			<h3>Key actions</h3>
 			<ul>
@@ -304,13 +312,6 @@
 				<li>Consider whether a staged approach might fix absolute barriers more quickly.</li>
 				<li>For large sites, consider prioritizing important features and functions.</li>
 				<li>Consider dates for support tools and internal resources.</li>
-			</ul>
-
-			<h3>Examples</h3>
-			<ul>
-				<li>"By February 27, 2015, ACME Inc's websites will meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0, Level AA conformance."</li>
-				<li>"By November 7, 2014, ACME Inc's websites will meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0, Level A conformance; and by May 29, 2015 websites will meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0, Level AA conformance."</li>
-				<li>"By June 26, 2015, all vendors of authoring tools used by ACME Inc's should provide information regarding their plans for <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> 2.0 conformance in future versions of their software. By June 24, 2016 ACME Inc. will preferentially purchase <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> conformant authoring tools."</li>
 			</ul>
 
 			<h3 class="f_panelHead">More detail</h3>
@@ -321,10 +322,17 @@
 				<p>Consider setting dates for establishing internal resources for training, technical assistance, monitoring, and/or an internal website with links to such resources.</p>
 		  </div>
 
+			<h3>Examples</h3>
+			<ul>
+				<li>"By February 27, 2015, ACME Inc's websites will meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0, Level AA conformance."</li>
+				<li>"By November 7, 2014, ACME Inc's websites will meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0, Level A conformance; and by May 29, 2015 websites will meet <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0, Level AA conformance."</li>
+				<li>"By June 26, 2015, all vendors of authoring tools used by ACME Inc's should provide information regarding their plans for <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> 2.0 conformance in future versions of their software. By June 24, 2016 ACME Inc. will preferentially purchase <abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> conformant authoring tools."</li>
+			</ul>
+
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
-			<h2><a name="monit" id="monit">Define monitoring, follow-up, and feedback process</a></h2>
+			<h2><a name="monit" id="monit">Define Monitoring, Conformance Claims, and Follow-up Process</a></h2>
 
 			<h3>Key actions</h3>
 			<ul>
@@ -334,12 +342,6 @@
 				<li>Outline how visitor feedback will be captured, responded to, and used.</li>
 			</ul>
 
-			<h3>Examples</h3>
-			<ul>
-				<li>"All areas of the ACME Inc. website will be reviewed annually using the process described at <a href="http://www.w3.org/WAI/eval/">Evaluating Web Sites for Accessibility</a>. Reviews are the responsibility of those departments identified as 'owning' that area of the site. All new content that is published will be subject to accessibility checks as part of the publishing workflow."</li>
-				<li>"Each page of the website will include links for feedback on the site; this information will be compiled and considered during the review process. Any submitted feedback will be responded to within 48 hours."</li>
-			</ul>
-
 			<h3 class="f_panelHead">More detail</h3>
 			<div>
 				<p>Regardless of how the milestones are specified it is important to review progress to address known issues regularly. Any changes in timescale or, more ideally, milestones that have been met should be updated in the policy.</p>
@@ -347,10 +349,16 @@
 				<p>User feedback is important in understanding accessibility barriers. Your policy should include information on how this is captured and responded to.</p>
 			</div>
 
+			<h3>Examples</h3>
+			<ul>
+				<li>"All areas of the ACME Inc. website will be reviewed annually using the process described at <a href="http://www.w3.org/WAI/eval/">Evaluating Web Sites for Accessibility</a>. Reviews are the responsibility of those departments identified as 'owning' that area of the site. All new content that is published will be subject to accessibility checks as part of the publishing workflow."</li>
+				<li>"Each page of the website will include links for feedback on the site; this information will be compiled and considered during the review process. Any submitted feedback will be responded to within 48 hours."</li>
+			</ul>
+
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
-			<h2><a name="integ" id="integ">Integrate and review policy</a></h2>
+			<h2><a name="integ" id="integ">Integrate and Review Policy</a></h2>
 
 			<h3>Key actions</h3>
 			<ul>
@@ -367,18 +375,34 @@
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 		
-			<h2><a name="examples" id="examples">Example policies</a></h2>
+			<h2><a name="examples" id="examples">Example Policies</a></h2>
 			<h3>Example of simple policy</h3>
 			<div class="drop-shadow lifted">
-				<p>ACME Inc. is committed to ensuring accessibility of its website for people with disabilities. All the pages on our website will conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility Guidelines</a> 2.0, Level AA conformance.</p>
+				<p>ACME Inc. is committed to ensuring accessibility of its website for people with disabilities. All the pages on our website will conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility Guidelines</a> 2.0, Level AA conformance. Any issues should be reported to <a href="mailto:accessibility@acme.inc">accessibility@acme.inc</a>.</p>
 			</div>
 
 			<h3>Example of comprehensive policy</h3>
 			<div class="drop-shadow lifted">
-				<p>ACME Inc. is committed to ensuring accessibility of its website for people with disabilities. New and updated web content produced by our organization will conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility Guidelines</a> 2.0, Level A conformance, by [date].</p>
-				<p>Existing web content produced by our organization, and new, updated, and existing web content provided for our site by third-party developers, will conform to Level AA conformance by [date].</p>
-				<p>We will initiate an internal monitoring program by [date]. Vendors supplying software used to develop our site will be required to provide information by [date] on conformance to W3C WAI's <a href="/TR/ATAG/">Authoring Tool Accessibility Guidelines</a> [latest version], Conformance Level A.</p>
-				<p>Our home page and our 'about this site' page will include links to this policy. We will review this policy in the future to consider updating it to	reference later versions of W3C's accessibility guidelines."</p>
+				<p>ACME Inc. is committed to ensuring accessibility of its website for people with disabilities. New and updated web content produced by our organization will conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility Guidelines</a> 2.0, Level A conformance, by February 27, 2015.</p>
+				<p>Existing web content produced by our organization, and new, updated, and existing web content provided for our site by third-party developers, will conform to Level AA conformance by November 27, 2015.</p>
+				<p>We will initiate an internal monitoring program by June 26, 2015. Vendors supplying software used to develop our site will be required to provide information by June 24, 2016 on conformance to W3C WAI's <a href="/TR/ATAG/">Authoring Tool Accessibility Guidelines</a> 2.0, Conformance Level A.</p>
+				<p>Our home page and our 'about this site' page will include links to this policy. We will review this policy in the future to consider updating it to	reference later versions of W3C's accessibility guidelines.</p>
+				<p>All our site pages will include a link to our 'Feedback' form. This will include an option to indicate the feedback is related to an accessibility barrier or issue. Any submitted feedback will be responded to by our customer services team within 48 hours. Feedback related to accessibility issues will be passed to our Web Management Team for assessment.</p>
+			</div>
+
+			<p class="totop"><a href="#contents">back to page contents</a></p>
+
+
+			<h2><a name="template" id="template">Policy Template</a></h2>
+
+			<p>In the template below, the <span class="hint">[hints]</span> in brackets are sections for you to complete.</p>
+
+			<div class="drop-shadow lifted">
+				<p><span class="hint">[Company name]</span> is committed to ensuring accessibility of its website for people with disabilities. New and updated web content produced by our organization will conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility Guidelines</a> 2.0, Level A conformance, by February 27, 2015.</p>
+				<p>Existing web content produced by our organization, and new, updated, and existing web content provided for our site by third-party developers, will conform to Level AA conformance by November 27, 2015.</p>
+				<p>We will initiate an internal monitoring program by June 26, 2015. Vendors supplying software used to develop our site will be required to provide information by June 24, 2016 on conformance to W3C WAI's <a href="/TR/ATAG/">Authoring Tool Accessibility Guidelines</a> 2.0, Conformance Level A.</p>
+				<p>Our home page and our 'about this site' page will include links to this policy. We will review this policy in the future to consider updating it to	reference later versions of W3C's accessibility guidelines.</p>
+				<p>All our site pages will include a link to our 'Feedback' form. This will include an option to indicate the feedback is related to an accessibility barrier or issue. Any submitted feedback will be responded to by our customer services team within 48 hours. Feedback related to accessibility issues will be passed to our Web Management Team for assessment.</p>
 			</div>
 		</div>
 		
