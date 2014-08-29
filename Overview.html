@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="Keywords" content="Web Accessibility Initiative, web accessibility, WAI, W3C, World Wide Web, Web, WWW, Consortium, computer, access, accessibility, disability, disabilities, worldwide, international, W3, standard, technology, free, open source, software" />
-	<title>Implementing Accessibility across Organizations and Web Projects</title>
+	<title>Implementing Web Accessibility Across Organizations and Projects</title>
 	<!-- When moving to the live environment any file or image links should have the following
 			removed from it:
 				http://www.w3.org/WAI/impl/
@@ -86,8 +86,37 @@
 			padding-left: 1.3em;
 			margin-bottom: 0;
 		}
-	</style>
+		
+		.key-actions {
+			list-style: none;
+	    padding: 0px;
+		}
 
+		.key-actions li {
+			padding-left: 1.5px;
+		}
+		.key-actions li.show-detail {
+			padding-left: 0px;
+		}
+		.key-actions li:before {
+			content: '\25B8';
+			margin: 0 0.5em;
+		}
+		.key-actions li.show-detail:before {
+			content: '\25BE';
+		}
+		
+		.key-actions .detail {
+			margin: 0 1.5em;
+		}
+		.key-actions .detail p:first-child {
+			margin-top: 0.5em;
+		}
+
+		.key-actions li .detail {
+			display: none;
+		}
+	</style>
 </head>
 <body>
 	<div id="controls"><ul>
@@ -191,15 +220,26 @@
 			<p>Establish a realistic goal given your organization's current approach, understanding, and view of accessibility. Undertake activities to gather support to achieve these goals and convince stakeholders or executives of their value.</p>
 
 			<h3>Key actions</h3>
-			<ul>
-				<li>Identify and document the project accessibility goals.</li>
-				<li>Explore your organization's current approach, understanding, and view of accessibility.</li>
-				<li>Identify the key drivers for accessibility and, if needed, develop a business case.</li>
-				<li>Promote awareness within your organization, and seek interested peers.</li>
-				<li>Secure commitment and backing, ideally from the executive and project management level.</li>
+			<ul class="key-actions">
+				<li class="detail-hidden"><a href="#">Identify and document the project accessibility goals.<span class="no-display"> Click to show detail</span></a>
+					<div class="detail">
+						<p>kwjehf lwkehf lwejkhf lwkjhf wlekjhf wlkjhf wlekjhf wlekjhf wlkjhf wekljhf wlekhf wlkhf wlkfh wlkfh welkfhwelkfh welkhf wlkhf wlkhjf</p>
+					</div>
+				</li>
+				<li class="detail-shown"><a href="#">Explore your organization's current approach, understanding, and view of accessibility.<span class="no-display"> Click to show detail</span></a>
+					<div class="detail">
+						<p>kwjehf lwkehf lwejkhf lwkjhf wlekjhf wlkjhf wlekjhf wlekjhf wlkjhf wekljhf wlekhf wlkhf wlkfh wlkfh welkfhwelkfh welkhf wlkhf wlkhjf</p>
+					</div>
+				</li>
+				<li>Identify the key drivers for accessibility and, if needed, develop a business case.
+				</li>
+				<li>Promote awareness within your organization, and seek interested peers.
+				</li>
+				<li>Secure commitment and backing, ideally from the executive and project management level.
+				</li>
 			</ul>
 
-			<h3 class="f_panelHead">More detail</h3>
+			<p class="f_panelHead">More detail</p>
 			<div>
 				<p>Your goal defines what you are aiming to achieve and helps you decide what actions are needed to obtain backing and define deliverables. For example, your goal might be to develop an accessible website as an individual project, to integrate accessibility throughout the organization to ensure the accessibility of your website, or merely to advocate for web accessibility within your organization.</p>
 				<p>Exploring your organization's current approach, understanding, and view of accessibility is an important first step. In most cases you will need to promote and gather support for accessibility, especially if your organization has had little experience with accessibility so far. Determining the key drivers for accessibility is critical to this purpose.</p>
@@ -445,5 +485,18 @@
 			statements.</p></div>
 		<!-- end footer -->
 	</div>
+
+	<script type="text/javascript">
+	$(".key-actions a").click(function(){
+		$(this).next().toggle(200);
+		$(this).parent().toggleClass('show-detail');
+		if($(this).parent().hasClass('show-detail')) {
+			$('.no-display', this).text(" Click to hide detail");
+		} else {
+			$('.no-display', this).text(" Click to show detail");
+		}
+		return false;
+	});
+	</script>
 </body>
 </html>
