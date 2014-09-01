@@ -112,10 +112,6 @@
 		.key-actions .detail p:first-child {
 			margin-top: 0.5em;
 		}
-
-		.key-actions li .detail {
-			display: none;
-		}
 	</style>
 </head>
 <body>
@@ -201,7 +197,8 @@
 			<h2 id="intro" class="no-display">Introduction</h2>
 			<p>Incorporating accessibility into your project or organization is as straight forward as any other planning task. This document provides you with guidance and considerations on how to approach planning for accessibility, whether that is for an individual website development project or across your entire organization. Your actual approach will vary depending the size of your organization, what you are aiming to achieve, and where you are in the development process.</p>
 			<p>This document is for project managers, project team leaders, and small business owners. It is also useful for accessibility consultants who are engaged in supporting a project or broader organizational change.</p>
-			<p>The following summarizes what this document presents. This does not suggest a fixed order and can be used however best suits your project and organization.</p>
+			<p>The following summarizes what this document presents. <!-- NO STRAIGHT FORWARD PROCESS, MANY WILL NOT RECOGNISE CLEAN STEP_BY_STEP. --> This does not suggest a fixed order and can be used however best suits your project and organization.</p>
+			<!-- p>Compare with Security...</p-->
 			<ul>
 				<li><a href="#goals">Determine Your Goal and Gather Support</a></li>
 				<li><a href="#resp">Establish Roles and Responsibilities</a></li>
@@ -217,35 +214,36 @@
 
 
 			<h2 id="goal">Determine Your Goal and Gather Support</h2>
-			<p>Establish a realistic goal given your organization's current approach, understanding, and view of accessibility. Undertake activities to gather support to achieve these goals and convince stakeholders or executives of their value.</p>
+			<p>Whether your accessibility goals are confined to a single project or are aimed a widespread organizational change, you will need to ensure that you have suitable backing and support. A clear and realistic accessibility goal is easy to communicate, aids in overall planning, and when successfully achieved is recognizable. As with other important aspects of website development, such as security, accessibility is best approached as an ongoing activity rather than something that can be 'completed'. </p>
 
 			<h3>Key actions</h3>
 			<ul class="key-actions">
-				<li class="detail-hidden"><a href="#">Identify and document the project accessibility goals.<span class="no-display"> Click to show detail</span></a>
+				<li>Identify and document the project accessibility goals.</a>
 					<div class="detail">
-						<p>kwjehf lwkehf lwejkhf lwkjhf wlekjhf wlkjhf wlekjhf wlekjhf wlkjhf wekljhf wlekhf wlkhf wlkfh wlkfh welkfhwelkfh welkhf wlkhf wlkhjf</p>
+						<p>Defining accessibility goals clarifies what activities need planned, how support can be best achieved, and what deliverables are required. Some example goals are; ensure that the new company website is accessible, or improve the integration of accessibility into organizational development processes and policies.</p>
 					</div>
 				</li>
-				<li class="detail-shown"><a href="#">Explore your organization's current approach, understanding, and view of accessibility.<span class="no-display"> Click to show detail</span></a>
+				<li>Explore your organization's current approach, understanding, and view of accessibility.</a>
 					<div class="detail">
-						<p>kwjehf lwkehf lwejkhf lwkjhf wlekjhf wlkjhf wlekjhf wlekjhf wlkjhf wekljhf wlekhf wlkhf wlkfh wlkfh welkfhwelkfh welkhf wlkhf wlkhjf</p>
+						<p>How your organization currently understands and views accessibility will help refine how goals can be realistically achieved. This may require a review of any existing policies or process, as well as exploring the issue with key members of staff. As well as helping refine your goals, this should also highlight what activities might be beneficial in promoting those goals and gathering internal support.</p>
 					</div>
 				</li>
-				<li>Identify the key drivers for accessibility and, if needed, develop a business case.
+				<li>Identify the key reasons for accessibility and, if needed, develop a business case.
+					<div class="detail">
+						<p>Understanding why accessibility has become important will help preparing materials to persuade others and in resolving resource prioritization clashes. A business case focused on key reasons may be required as part of this process. Key reasons may also suggest additional necessary activities. For example, an executive directive to increase revenue by growing the website's reach to include people with disabilities, older people, and mobile web users will likely require more robust reporting of accessibility achievements and impact on revenue.</p>
+					</div>
 				</li>
 				<li>Promote awareness within your organization, and seek interested peers.
+					<div class="detail">
+						<p>Other project teams with a stake or role in your organization's online presence may need to be persuaded of the value of accessibility. Individuals in these teams may also be able to take on some accessibility responsibility or be helpful in adding additional influence for the project goals.</p>
+					</div>
 				</li>
 				<li>Secure commitment and backing, ideally from the executive and project management level.
+					<div class="detail">
+						<p>Any prepared business case can be used to obtain commitment to project goals, ideally by more senior management. This will simplify many issues down the line, especially when there are clashes in project or organizational priorities. Where you have limited influence within your organization, this backing will be invaluable.</p>
+					</div>
 				</li>
 			</ul>
-
-			<p class="f_panelHead">More detail</p>
-			<div>
-				<p>Your goal defines what you are aiming to achieve and helps you decide what actions are needed to obtain backing and define deliverables. For example, your goal might be to develop an accessible website as an individual project, to integrate accessibility throughout the organization to ensure the accessibility of your website, or merely to advocate for web accessibility within your organization.</p>
-				<p>Exploring your organization's current approach, understanding, and view of accessibility is an important first step. In most cases you will need to promote and gather support for accessibility, especially if your organization has had little experience with accessibility so far. Determining the key drivers for accessibility is critical to this purpose.</p>
-				<p>In some cases the drivers can be external, such as to meet legislation or to be more competitive. Drivers may also be internal such as to meet directives from senior management or to increase revenue by growing the website's reach to include people with disabilities, older people, and mobile web users.</p>
-				<p>Developing a business case in response to your particular situation is often needed to convince your management and your colleagues, and to secure budget and time for accessibility activities. Using this to obtain commitment, ideally by more senior management, will simplify many issues down the line, especially when there are clashes in project or organizational priorities. Where you have limited influence within your organization, this backing will be invaluable.</p>
-			</div>
 
 			<h3>Related resources</h3>
 			<ul>
@@ -485,18 +483,27 @@
 			statements.</p></div>
 		<!-- end footer -->
 	</div>
-
+	
 	<script type="text/javascript">
-	$(".key-actions a").click(function(){
-		$(this).next().toggle(200);
-		$(this).parent().toggleClass('show-detail');
-		if($(this).parent().hasClass('show-detail')) {
-			$('.no-display', this).text(" Click to hide detail");
-		} else {
-			$('.no-display', this).text(" Click to show detail");
-		}
-		return false;
-	});
+		// Add in the show/hide functionality and supporting content for key actions
+		$(".key-actions li").each(function(){
+			if($(this).find('.detail').length){
+				$(this).addClass('detail-hidden');
+				var tokens = $(this).html().split(/(?=<)/);
+				$(this).html('<a href="#">' + tokens.shift().trim() + '<span class="no-display"> Click to show detail</span></a>' + tokens.join(''));
+				$(this).find('.detail').css('display', 'none');
+			}
+		});
+		$(".key-actions a").click(function(){
+			$(this).next().toggle(200);
+			$(this).parent().toggleClass('show-detail');
+			if($(this).parent().hasClass('show-detail')) {
+				$('.no-display', this).text(" Click to hide detail");
+			} else {
+				$('.no-display', this).text(" Click to show detail");
+			}
+			return false;
+		});
 	</script>
 </body>
 </html>
