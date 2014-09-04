@@ -46,12 +46,20 @@
 			into /WAI/style/excol.css to address this issue throughout the site */
 		.f_panelHead {
 			border-bottom: solid #fffaf5;
+			padding-left: 1.6em;
+			position: relative;
 		}
 		.f_panelHead.fs_hover, .f_panelHead.fs_focus {
 			border-bottom: solid #993300;
 		}
 		.f_panelHead.fs_selected {
 			border-bottom: solid #993300;
+		}
+		.f_expanderWrapper {
+			float: none;
+			position: absolute;
+			left: 0;
+			top: 0;
 		}
 		
 		/* It may be better not to add this to the core wai-main.css as it would make more
@@ -94,6 +102,10 @@
 
 		.key-actions li {
 			margin-left: 1.5em;
+		}
+		
+		.key-actions li>span {
+			padding-left: 2em;
 		}
 
 		.key-actions li div p:first-child {
@@ -244,84 +256,51 @@
 
 
 			<h2 id="resp">Establish Roles and Responsibilities</h2>
-			<p>Identify and appoint individuals who are responsible for accessibility within your project team or organization, and outline what that role entails.</p>
-		
-			<h3>Key actions</h3>
-			<ul>
-				<li><span class="f_panelHead">Identify roles and assign responsibilities across different areas of the project.</span>
-					<div>
-						<p>For website development projects identify key project team members who will have responsibility for leading accessibility activities within their area. Ensure there is representation from across all important project areas such as design, content creation, development, and quality assurance. In smaller teams one individual may hold sole responsibility for accessibility.</p>
-					</div>
-				</li>
-				<li><span class="f_panelHead">Consider what organizational areas might impact on the provision of accessible online services and websites, and ensure they are aware of their role and responsibilities.</span>
-					<div>
-						<p></p>
-					</div>
-				</li>
-				<li><span class="f_panelHead">Communicate within the project and organization who the responsible parties are.</span></li>
-				<li><span class="f_panelHead">When using an external organization, ensure they are aware of your accessibility requirements and of their responsibilities.</span></li>
-				<li><span class="f_panelHead">For websites and projects spanning jurisdictional regions, ensure responsibility is assigned for each region.</span></li>
-			</ul>
+			<p>Identify and appointing individuals who are responsible for accessibility ensures that any accessibility related issues are not neglected and that everyone on the team knows where to take accessibility questions.</p>
 
-<!--li>Consider what organizational areas might impact on the accessibility of the project, such as human resources, procurement, marketing, organizational executive, legal, and ensure they are aware of their role and responsibilities.</li>
-<li>Communicate up and down within the project and organization who the responsible parties are.</li>
-<li>If you are using an external company or organization, ensure that they are aware of your accessibility requirements and of their responsibilities.</li>
-<li>For websites and projects spanning multiple jurisdictional regions, ensure that responsibility is assigned for each region.</li>
-
- <div class="">
-<p>Identifying and appointing individuals responsible for accessibility is an important part of ensuring that accessibility is considered throughout the design and development process, and across the organization. The assigned roles ensure that any accessibility related issues are not neglected and that everyone on the team knows where to take accessibility questions.</p>
-<div class="aside">
-<p class="eg">
-e.g.
-</p>
-<div class="example-bar">
-<h4>Example responsibilities</span></h4>
-<ul>
-<li><b>Marketing</b> - Ensuring good accessibility practice within the brand or design guidelines.</li>
-<li><b>Quality assurance</b> - Test for and track accessibility issues within the code.</li>
-<li><b>Development</b> - Maintain code libraries with accessible components.</li>
-<li><b>Purchasing</b> - Ensure that organizational accessibility policy is incorporated within procurement processes.</li>
-<li><b>Acceptance testing</b> - Ensure that any agency delivered website or component meets your desired level of accessibility.</li>
-<li><b>Recruitment</b> - Incorporate accessibility skills within recruitment profiles.</li>
-</ul>
-</div>
-</div>
-<p>Responsibility may be spread throughout your project team, particularly in larger teams. For example, the responsibility for ensuring accessible visual design may be shared by the design manager and digital designer. In other situations, one individual may have multiple responsibilities. For example, in a smaller team a developer may be responsible for the coding as well as for the quality assurance testing. What is important, is to identify the necessary responsibilities and assign them to appropriate individuals.</p>
-<p>While some roles and responsibilities are focused on the immediate project needs, others are focused on ensuring sustainability of the necessary frameworks that facilitate accessibility. For example, part of the responsibility of the role for 'accessible design' would be to ensure that members of the design team have the appropriate skills and knowledge to deliver accessible designs. Other areas that you may also need to consider include human resources, procurement, marketing, organizational executive, and legal. Identified responsible parties in these areas have the task of incorporating accessibility into existing policies, practices, and procedures.</p>
-<p>For some organizations the task of creating a website, or part of it, such as the visual design, is often placed in the hands of an external company. In this case you, as the purchaser, will still hold responsibility for website accessibility. It is important to ensure that you are clearly communicating what you expect in terms of accessibility to the supplier.</p>
-<p>The following list provides examples of other functions that might be important to consider when assigning responsibility:</p>
-<ul>
-<li>Sign-off process and authority for accessibility of deliverables.</li>
-<li>Manage and procure accessibility audits and testing.</li>
-<li>Executive presentations of progress and business value of accessibility.</li>
-<li>Regular communication between regional and departmental accessibility teams.</li>
-<li>Ongoing review and sharing of new accessibility techniques.</li>
-<li>Identify and respond to accessibility training needs.</li>
-</ul>
-</div>
-</div-->
-
-			<h3 class="f_panelHead">More detail</h3>
-			<div>
-				<div class="">
-					<p>Identifying and appointing individuals responsible for accessibility ensure that any accessibility related issues are not neglected and that everyone on the team, and in your organization, knows where to take accessibility questions.</p>
-					<p class="eg">
-						e.g.
-					</p>
-					<div class="example-bar">
+			<div class="aside">
+				<p class="eg">e.g.</p>
+				<div class="example-bar">
 					<h4>Example responsibilities</h4>
-						<ul>
-							<li><b>Marketing</b> - Ensuring good accessibility practice within the brand or design guidelines.</li>
-							<li><b>Development</b> - Maintain code libraries with accessible components.</li>
-							<li><b>Purchasing</b> - Ensure that organizational accessibility policy is incorporated within procurement processes.</li>
-							<li><b>Acceptance testing</b> - Ensure that any agency delivered website or component meets your desired level of accessibility.</li>
-							<li><b>Recruitment</b> - Incorporate accessibility skills within recruitment profiles.</li>
-						</ul>
-					</div>
-					<p>Responsibility may be spread throughout your project team, particularly in larger teams. For example, the responsibility for ensuring accessible visual design may be shared by the design manager and digital designer. In other situations, one individual may have multiple responsibilities. For example, in a smaller team a developer may be responsible for the coding as well as for the quality assurance testing. What is important, is to identify responsibilities and assign them to appropriate individuals.</p>
-					<p>While some roles and responsibilities are focused on the immediate project needs, others are focused on ensuring sustainability of frameworks that facilitate accessibility. For example, part of the responsibility of the role for 'accessible design' would be to ensure that members of the design team have the appropriate skills and knowledge to deliver accessible designs. Other areas that you may also need to consider include human resources, procurement, marketing, organizational executive, and legal. Identified responsible parties in these areas have the task of incorporating accessibility into existing policies, practices, and procedures.</p> 
+					<ul>
+						<li><b>Marketing</b> - Ensuring good accessibility practice within the brand or design guidelines.</li>
+						<li><b>Quality assurance</b> - Test for and track accessibility issues within the code.</li>
+						<li><b>Development</b> - Maintain code libraries with accessible components.</li>
+						<li><b>Purchasing</b> - Ensure that organizational accessibility policy is incorporated within procurement processes.</li>
+						<li><b>Acceptance testing</b> - Ensure that any agency delivered website or component meets your desired level of accessibility.</li>
+						<li><b>Recruitment</b> - Incorporate accessibility skills within recruitment profiles.</li>
+					</ul>
 				</div>
 			</div>
+	
+			<h3>Key actions</h3>
+			<ul class="key-actions">
+				<li><span class="f_panelHead">Identify roles and assign responsibilities across different areas of the project.</span>
+					<div>
+						<p>For website development projects identify key project team members who will have responsibility for leading accessibility activities within their area and to function as primary contacts for accessibility questions. Ensure there is representation from across all project areas such as design, content creation, development, and quality assurance. In smaller teams it is likely that one individual will hold sole responsibility for accessibility.</p>
+					</div>
+				</li>
+				<li><span class="f_panelHead">Assign responsibility to other organizational areas that impact on the provision of accessible websites.</span>
+					<div>
+						<p>For example, incorporating your accessibility policy into procurement processes reduces the risk that third-party supplied content or tools will introduce accessibility barriers. Consider other organizational areas such as human resources, marketing, organizational executive, and legal. Identify and appoint individuals to review policies and processes with accessibility in mind.</p>
+					</div>
+				</li>
+				<li><span class="f_panelHead">Communicate within the project and organization who the responsible parties are.</span>
+					<div>
+						<p>Communicate who to take accessibility issues to and also highlight the ongoing commitment to accessibility. For wider organizational communication aim to inform key members of management and teams involved in website development activities.</p>
+					</div>
+				</li>
+				<li><span class="f_panelHead">Ensure any third-party providers are aware of your accessibility requirements and your expectations.</span>
+					<div>
+						<p>If creating a website, or part of it, such as the visual design, is outsourced to an external company, make them aware of your accessibility policy. Ultimately you, as the purchaser, will still hold responsibility for website accessibility. Responsibility in this case means clear communication of what you expect in terms of accessibility and any additional accessibility acceptance testing.</p>
+					</div>
+				</li>
+				<li><span class="f_panelHead">Assign responsibility for each jurisdictional region your website spans.</span>
+					<div>
+						<p>Where your website is subject to many different legislations, consider appointing a responsible party for each region. Their role is to monitor legislative change relating to accessibility and ensure that organizational policies are reviewed and updated appropriately.</p>
+					</div>
+				</li>
+			</ul>
 
 			<h3>Related resources</h3>
 			<ul>
