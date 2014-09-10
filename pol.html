@@ -68,12 +68,20 @@
 			into /WAI/style/excol.css to address this issue throughout the site */
 		.f_panelHead {
 			border-bottom: solid #fffaf5;
+			padding-left: 1.6em;
+			position: relative;
 		}
 		.f_panelHead.fs_hover, .f_panelHead.fs_focus {
 			border-bottom: solid #993300;
 		}
 		.f_panelHead.fs_selected {
 			border-bottom: solid #993300;
+		}
+		.f_expanderWrapper {
+			float: none;
+			position: absolute;
+			left: 0;
+			top: 0;
 		}
 		
 		/* It may be better not to add this to the core wai-main.css as it would make more
@@ -99,6 +107,23 @@
 			margin-top: 0;
 		}
 		
+		.key-actions {
+			list-style: none;
+	    padding: 0px;
+		}
+
+		.key-actions li {
+			margin-left: 1.5em;
+		}
+		
+		.key-actions li>span {
+			padding-left: 2em;
+		}
+
+		.key-actions li div p:first-child {
+			margin-top: 0.5em;
+		}
+		
 		/* This style comes from the file inaccessible.css. Again, ideally incorporating
 		into wai-main.css would be good practice */
 		.hint {
@@ -109,6 +134,8 @@
 		/* Over styled document example to avoid the red bordered approach */
 		.drop-shadow {
 	  	background: none repeat scroll 0 0 #fff;
+	    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+	    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
 	    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
 	    margin: 1em 10px 2em;
 	    padding: 1em 2em;
@@ -127,17 +154,36 @@
 		
 		.drop-shadow.lifted:before, .drop-shadow.lifted:after {
 		  bottom: 15px;
+		  -moz-box-shadow: 0 13px 10px rgba(0, 0, 0, 0.7);
+		  -webkit-box-shadow: 0 13px 10px rgba(0, 0, 0, 0.7);
 		  box-shadow: 0 13px 10px rgba(0, 0, 0, 0.7);
 		  height: 10%;
 		  left: 5px;
-		  transform: rotate(-3deg);
+		  transform: rotate(-2deg);
+		  -webkit-transform: rotate(-2deg);
+		  -moz-transform: rotate(-2deg);
+		  -o-transform: rotate(-2deg);
+		  -ms-transform: rotate(-2deg);
 		  width: 50%;
 		}
 
 		.drop-shadow.lifted:after {
 		  left: auto;
 		  right: 5px;
-		  transform: rotate(3deg);
+		  transform: rotate(2deg);
+		  -webkit-transform: rotate(2deg);
+		  -moz-transform: rotate(2deg);
+		  -o-transform: rotate(2deg);
+		  -ms-transform: rotate(2deg);
+		}
+		
+		ul.with-drop-shadow {
+			list-style-type: none;
+			padding-left: 2em;
+		}
+		
+		ul.with-drop-shadow>li {
+			margin-left: 0;
 		}
 	</style>
 </head>
@@ -222,46 +268,43 @@
 
 			<h2><a name="intro" id="intro" class="no-display">Introduction</a></h2>
 
-			<p>An organizational policy on web accessibility sets out your goals for how your organization will support the creation of accessible websites and services. Your policy will make reference to recognized standards and guidelines, and possibly to national legislation.</p>
-			<p>By creating a policy, organizations are taking a proactive step towards providing more inclusive services which is an important component of corporate social responsibility. Making your policy public, or even widely distributed internally, increases the visibility of activities and ensures accessibility is prioritized.</p>
-			<p>An organizational policy outlines what you aim to achieve, where as a conformance statement details what has actually been achieved. While your accessibility policy applies to your whole organization, you may have many conformance statements if your organization has many websites.</p>
-			<p>This document addresses considerations that can arise when developing organizational policies on web accessibility.</p>
+			<p>An organizational policy on web accessibility sets out your goals for how your organization will support the creation of accessible websites and services. Creating a policy is a proactive step towards providing more inclusive services and an important component of corporate social responsibility. Making your policy public, or even widely distributed internally, increases the visibility of activities and ensures accessibility is prioritized.</p>
+			
+			<h3>What is this document for?</h3>
+			<p>This document outlines important questions and actions to consider when creating or updating an accessibility policy.</p>
+			
+			<h3>Using this document</h3>
+			<p>There are a number of topics that you need to consider when preparing your policy. There is no requirement to approach them in the order given and it is not necessary that a statement is provided to cover each topic. Your policy should be written in a way that is supportive not burdensome.</p>
+			
 
-			<h2><a name="refer" id="refer">Reference Guidelines and Standards</a></h2>
-
-			<h3>Key actions</h3>
+			<h2 id="refer">Reference Guidelines and Standards</h2>
+			<p>Recognized standards and guidelines define what websites and services need to achieve in order to be considered accessible. Ensuring that these are clearly referenced creates a shared understanding in your organization of your overall goals.</p>
+			<p><abbr title="Worldwide Web Consortium">W3C</abbr> Guidelines categorize conformance criteria into levels; A, AA and AAA. The levels of conformance are based on a <a href="/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head">range of factors</a> but broadly indicate increasingly more inclusive websites with fewer barriers. Include an indication of the expected conformance level to be achieved. Consider that it may be difficult and expensive to set your initial goal too high if there has been little or no previous accessibility work.</p>
+			<p>Authoring tools used to create websites can impact on the accessibility of the final product. They can also impact on staff with disabilities who have to use the tools as part of their job. Consider guidelines for your organization's content creation tools as an important part of your policy statement.</p>
+			
+			<h3>What to include</h3>
 			<ul>
-				<li>Identify and assess suitability of applicable standard and version.</li>
-				<li>Consider inclusion of authoring tool guidelines.</li>
-				<li>Specify what conformance level is to be achieved for each referenced guideline.</li>
-				<li>Assess the applicability of any standards to internal inclusion policies.</li>
-				<li>Consider any relevant legislative and regulatory requirements.</li>
+				<li>Reference to latest version of web content standards or guideline.</li>
+				<li>Conformance level to be achieved for each referenced guideline.</li>
 			</ul>
 
-			<h3 class="f_panelHead">More detail</h3>
-			<div>
-				<p>The <abbr title="Worldwide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> produce recognized international standards specifying how to make websites accessible. The one most relevant is the <a href="/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG)</a>, however, it is important to consider tools used in your organization and how they support creating more accessible content and users with disabilities.</p>
+			<h3>What you might include</h3>
+			<ul>
+				<li>Reference to latest version of authoring tool standards or guidelines.</li>
+				<li>Reference to any relevant legislative and regulatory requirements.</li>
+			</ul>
 
-				<div class="aside">
-					<div class="example-bar">
-						<h4>Relevant guidelines</h4>
-						<ul>
-							<li><strong><a href="/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG)</a></strong> - how to make websites accessible.</li>
-							<li><strong><a href="/WAI/intro/atag">Authoring Tool Accessibility Guidelines (ATAG)</a></strong> - how to make software better support the production of accessible web content.</li>
-							<li><strong><a href="/WAI/intro/uaag">User Agent Accessibility Guidelines (UAAG)</a></strong> - how to make accessible browsers and multimedia players.</li>
-						</ul>
-					</div>
-				</div>
-
-				<p>Authoring tools used to create websites can impact on the accessibility of the final product. You may consider guidelines for your organization's content creation tools as an important part of your policy statement.</p>
-				<p><abbr title="Worldwide Web Consortium">W3C</abbr> Guidelines categorize conformance criterion into levels; A, AA and AAA. The levels of conformance are based on a <a href="/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head">range of factors</a> but broadly indicate increasingly more inclusive websites with fewer barriers. Ensure your guideline reference includes an indication of the expected conformance level to be achieved. Setting an achievable conformance level ensures that internal support and enthusiasm can be maintained. It may be difficult and expensive to set your initial goal at Level AA if there has been little accessibility work done in the past.</p>
-				<p>You may also wish to reference relevant legislation covering inclusion and discrimination. For websites covering multiple legislative regions, it may be necessary to refer to the legislation for each region and possibly even differing standards. Note, you may also be subject to legislation as a result of your organizational domain, for example, education.</p>
-			</div>
+			<h3>Relevant guidelines</h3>
+			<ul>
+				<li><strong><a href="/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG)</a></strong> - how to make websites accessible.</li>
+				<li><strong><a href="/WAI/intro/atag">Authoring Tool Accessibility Guidelines (ATAG)</a></strong> - how to make software better support the production of accessible web content.</li>
+				<li><strong><a href="/WAI/intro/uaag">User Agent Accessibility Guidelines (UAAG)</a></strong> - how to make accessible browsers and multimedia players.</li>
+			</ul>
 
 			<h3>Examples</h3>
-			<ul>
-				<li>"This website aims to conform to <abbr title="Worldwide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> <a href="/WAI/intro/wcag"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></a> Level AA."</li>
-				<li>"At ACME Inc. we seek to ensure all our websites and web applications, both customer facing and for internal use, conform all Level A criteria of the <abbr title="Worldwide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> <a href="/TR/WCAG20/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Version 2.0</a>. We also aim to ensure that our authoring tools conform to all Level A criteria of the <a href="/TR/ATAG20/"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> Version 2.0</a>.</li>
+			<ul class="with-drop-shadow">
+				<li class="drop-shadow lifted">"This website aims to conform to <abbr title="Worldwide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> <a href="/WAI/intro/wcag"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></a> Level AA."</li>
+				<li class="drop-shadow lifted">"At ACME Inc. we seek to ensure all our websites and web applications, both customer facing and for internal use, conform all Level A criteria of the <abbr title="Worldwide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> <a href="/TR/WCAG20/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Version 2.0</a>. We also aim to ensure that our authoring tools conform to all Level A criteria of the <a href="/TR/ATAG20/"><abbr title="Authoring Tool Accessibility Guidelines">ATAG</abbr> Version 2.0</a>.</li>
 			</ul>
 
 			<h3>Related resources</h3>
@@ -272,7 +315,7 @@
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
-			<h2><a name="scope" id="scope">Define Scope of Policy</a></h2>
+			<h2 id="scope">Define Scope of Policy</h2>
 
 			<h3>Key actions</h3>
 			<ul>
@@ -288,9 +331,9 @@
 			</div>
 
 			<h3>Examples</h3>
-			<ul>
-				<li>"This policy applies to all new, updated, and existing web pages."</li>
-				<li>"This policy applies to all web content produced or updated by ACME Inc. In addition, ACME Inc. is taking the	following steps to ensure accessibility of content provided by	third-party developers: 
+			<ul class="with-drop-shadow">
+				<li class="drop-shadow lifted">"This policy applies to all new, updated, and existing web pages."</li>
+				<li class="drop-shadow lifted">"This policy applies to all web content produced or updated by ACME Inc. In addition, ACME Inc. is taking the	following steps to ensure accessibility of content provided by	third-party developers: 
 					<ul>
 						<li>Informing third-party developers of ACME Inc's	policy on web accessibility;</li>
 						<li>Providing links to information and resources on implementing web accessibility;</li>
@@ -304,7 +347,7 @@
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
-			<h2><a name="miles" id="miles">Set Milestones</a></h2>
+			<h2 id="miles">Set Milestones</h2>
 
 			<h3>Key actions</h3>
 			<ul>
@@ -332,7 +375,7 @@
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
-			<h2><a name="monit" id="monit">Define Monitoring, Conformance Claims, and Follow-up Process</a></h2>
+			<h2 id="monit">Define Monitoring, Conformance Claims, and Follow-up Process</h2>
 
 			<h3>Key actions</h3>
 			<ul>
@@ -358,7 +401,7 @@
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
-			<h2><a name="integ" id="integ">Integrate and Review Policy</a></h2>
+			<h2 id="integ">Integrate and Review Policy</h2>
 
 			<h3>Key actions</h3>
 			<ul>
@@ -375,7 +418,7 @@
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 		
-			<h2><a name="examples" id="examples">Example Policies</a></h2>
+			<h2 id="examples">Example Policies</h2>
 			<h3>Example of simple policy</h3>
 			<div class="drop-shadow lifted">
 				<p>ACME Inc. is committed to ensuring accessibility of its website for people with disabilities. All the pages on our website will conform to W3C WAI's <a href="/TR/WCAG/">Web Content Accessibility Guidelines</a> 2.0, Level AA conformance. Any issues should be reported to <a href="mailto:accessibility@acme.inc">accessibility@acme.inc</a>.</p>
@@ -393,7 +436,7 @@
 			<p class="totop"><a href="#contents">back to page contents</a></p>
 
 
-			<h2><a name="template" id="template">Policy Template</a></h2>
+			<h2 id="template">Policy Template</h2>
 
 			<p>In the template below, the <span class="hint">[hints]</span> in brackets are sections for you to complete.</p>
 
