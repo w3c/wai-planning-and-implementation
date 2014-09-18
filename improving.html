@@ -2,148 +2,278 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Improving the Accessibility of Your Web Site</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Keywords" content="Web Accessibility Initiative, web accessibility, WAI, W3C, World Wide Web, Web, WWW, Consortium, computer, access, accessibility, disability, disabilities, worldwide, international, W3, standard, technology, free, open source, software" />
+	<title>Improving the Accessibility of Your Web Site</title>
+	<!-- When moving to the live environment any file or image links should have the following
+			removed from it:
+				http://www.w3.org/WAI/impl/
+	-->
+	<link href="http://www.w3.org/WAI/style/excol.css" rel="stylesheet" type="text/css" />
+	<!-- This should be used when the page goes live
+		<script type="text/javascript" src="//www.w3.org/WAI/scripts/excol/excol.js" xml:space="preserve"></script> -->
+	<!-- This should be removed with the page goes live -->
+	<script type="text/javascript" src="excol.js" xml:space="preserve"></script>
 
-  <!-- This should be removed when moving to the live environment. Also any anchor links should have 
-       the absolute link (http://w3c.github.io/wai-planning-and-implementation/improving.html) on anchor tags removed. -->
-  <base href="http://www.w3.org/WAI/impl/" />
-  <!-- Remove this when moving to the live environment -->
-  <style>
-    .draft.note {
-      background-color: #FFE6DA;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      margin: 1em;
-      padding: 5px 10px 8px;
-    }
-    .draft.note::before {
-      content: "Notes:";
-      font-weight: bold;
-    }
-    .draft.note p:first-child {
-      margin-top: 0;
-    }
-    .draft.note p:last-child {
-      margin-bottom: 0;
-    }
-  </style>
+	<link href="http://www.w3.org/WAI/impl/../wai-main.css" rel="stylesheet" type="text/css" />
+	<!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
 
-  <link rel="stylesheet" href="../wai-main.css" type="text/css" />
-<!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]--></head>
+	<!-- Remove this when moving to the live environment -->
+	<style>
+		.draft.note {
+			background-color: #FFE6DA;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			margin: 1em;
+			padding: 5px 10px 8px;
+		}
+		.draft.note::before {
+			content: "Notes:";
+			font-weight: bold;
+		}
+		.draft.note p:first-child {
+			margin-top: 0;
+		}
+		.draft.note p:last-child {
+			margin-bottom: 0;
+		}
+	</style>
 
+	<!-- When moving to live environment this needs to move to wai-main.css -->
+	<style>
+		/* ex-col jumping with hover/focus temp fix. Ideally this should be incorporated
+			into /WAI/style/excol.css to address this issue throughout the site */
+		.f_panelHead {
+			border-bottom: solid #fffaf5;
+			padding-left: 1.6em;
+			position: relative;
+		}
+		.f_panelHead.fs_hover, .f_panelHead.fs_focus {
+			border-bottom: solid #993300;
+		}
+		.f_panelHead.fs_selected {
+			border-bottom: solid #993300;
+		}
+		.f_expanderWrapper {
+			float: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		
+		/* It may be better not to add this to the core wai-main.css as it would make more
+			widespread changes to how to top links would look. */
+		p.totop a {
+			text-decoration: none;
+		}
+		p.totop a:hover, p.totop a:focus {
+			text-decoration: underline;
+		}
+		
+		/* Again, it may be beneficial to move these classes into wai-main.css */
+		.eg {
+			color: #930;
+			font-size: 135%;
+			float:left;
+			padding-top: 0;
+			margin-top: 0;
+			margin-left: 10px;
+		}
+		.example-bar {
+			border-left: solid 2px #930;
+			margin-left: 55px;
+			padding: 0 15px;
+		}
+		.example-bar h4 {
+			margin: 0;
+		}
+		.example-bar ul {
+			/* This will need adjusted when moving to live */
+			list-style: disc outside url("http://www.w3.org/WAI/impl/../images/bullet-c60.gif");
+			padding-left: 1.3em;
+			margin-bottom: 0;
+		}
+		
+		.key-actions {
+			list-style: none;
+	    padding: 0px;
+		}
+
+		.key-actions li {
+			margin-left: 1.5em;
+		}
+		
+		.key-actions li>span {
+			padding-left: 2em;
+		}
+
+		.key-actions li div p:first-child {
+			margin-top: 0.5em;
+		}
+	</style>
+</head>
 <body>
+	<div id="controls"><ul>
+		<li><a href="#skip"><img src="http://www.w3.org/WAI/impl/../../Icons/downinpage.png" alt="" /> Skip to Content</a></li>
+		<li> | <a href="/WAI/changedesign.html">Change text size or colors</a></li>
+	</ul></div>
 
-<div id="controls"><ul>
-      <li><a href="#skip" shape="rect"><img src="/Icons/downinpage.png" alt="" /> Skip to Content </a></li>
-      <li><a href="/WAI/changedesign.html" shape="rect"> | Change text size or colors </a> </li>
-   </ul></div>
+	<div id="masthead"><p id="logos"><a href="http://www.w3.org/" title="W3C Home"><img alt="W3C logo" src="http://www.w3.org/WAI/impl/../../Icons/w3c_home" /></a><a href="http://www.w3.org/WAI/" title="WAI Home"><img alt="Web Accessibility initiative" src="http://www.w3.org/WAI/impl/../../WAI/images/wai-temp" /></a></p></div>
 
-<div id="masthead"><p id="logos"><a href="http://www.w3.org/" title="W3C Home" shape="rect"><img alt="W3C logo" src="/Icons/w3c_home" /></a><a href="http://www.w3.org/WAI/" title="WAI Home" shape="rect"><img alt="Web Accessibility initiative" src="/WAI/images/wai-temp" /></a></p></div>
+	<div id="tagline"><p>WAI: Strategies, guidelines, resources to make the Web accessible to people with disabilities</p></div>
 
-<div id="tagline"><p>WAI: Strategies, guidelines, resources to make the
-      Web accessible to people with disabilities</p></div>
+	<div id="nav">
+		<h2>Site Navigation</h2>
+		<p id="w3cnav"><a href="http://www.w3.org/">W3C Home</a></p>
+		<p id="subhomenav"><a href="/WAI/">Web Accessibility Initiative (WAI) Home</a></p>
+		<ol id="nav1" type="A">
+			<li><a href="../gettingstarted/Overview.html">Getting Started</a></li>
+			<li><a href="../users/Overview.html">Designing for Inclusion</a></li>
+			<li><a href="../guid-tech.html">Guidelines &amp; Techniques</a></li>
+			<li class="current-nav "><a href="../managing.html">Planning &amp; Implementing</a>
+				<ul>
+					<li class="nav-head">Policy Resources
+						<ol>
+							<li><a href="../Policy/harmon.html">Standards Harmonization</a></li>
+							<li><a href="../Policy/Overview.html">International Policies</a></li>
+							<li><a href="pol.html">Organizational Policies</a></li>
+						</ol>
+					</li>
+					<li class="current-nav nav-head">Managing Accessibility
+						<ol>
+							<li><a href="Overview.html">Implementation Planning</a></li>
+							<li id="current-node" class="current-nav"><span class="label"><span id="current-icon">»</span>Improving Existing Sites</span></li>
+							<li><a href="../users/involving.html">Involving Users in Web Projects</a></li>
+							<li><a href="software.html">Selecting Authoring Tools</a></li>
+						</ol>
+					</li>
+				</ul>
+			</li>
+			<li><a href="../eval/Overview.html">Evaluating Accessibility</a></li>
+			<li><a href="../train.html">Presentations &amp; Tutorials</a></li>
+			<li><a href="../about-links.html">Getting Involved with WAI</a></li>
+		</ol>
+		
+		<div id="nav-static">
+			<div class="nav-discover">
+				<p><a href="http://www.w3.org/WAI/yourWAI"><strong><u>Discover new resources</u></strong> for people with disabilities, policy makers, managers, and you!</a></p>
+			</div>
+				
+			<p class="translations"><a href="http://www.w3.org/WAI/wai-translations"><img src="http://www.w3.org/WAI/images/translations-med-1" alt="characters from different languages" /> Translations</a></p>
+		</div>
+	</div>
 
-<div id="nav"><h2>Site Navigation</h2><p id="w3cnav"><a href="http://www.w3.org/">W3C Home</a></p><p id="subhomenav"><a href="/WAI/">Web Accessibility Initiative (WAI) Home</a></p><ol id="nav1" type="A"><li><a href="../gettingstarted/Overview.html" shape="rect">Getting Started</a></li><li><a href="../users/Overview.html" shape="rect">Designing for Inclusion</a></li><li><a href="../guid-tech.html" shape="rect">Guidelines &amp; 
-            Techniques</a></li><li class="current-nav "><a href="../managing.html" shape="rect">Planning &amp; Implementing</a><ul><li class="nav-head">Policy Resources
-                  
-               <ol><li><a href="../Policy/harmon.html" shape="rect">Standards Harmonization</a></li><li><a href="../Policy/Overview.html" shape="rect">International Policies</a></li><li><a href="pol.html" shape="rect">Organizational Policies</a></li></ol></li><li class="current-nav nav-head">Managing Accessibility
-                  
-               <ol><li><a href="Overview.html" shape="rect">Implementation Plan</a></li><li id="current-node" class="current-nav "><span class="label"><span id="current-icon">»</span>Improving Existing Sites</span></li><li><a href="../users/involving.html" shape="rect">Involving Users in Web Projects</a></li><li><a href="software.html" shape="rect">Selecting Authoring Tools</a></li></ol></li></ul></li><li><a href="../eval/Overview.html" shape="rect">Evaluating Accessibility</a></li><li><a href="../train.html" shape="rect">Presentations &amp; Tutorials</a></li><li><a href="../about-links.html" shape="rect">Getting Involved with WAI</a></li></ol><div id="nav-static"><div class="nav-discover">
-         <p><a href="http://www.w3.org/WAI/yourWAI" shape="rect"><strong><u>Discover new resources</u></strong> for people with disabilities, policy makers, managers, and you!</a></p>
-      </div><p class="translations"><a href="http://www.w3.org/WAI/wai-translations" shape="rect"><img src="http://www.w3.org/WAI/images/translations-med-1" alt="characters from different languages" /> Translations</a></p></div></div>
+	<div id="main">
+		<div id="skipwrapper"><a id="skip">-</a></div>
 
-<div id="main"><div id="skipwrapper"><a id="skip" shape="rect">-</a></div>
-<a name="startcontent" id="startcontent" shape="rect"></a>
+		<!-- Remove this when moving to live environment -->
+		<p class="highlight-version"><strong>This is an internal Editor's Draft. The main page is at <a href="http://www.w3.org/WAI/impl/improving.html">www.w3.org/WAI/impl/improving.html</a><br>
+			Please send any suggestions, edits, or comments</strong> to the publicly-archived list: <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a>
+		</p>
 
-  <!-- Remove this when moving to live environment -->
-  <p class="highlight-version"><strong>This is an internal Editor's Draft. The main page is at <a href="http://www.w3.org/WAI/impl/improving.html">www.w3.org/WAI/impl/improving.html</a><br>
-    Please send any suggestions, edits, or comments</strong> to the publicly-archived list: <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a>
-  </p>
+	  <h1>Improving the Accessibility of Your Website</h1>
+	  <div id="contents">
+	    <h2>Page Contents</h2>
+	    <ul>
+	      <li><a href="#intro" shape="rect">Introduction</a></li>
+	      <li><a href="#scope" shape="rect">Determine scope</a></li>
+	      <li><a href="#assess" shape="rect">Assessing the situation</a></li>
+	      <li><a href="#priority" shape="rect">Prioritizing solutions</a></li>
+	      <li><a href="#team" shape="rect">Building an accessibility team</a></li>
+	      <li><a href="#project" shape="rect">Project life cycle</a></li>
+	    </ul>
+	  </div>
 
-  <h1>Improving the Accessibility of Your Website</h1>
+		<h2 id="intro" class="no-display">Introduction</h2>
+		<p>For many websites, accessibility was not a consideration when first created. As part of the maintenance process there is an opportunity to identify and address accessibility barriers. Addressing accessibility can be approached as a standalone project or part of broader site maintenance activities. In either case there are approaches that help make the process more efficient and effective.</p>
 
-  <div id="contents">
-    <h2>Page Contents</h2>
-    <ul>
-      <li><a href="http://w3c.github.io/wai-planning-and-implementation/improving.html#intro" shape="rect">Introduction</a></li>
-      <li><a href="http://w3c.github.io/wai-planning-and-implementation/improving.html#scope" shape="rect">Determine scope</a></li>
-      <li><a href="http://w3c.github.io/wai-planning-and-implementation/improving.html#assess" shape="rect">Assessing the situation</a></li>
-      <li><a href="http://w3c.github.io/wai-planning-and-implementation/improving.html#priority" shape="rect">Prioritizing solutions</a></li>
-      <li><a href="http://w3c.github.io/wai-planning-and-implementation/improving.html#team" shape="rect">Building an accessibility team</a></li>
-      <li><a href="http://w3c.github.io/wai-planning-and-implementation/improving.html#project" shape="rect">Project life cycle</a></li>
-    </ul>
-  </div>
+		<h3>What is this document for?</h3>
+			<p>This document provides you information on what is important when seeking to improve the accessibility of a website. The related document on <a href="Overview.html">Implementation Planning</a> may be useful as many of the topics discussed are relevant to improving accessibility for existing websites.</p>
+		<h3>Who is it for?</h3>
+			<p>This document is for project managers, project team leaders, website owners and managers, web developers, and small business owners. It is likely that you will be relatively new to accessibility.</p>
+		<h3>Using this document</h3>
+			<p>The document presents the information as a structured list of topics that you will need to consider. Information from prior topics are often required for subsequent topics so the order these are approached in will be important.</p>
+			<ul>
+				<li><a href="#basics">Understanding the Basics</a></li>
+				<li><a href="#scope">Determine Scope and Target</a></li>
+				<li><a href="#assess">Assess the Situation</a></li>
+				<li><a href="#policy">Prioritize Solutions</a></li>
+				<li><a href="#repair">Implement Repairs</a></li>
+				<li><a href="#revisit">Review and Plan to Revisit</a></li>
+			</ul>
 
-  <h2><a id="intro" name="intro">Introduction</a></h2>
-  <!-- Remove any 'draft note's when moving to live environment -->
-  <div class="draft note">
-  <p id="intro1">
-    Need to outline that these are additional considerations from the basic planning for accessibility. What items from that document are relevant? What is not? Again, who is this for, what will they get, what is the structure. Keeping the same structure as the planning page may be useful as the consistency makes the differences more obvious.
-  </p>
-  <p id="intro2">
-    There is a significant overlap between the sections on this page and those on the Implementation page. To avoid repeating this material it may be useful to refer to those parts which are the same and highlight any minor differences. This includes:
-  </p>
-  <ul>
-    <li>Exploring your organizational awareness</li>
-    <li>Develop organizational policy</li>
-    <li>Review available resources</li>
-    <li>Procurement and commissioning - although may be more about defining scope of task with any third party as can make it specific to identified barriers</li>
-    <li>Communicating and sharing - although there may be identified barriers left that need to be communicated internally and externally</li>
-    <li>Maintenance and monitoring - although there may be identified barriers left over that need to be rolled over into the next opportunity for fixes. How are these barriers captured? Is this a question for Assessing the situation</li>
-  </ul>
-  </div>
+		<p>Note that additional content regarding each Key Action can be revealed using the button beside the action. You can expand all such content using the following buttons.</p>
+		<div class="f_controls_accordion f_fileToLoad_accordionControls"></div>
+			
+					
+	  <!-- Remove any 'draft note's when moving to live environment -->
+	  <div class="draft note">
+	  <p id="intro1">
+	    Need to outline that these are additional considerations from the basic planning for accessibility. What items from that document are relevant? What is not? Again, who is this for, what will they get, what is the structure. Keeping the same structure as the planning page may be useful as the consistency makes the differences more obvious.
+	  </p>
+	  <p id="intro2">
+	    There is a significant overlap between the sections on this page and those on the Implementation page. To avoid repeating this material it may be useful to refer to those parts which are the same and highlight any minor differences. This includes:
+	  </p>
+	  <ul>
+	    <li>Exploring your organizational awareness</li>
+	    <li>Develop organizational policy</li>
+	    <li>Review available resources</li>
+	    <li>Procurement and commissioning - although may be more about defining scope of task with any third party as can make it specific to identified barriers</li>
+	    <li>Communicating and sharing - although there may be identified barriers left that need to be communicated internally and externally</li>
+	    <li>Maintenance and monitoring - although there may be identified barriers left over that need to be rolled over into the next opportunity for fixes. How are these barriers captured? Is this a question for Assessing the situation</li>
+	  </ul>
+	  </div>
 
-  <h2><a id="scope" name="scope">Determine scope</a></h2>
-  <div class="draft note">
-  <p id="scope1">
-    Differs from planning as there is an existing site or service but many of the same questions. Also, is this an isolated retrofitting project, part of a broader change, or minor changes? Timescale is an important factor here as well.
-  </p>
-  </div>
+	  <h2><a id="scope" name="scope">Determine scope</a></h2>
+	  <div class="draft note">
+	  <p id="scope1">
+	    Differs from planning as there is an existing site or service but many of the same questions. Also, is this an isolated retrofitting project, part of a broader change, or minor changes? Timescale is an important factor here as well.
+	  </p>
+	  </div>
 
-  <h2><a id="assess" name="assess">Assessing the situation</a></h2>
-  <div class="draft note">
-  <p id="assess1">
-    Need to thoroughly review and test the site or service identified in the scope. This provides a clear set of barriers to be addressed.
-  </p>
-  </div>
+	  <h2><a id="assess" name="assess">Assessing the situation</a></h2>
+	  <div class="draft note">
+	  <p id="assess1">
+	    Need to thoroughly review and test the site or service identified in the scope. This provides a clear set of barriers to be addressed.
+	  </p>
+	  </div>
 
-  <h2><a id="priority" name="priority">Prioritizing solutions</a></h2>
-  <div class="draft note">
-  <p id="priority1">
-    Do by impact on users and/or ease of addressing. Resources are ideally targeted at high impact/easy fix barriers and then work from there.
-  </p>
-  </div>
+	  <h2><a id="priority" name="priority">Prioritizing solutions</a></h2>
+	  <div class="draft note">
+	  <p id="priority1">
+	    Do by impact on users and/or ease of addressing. Resources are ideally targeted at high impact/easy fix barriers and then work from there.
+	  </p>
+	  </div>
   
-  <h2><a name="project" id="project">Project life cycle</a></h2>
-  <div class="draft note">
-  <p id="project1">
-    Less emphasis on starting early as it is already too late. More information available on how long fixes are likely to take. This can be planned in.
-  </p>
-  </div>
+	  <h2><a name="project" id="project">Project life cycle</a></h2>
+	  <div class="draft note">
+	  <p id="project1">
+	    Less emphasis on starting early as it is already too late. More information available on how long fixes are likely to take. This can be planned in.
+	  </p>
+	  </div>
 
-  <h2><a id="team" name="team">Building an accessibility team</a></h2>
-  <div class="draft note">
-  <p id="team1">
-    This may be more about how to develop an existing team. What additional resources are required? Are changes required in the way the organization is structure to accommodate on-going projects. Perhaps these are questions for the planning as well.
-  </p>
-  </div>
-</div>
+	  <h2><a id="team" name="team">Building an accessibility team</a></h2>
+	  <div class="draft note">
+	  <p id="team1">
+	    This may be more about how to develop an existing team. What additional resources are required? Are changes required in the way the organization is structure to accommodate on-going projects. Perhaps these are questions for the planning as well.
+	  </p>
+	  </div>
+	</div>
 
-<div id="footer">
-  <h2>Document Information</h2>
+	<div id="footer">
+	  <h2>Document Information</h2>
 
-  <p><strong>Status:</strong> First published March 2006. Updated  November 2011.  [<a href="/WAI/EO/changelogs/cl-retrofit" shape="rect">changelog</a>]<br clear="none" />
+	  <p><strong>Status:</strong> First published March 2006. Updated  November 2011.  [<a href="/WAI/EO/changelogs/cl-retrofit" shape="rect">changelog</a>]<br clear="none" />
      
-Editors: Shawn Lawton Henry, Shadi Abou-Zahra, and Education and Outreach
-Working Group (<a href="/WAI/EO/" shape="rect">EOWG</a>) <a href="http://www.w3.org/WAI/EO/EOWG-members.html" shape="rect">participants</a>. Developed with support from <a href="http://www.w3.org/WAI/TIES/" shape="rect"><acronym title="Web Accessibility Initiative: Training, Implementation, Education, Support">WAI-TIES</acronym></a>, a project of the European Commission <acronym title="Information Society Technologies">IST</acronym> Programme.</p>
+	Editors: Shawn Lawton Henry, Shadi Abou-Zahra, and Education and Outreach
+	Working Group (<a href="/WAI/EO/" shape="rect">EOWG</a>) <a href="http://www.w3.org/WAI/EO/EOWG-members.html" shape="rect">participants</a>. Developed with support from <a href="http://www.w3.org/WAI/TIES/" shape="rect"><acronym title="Web Accessibility Initiative: Training, Implementation, Education, Support">WAI-TIES</acronym></a>, a project of the European Commission <acronym title="Information Society Technologies">IST</acronym> Programme.</p>
 
-<div class="footer-nav"><p>[<a href="http://www.w3.org/WAI/sitemap.html" shape="rect">WAI Site Map</a>] [<a href="http://www.w3.org/WAI/sitehelp.html" shape="rect">Help with WAI Website</a>] [<a href="http://www.w3.org/WAI/search.php" shape="rect">Search</a>] [<a href="/WAI/contacts" shape="rect">Contacting WAI</a>]<br clear="none" />
-         <strong>Feedback welcome to <a href="mailto:wai-eo-editors@w3.org" shape="rect">wai-eo-editors@w3.org</a></strong> (a publicly archived list) or <a href="mailto:wai@w3.org" shape="rect">wai@w3.org</a> (a WAI staff-only list).</p></div><div class="copyright"><p><a rel="Copyright" href="/Consortium/Legal/ipr-notice#Copyright" shape="rect">Copyright</a> © 1994-2012 <a href="/" shape="rect"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/" shape="rect"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/" shape="rect"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/" shape="rect">Keio</a>), All Rights Reserved. W3C <a href="/Consortium/Legal/ipr-notice#Legal_Disclaimer" shape="rect">liability</a>, <a href="/Consortium/Legal/ipr-notice#W3C_Trademarks" shape="rect">trademark</a>, <a rel="Copyright" href="/Consortium/Legal/copyright-documents" shape="rect">document use</a> and <a rel="Copyright" href="/Consortium/Legal/copyright-software" shape="rect">software
-         licensing</a> rules apply. Your interactions with this site are in
-         accordance with our <a href="/Consortium/Legal/privacy-statement#Public" shape="rect">public</a> and <a href="/Consortium/Legal/privacy-statement#Members" shape="rect">Member</a> privacy
-         statements.</p></div>
-</div>
+	<div class="footer-nav"><p>[<a href="http://www.w3.org/WAI/sitemap.html" shape="rect">WAI Site Map</a>] [<a href="http://www.w3.org/WAI/sitehelp.html" shape="rect">Help with WAI Website</a>] [<a href="http://www.w3.org/WAI/search.php" shape="rect">Search</a>] [<a href="/WAI/contacts" shape="rect">Contacting WAI</a>]<br clear="none" />
+	         <strong>Feedback welcome to <a href="mailto:wai-eo-editors@w3.org" shape="rect">wai-eo-editors@w3.org</a></strong> (a publicly archived list) or <a href="mailto:wai@w3.org" shape="rect">wai@w3.org</a> (a WAI staff-only list).</p></div><div class="copyright"><p><a rel="Copyright" href="/Consortium/Legal/ipr-notice#Copyright" shape="rect">Copyright</a> © 1994-2012 <a href="/" shape="rect"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/" shape="rect"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/" shape="rect"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/" shape="rect">Keio</a>), All Rights Reserved. W3C <a href="/Consortium/Legal/ipr-notice#Legal_Disclaimer" shape="rect">liability</a>, <a href="/Consortium/Legal/ipr-notice#W3C_Trademarks" shape="rect">trademark</a>, <a rel="Copyright" href="/Consortium/Legal/copyright-documents" shape="rect">document use</a> and <a rel="Copyright" href="/Consortium/Legal/copyright-software" shape="rect">software
+	         licensing</a> rules apply. Your interactions with this site are in
+	         accordance with our <a href="/Consortium/Legal/privacy-statement#Public" shape="rect">public</a> and <a href="/Consortium/Legal/privacy-statement#Members" shape="rect">Member</a> privacy
+	         statements.</p></div>
+	</div>
 </body>
 </html>
