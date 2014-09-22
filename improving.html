@@ -266,8 +266,9 @@
 		
 
 			  <h2 id="assess">Assess the Situation</a></h2>
-				<p>The goal of assessing your website or pages is to define the accessibility barriers and gather information in order to plan for their repair. Evaluation can focus on specific points to help guide your improvement plan, such as determining if a particular issue is widespread or isolated, or what the impact is on users with disabilities.</p>
+				<p>The goal of assessing your website or pages is to identify the accessibility barriers and gather information in order to plan for their repair. Evaluation can focus on specific points to help guide your improvement plan, such as determining if a particular issue is widespread or isolated, or what the impact is on users with disabilities.</p>
 				<p>Rather than thoroughly evaluating every target page, you can focus on representative areas in order to obtain more valuable information with less effort. For example, templates, style sheets, and any shared components, such as navigation bars and footers, only need to be evaluated once.</p>
+				<p>Knowing where identified issues originate can help in your improvement planning. For example, if only a few data tables are missing necessary markup, then you might include adding table markup to quality assurance processes. however, if none of the tables are properly marked up, you would add data table markup to your education plan. If tables from one development team are done properly, but another teams are not, this helps further clarify where education is needed.</p>
 				<p>Many organizations hire accessibility specialists to evaluate their website. They will also be able to provide guidance on how to respond to the identified barriers. This can include general recommendations on approach and priorities, specific recommendations on solutions, and guidance on the knowledge and skills needed for the repairs.</p>
 
 				<h3>Key actions</h3>
@@ -282,36 +283,65 @@
 							<p>Ensure that you are as consistent as possible in applying your evaluation methodology. This allows you to repeat the evaluation and compare the results. <abbr title="Website Accessibility Conformance Evaluation Methodology">WCAG-EM</abbr> is a comprehensive and structured approach to help determine how well a website conforms to <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>.</p>
 						</div>
 					</li>
-					<li><span class="f_panelHead">Consider how identified issues can direct solutions.</span>
+					<li><span class="f_panelHead">Evaluate with real users.</span>
 						<div>
-							<p>Knowing where identified issues originate can help in your improvement planning. For example, if only a few data tables are missing necessary markup, then you might include adding table markup to quality assurance processes. however, if none of the tables are properly marked up, you would add data table markup to your education plan. If tables from one development team are done properly, but another teams are not, this helps further clarify where education is needed.</p>
+							<p>In addition to helping identify and prioritize accessibility barriers, watching people struggle to use your site can be a powerful motivator for your improvement project team.</p>
 						</div>
 					</li>
+					<li><span class="f_panelHead">Use appropriate evaluation and repair tools.</span>
+						<div>
+							<p>Web accessibility evaluation tools are programs and online services that help check if a website meets accessibility guidelines. There are also tools that help repair accessibility barriers. Some evaluation tools can be configured to be more useful to your specific project. For example, once you figure out your scope, you can configure the tool to only evaluate those criteria and pages. This can speed up the evaluation and simplify the report.</p>
+						</div>
+					</li>
+					<li><span class="f_panelHead">Consider how authoring tools might introduce barriers.</span>
+						<div>
+							<p>Authoring tools are software or services used to create or modify websites, such as web page editors and content management systems (CMS). Some authoring tools provide better accessibility support than others. You might be able to improve accessibility support in your authoring tool by:</p>
+							<ul>
+						    <li>Configuring your tools, for example, sometimes accessibility features in authoring tools are disabled by default and need to be turned on</li>
+						    <li>Using plug-ins or other add-on software to extend the accessibility support of your tools</li>
+						    <li>Upgrading your existing tools to the latest version, if they have better accessibility support</li>
+						    <li>Purchasing different tools with better accessibility support</li>
+								
+							</ul>
+							<p>For some content, such as video or <abbr title="Portable Document Format">PDF</abbr>, there may be an involved process with a number of tools involved. You may need to consider each step of the process to identify where issues are introduced and where they may be best addressed.</p>
+						</div>
+					</li>
+					
 				</ul>
 		
 				<h3>Related resources</h3>
 				<ul>
 					<li><a href="/WAI/eval/conformance.html">Website Accessibility Conformance Evaluation Methodology</a> - An approach for determining how well a website conforms to <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>.</li>
+					<li><a href="/WAI/eval/users">Involving Users in Evaluating Web Accessibility</a> - Guidance on including people with disabilities ("users") in accessibility evaluation throughout Web development.</li>
+					<li><a href="/WAI/eval/selectingtools.html">Selecting Web Accessibility Evaluation Tools</a> - Guidance on choosing which Web accessibility evaluation tools to use to help evaluate Web accessibility.</li>
 				</ul>
 
 				<p class="totop"><a href="#contents">back to page contents</a></p>		
 		
 
 			  <h2 id="prioritize">Prioritize Solutions</a></h2>
-				<p>  By area
-		  By impact
-		</p>
-			  <div class="draft note">
-			  <p>
-			    Do by impact on users and/or ease of addressing. Resources are ideally targeted at high impact/easy fix barriers and then work from there.
-			  </p>
-			  </div>
+				<p>Prioritizing repairs will make implementation more manageable and aims to bring benefit to users as soon as possible. Also, you may find that resource limitations mean that not all repairs can be made immediately. When considering prioritization, there are two important factors to determine:</p>
+				<ol>
+					<li><h4>What is the impact on people with disabilities?</h4>
+						<p>Accessibility barriers are often identified by WCAG success criteria. Each criteria has a Level (A, AA, AAA) that helps determine the impact of a particular accessibility barrier. The actual impact depends on the context of the barrier and target audience. For example, poor contrast in the main content has a high impact, whereas in generic footers it may have low impact.</p>
+						<p>Evaluating with users will also help determine the impact of accessibility any barriers.</p>
+					</li>
+					<li><h4>What is the effort required for repair?</h4>
+						<p>The time, cost, and skills to repair a barrier will vary greatly. For example, repairing an issue in the footer could require a simple change to the template that is automatically propagated throughout the website, or it could require changing every page manually.</p>
+						<p>Running workshops with representatives from all teams can help you quickly determine possible solutions and what effort would be required to implement them.</p>
+					</li>
+				</ol>
 
 				<h3>Key actions</h3>
 				<ul class="key-actions">
-					<li><span class="f_panelHead">Lorem ipsum</span>
+					<li><span class="f_panelHead">Prioritize by barriers</span>
 						<div>
-							<p></p>
+							<p>You will generally want to prioritize high impact easy fixes first. This will provide the most improvement in the shortest time. Creating a graph of impact versus effort can help you quickly determine the overall priority of barriers. This approach has several advantages: it usually takes less time overall, and you get lots of improvement quickly.</p>
+						</div>
+					</li>
+					<li><span class="f_panelHead">Prioritize by area</span>
+						<div>
+							<p>It is usually best to first repair those areas that have the greatest impact on user's experience. Identify key pages or journeys within the website. For example, the home page may be a primary entry point, purchasing a product and payment process may be an important function. Frequently-used, high-traffic, pages and functionality can be identified using analytics.</p>
 						</div>
 					</li>
 				</ul>
