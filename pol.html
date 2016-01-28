@@ -12,29 +12,8 @@
 	-->
 	
 	<link href="http://www.w3.org/WAI/impl/../wai-main.css" rel="stylesheet" type="text/css" />
+	<link href="wai-style-changes.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
-
-	<!-- Remove this when moving to the live environment -->
-	<style>
-		.draft.note {
-			background-color: #FFE6DA;
-			-webkit-border-radius: 3px;
-			-moz-border-radius: 3px;
-			border-radius: 3px;
-			margin: 1em;
-			padding: 5px 10px 8px;
-		}
-		.draft.note::before {
-			content: "Notes:";
-			font-weight: bold;
-		}
-		.draft.note p:first-child {
-			margin-top: 0;
-		}
-		.draft.note p:last-child {
-			margin-bottom: 0;
-		}
-	</style>
 
 	<!-- When moving to live environment this needs to move to wai-main.css -->
 	<style>
@@ -160,17 +139,19 @@
 	</style>
 </head>
 
-<body>
-	<div id="controls"><ul>
-		<li><a href="#skip"><img src="http://www.w3.org/WAI/impl/../../Icons/downinpage.png" alt="" /> Skip to Content</a></li>
-		<li> | <a href="/WAI/changedesign">Change text size or colors</a></li>
-	</ul></div>
+<body class="draft">
+	<header>
+		<div id="controls"><ul>
+			<li><a href="#skip"><img src="http://www.w3.org/WAI/impl/../../Icons/downinpage.png" alt="" /> Skip to Content</a></li>
+			<li> | <a href="/WAI/changedesign">Change text size or colors</a></li>
+		</ul></div>
 
-	<div id="masthead"><p id="logos"><a href="/" title="W3C Home"><img alt="W3C logo" src="http://www.w3.org/WAI/impl/../../Icons/w3c_home" /></a><a href="/WAI/" title="WAI Home"><img alt="Web Accessibility initiative" src="http://www.w3.org/WAI/impl/../../WAI/images/wai-temp" /></a></p></div>
+		<div id="masthead"><p id="logos"><a href="/" title="W3C Home"><img alt="W3C logo" src="http://www.w3.org/WAI/impl/../../Icons/w3c_home" /></a><a href="/WAI/" title="WAI Home"><img alt="Web Accessibility initiative" src="http://www.w3.org/WAI/impl/../../WAI/images/wai-temp" /></a></p></div>
 
-	<div id="tagline"><p>WAI: Strategies, guidelines, resources to make the Web accessible to people with disabilities</p></div>
+		<div id="tagline"><p>WAI: Strategies, guidelines, resources to make the Web accessible to people with disabilities</p></div>
+	</header>
 
-	<div id="nav">
+	<nav id="nav">
 		<h2>Site Navigation</h2>
 		<p id="w3cnav"><a href="/">W3C Home</a></p>
 		<p id="subhomenav"><a href="/WAI/">Web Accessibility Initiative (WAI) Home</a></p>
@@ -209,15 +190,15 @@
 				
 			<p class="translations"><a href="/WAI/wai-translations"><img src="http://www.w3.org/WAI/images/translations-med-1" alt="characters from different languages" /> Translations</a></p>
 		</div>
-	</div>
+	</nav>
 
-	<div id="main">
+	<main id="main" role="main">
 		<div id="skipwrapper"><a id="skip">-</a></div>
 
 		<!-- Remove this when moving to live environment -->
-		<p class="highlight-version"><strong>This is an internal Editor's Draft. The main page is at <a href="http://www.w3.org/WAI/impl/pol.html">www.w3.org/WAI/impl/pol.html</a><br>
-			Please send any suggestions, edits, or comments</strong> to the publicly-archived list: <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a>
-		</p>
+		<div class="status">
+		  <p><strong>Status:</strong> This is an in-progress, unapproved draft.</p>
+		</div>
 
 		<h1>Developing Organizational Policies on Web Accessibility</h1>
 		<div id="contents"> 
@@ -463,19 +444,33 @@
 		<p><a href="Overview">Planning and Managing Web Accessibility</a> outlines how to integrate accessibility throughout your web development. Ensure that when redesigns or updates are planned, accessibility is included from the start of the project. Accessibility is much less costly and time-consuming when tackled at the beginning of a project, rather than the end.</p>
 		
 		<p class="totop"><a href="#contents">back to page contents</a></p>
-	</div>
 
-	<div id="footer">
-	   <h2>Document Information</h2>
-	   <p><strong>Status:</strong> <strong>Draft</strong> approved by <a href="/WAI/EO/">EOWG</a> updated October 2014 (first published: October 2002)<br>
+		<aside class="side-box contribute" role="complementary">
+		  <h2 class="heading">Help improve this page</h2>
+		  <p>Please share your ideas, suggestions, or comments via email to the publicly-archived list <a href="mailto:wai-eo-editors@w3.org?subject=%5bDeveloping%20Organizational%20Policies%20on%20Web%20Accessibility%5d">wai-eo-editors@w3.org</a> or via GitHub.</p>
+
+			<div class="buttons">
+		  	<a class="btn" title="Publicly archived list" href="mailto:wai-eo-editors@w3.org?subject=%5bDeveloping%20Organizational%20Policies%20on%20Web%20Accessibility%5d">E-mail</a>
+		    <a class="btn"
+href="https://github.com/w3c/wai-planning-and-implementation/blob/gh-pages/pol.html">Fork &amp; edit on GitHub</a>
+		  	<a class="btn" href="https://github.com/w3c/wai-planning-and-implementation/issues/new?title=[Developing%20Organizational%20Policies%20on%20Web%20Accessibility]&body=This%20is%20a%20comment%20related%20to%20the%20page%20[Developing%20Organizational%20Policies%20on%20Web%20Accessibility](//w3c.github.io/wai-planning-and-implementation/pol.html)">New GitHub Issue</a>
+			</div>
+		</aside>
+	</main>
+
+	<footer id="footer" role="contentinfo">
+		<div>
+	  	<h2>Document Information</h2>
+	  	<p><strong>Status:</strong> <strong>Draft</strong> approved by <a href="/WAI/EO/">EOWG</a> updated October 2014 (first published: October 2002)<br>
 	      Editors: <a href="/People/#kevin">Kevin White</a> and <a href="/People/Brewer/">Judy Brewer</a>. Contributors: <a href="/People/shadi/">Shadi Abou-Zahra</a>, <a href="/People/Shawn/">Shawn Lawton Henry</a>, and <a href="/WAI/EO/EOWG-members">participants</a> of the <a href="/WAI/EO/">Education and Outreach Working Group</a>. Updated with support from <a href="/WAI/ACT/" shape="rect"><acronym title="Web Accessibility Initiative - Cooperation Framework for Guidance on Advanced Technologies, Evaluation Methodologies, and Research Agenda Setting to Support eAccessibility">WAI-ACT</acronym></a>, a project of the European Commission <acronym title="Information Society Technologies">IST</acronym> Programme.</p>
-	   <div class="footer-nav">
-	      <p>[<a href="/WAI/sitemap.html">WAI Site Map</a>] [<a href="/WAI/sitehelp.html">Help with WAI Website</a>] [<a href="/WAI/search.php">Search</a>] [<a href="/WAI/contacts">Contacting WAI</a>]<br clear="none" />
+	  	<div class="footer-nav">
+	    	<p>[<a href="/WAI/sitemap.html">WAI Site Map</a>] [<a href="/WAI/sitehelp.html">Help with WAI Website</a>] [<a href="/WAI/search.php">Search</a>] [<a href="/WAI/contacts">Contacting WAI</a>]<br clear="none" />
 	         <strong>Feedback welcome to <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org</a></strong> (a publicly archived list) or <a href="mailto:wai@w3.org">wai@w3.org</a> (a WAI staff-only list).</p>
-	   </div>
-	   <div class="copyright">
-	      <p>Copyright &#xA9; 2014 W3C <sup>&#xAE;</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>) <a href="/Consortium/Legal/ipr-notice">Usage policies apply</a>.</p>
-	   </div>
-	</div>
+	  	</div>
+	  	<div class="copyright">
+	    	<p>Copyright &#xA9; 2014 W3C <sup>&#xAE;</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>) <a href="/Consortium/Legal/ipr-notice">Usage policies apply</a>.</p>
+	  	</div>
+		</div>
+	</footer>
 </body>
 </html>
