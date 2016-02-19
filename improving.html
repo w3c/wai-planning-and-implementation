@@ -9,62 +9,15 @@
 			removed from it:
 				http://www.w3.org/WAI/impl/
 	-->
-	<!-- This should be used when the page goes live
-		<script type="text/javascript" src="//www.w3.org/WAI/scripts/excol/excol.js" xml:space="preserve"></script> -->
-	<!-- This should be removed with the page goes live -->
-	<script type="text/javascript" src="excol.js" xml:space="preserve"></script>
-
 	<link href="http://www.w3.org/WAI/impl/../wai-main.css" rel="stylesheet" type="text/css" />
 	<link href="wai-style-changes.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link rel="stylesheet" href="/WAI/ie-old.css" type="text/css" media="all" /><![endif]-->
 
 	<!-- When moving to live environment this needs to move to wai-main.css -->
 	<style>
-		h1 {
-		    margin-bottom: 1em;
-		}
-	
-		/* ex-col jumping with hover/focus temp fix. Ideally this should be incorporated
-			into /WAI/style/excol.css to address this issue throughout the site */
-		.f_panelHead {
-			border-bottom: solid #fffaf5;
-			padding-left: 1.6em;
-			position: relative;
-		}
-		.f_panelHead.fs_hover, .f_panelHead.fs_focus {
-			border-bottom: solid #993300;
-		}
-		.f_panelHead.fs_selected {
-			border-bottom: solid #993300;
-		}
-		.f_expanderWrapper {
-			float: none;
-			position: absolute;
-			left: 0;
-			top: 0;
-		}
-
-		/* It may be better not to add this to the core wai-main.css as it would make more
-			widespread changes to how to top links would look. */
-		p.totop a {
-			text-decoration: none;
-		}
-		p.totop a:hover, p.totop a:focus {
-			text-decoration: underline;
-		}
-
 		/* Again, it may be beneficial to move these classes into wai-main.css */
-		.key-actions {
-			list-style: none;
-	    padding: 0px;
-		}
-
-		.key-actions li {
-			margin-left: 1.5em;
-		}
-
-		.key-actions li>span {
-			padding-left: 2em;
+		.key-actions li>strong {
+			font-weight: bold;
 		}
 
 		li p:first-of-type {
@@ -172,12 +125,12 @@
 
 				<h3>Key actions</h3>
 				<ul class="key-actions">
-					<li><span class="f_panelHead">Set a standard and conformance level.</span>
+					<li><strong>Set a standard and conformance level.</strong>
 						<div>
 							<p>Most organizations use <a href="/TR/WCAG20/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr></a> as a target for accessibility and specify conformance levels for each success criteria. Level A is the minimum level of conformance. Most organizations aim to achieve Level AA for success criteria. Your organization may already have an accessibility policy specifying what standard and level you need to achieve.</p>
 						</div>
 					</li>
-					<li><span class="f_panelHead">Define what is to be evaluated.</span>
+					<li><strong>Define what is to be evaluated.</strong>
 						<div>
 							<p>You will need to carefully consider your timelines and available resources when determining the scope. Where you initially have limited resources, focusing on key user journeys and content often bring the most significant benefits in the shortest time.</p>
 						</div>
@@ -200,22 +153,22 @@
 
 				<h3>Key actions</h3>
 				<ul class="key-actions">
-					<li><span class="f_panelHead">Before assessing, fix any known barriers.</span>
+					<li><strong>Before assessing, fix any known barriers.</strong>
 						<div>
 							<p>In some cases you may already know of accessibility barriers. If easily fixed, it may be best to repair these before going further. This can bring early site improvement. More importantly, if you are involving users in your evaluation, any existing barriers may make it difficult for them to access other areas or content. If known barriers can be fixed, this may help your users find other issues.</p>
 						</div>
 					</li>
-					<li><span class="f_panelHead">Evaluate using a standardized approach.</span>
+					<li><strong>Evaluate using a standardized approach.</strong>
 						<div>
 							<p>Ensure that you are consistent in applying your evaluation methodology. This allows you to repeat the evaluation and compare the results. <a href="https://www.w3.org/TR/WCAG-EM/"><abbr title="Website Accessibility Conformance Evaluation Methodology">WCAG-EM</abbr></a> is a comprehensive and structured approach to help determine how well a website conforms to <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>.</p>
 						</div>
 					</li>
-					<li><span class="f_panelHead">Evaluate with real users.</span>
+					<li><strong>Evaluate with real users.</strong>
 						<div>
 							<p>Including evaluation with users helps your team understand real-world accessibility issues and the impact of accessibility barriers. An understanding of the effect of accessibility barriers helps in creating better solutions. Observing sessions where users wrestle with your site can also be a powerful motivator for your project team.</p>
 						</div>
 					</li>
-					<li><span class="f_panelHead">Use appropriate evaluation and repair tools.</span>
+					<li><strong>Use appropriate evaluation and repair tools.</strong>
 						<div>
 							<p>Web accessibility evaluation tools are programs and online services that help check if a website meets accessibility guidelines. There are also tools that help repair accessibility barriers. Some evaluation tools can be configured to be more useful to your specific project. For example, once you figure out your scope and target, you can configure the tool to only evaluate those criteria and pages. This can speed up the evaluation and simplify the report.</p>
 						</div>
@@ -246,12 +199,12 @@
 
 				<h3>Key actions</h3>
 				<ul class="key-actions">
-					<li><span class="f_panelHead">Prioritize high impact, easily addressed barriers.</span>
+					<li><strong>Prioritize high impact, easily addressed barriers.</strong>
 						<div>
 							<p>This provides the most improvement in the shortest time. Creating a graph of impact versus effort can help you quickly determine high priority barriers. This approach usually takes less time. However, it may result in harder-to-fix or low impact issues always falling out of scope.</p>
 						</div>
 					</li>
-					<li><span class="f_panelHead">Prioritize by important functionality or high use content.</span>
+					<li><strong>Prioritize by important functionality or high use content.</strong>
 						<div>
 							<p>It is usually best to first repair those areas that have the greatest impact on user experience. Identify key pages or journeys within the website and fix problems in those areas. For example, the home page may be a primary entry point, or purchasing a product and payment process may be important functions. Frequently-used, high-traffic pages and functionality can be identified using analytics.</p>
 						</div>
@@ -272,7 +225,7 @@
 
 				<h3>Key actions</h3>
 				<ul class="key-actions">
-					<li><span class="f_panelHead">Review solutions following implementation.</span>
+					<li><strong>Review solutions following implementation.</strong>
 						<div>
 							<p>Sometimes there is no perfect solution or a solution might introduce other problems. If possible, run an evaluation of the repairs to ensure that the issue has been adequately addressed.</p>
 						</div>
@@ -287,17 +240,17 @@
 
 				<h3>Key actions</h3>
 				<ul class="key-actions">
-					<li><span class="f_panelHead">Document any remaining issues.</span>
+					<li><strong>Document any remaining issues.</strong>
 						<div>
 							<p>Knowing what was fixed, how, and what outstanding issues remain can help subsequent maintenance or redesign activities. This will also help maintain momentum for accessibility and reduce subsequent evaluation costs.</p>
 						</div>
 					</li>
-					<li><span class="f_panelHead">Update or create your accessibility conformance statement.</span>
+					<li><strong>Update or create your accessibility conformance statement.</strong>
 						<div>
 							<p>Your accessibility statement can provide contact details for feedback, and provide information to help users optimize their experience. You might also want to summarize how your site is supportive of accessibility, and where you still have work to do. Following completion of any accessibility repairs it is important to review your accessibility statement and update it with improvements made and remaining issues.</p>
 						</div>
 					</li>
-					<li><span class="f_panelHead">Set a follow-up date.</span>
+					<li><strong>Set a follow-up date.</strong>
 						<div>
 							<p>At the end of your project set a date for when the accessibility of the website should be next reviewed. This may be part of a regular maintenance schedule or as part of an upcoming improvement or redesign project. This can be recorded in your accessibility statement or policy.</p>
 						</div>
@@ -319,19 +272,19 @@
 
 				<h3>Key actions</h3>
 				<ul class="key-actions">
-					<li><span class="f_panelHead">Keep track of solutions.</span>
+					<li><strong>Keep track of solutions.</strong>
 						<div>
 							<p>Documenting what solutions were considered and finally implemented will help subsequent projects avoid introducing the same issues, or attempting solutions already shown to be flawed. This type of resource can help less experienced and new team members understand more about accessibility.</p>
 						</div>
 					</li>
 					
-					<li><span class="f_panelHead">Consider production processes and training.</span>
+					<li><strong>Consider production processes and training.</strong>
 						<div>
 							<p>Creating the content for your website can involve many staff, stages, or tools. For some content, such as video or <abbr title="Portable Document Format">PDF</abbr>, this may be particularly complex. Consider each step of the process to identify where issues are introduced and how they may be best addressed. This might point to additional training needs, quality assurance stages, or improved tools.</p>
 						</div>
 					</li>
 					
-					<li><span class="f_panelHead">Consider how authoring tools might introduce barriers.</span>
+					<li><strong>Consider how authoring tools might introduce barriers.</strong>
 						<div>
 							<p>Authoring tools are software or services used to create or modify websites, such as web page editors and content management systems (CMS). Some authoring tools provide better accessibility support than others. You might be able to improve accessibility support in your authoring tool by:</p>
 							<ul>
@@ -357,12 +310,12 @@
 
 				<h3>Key actions</h3>
 				<ul class="key-actions">
-					<li><span class="f_panelHead">Consider accessibility as an organizational strategic goal.</span>
+					<li><strong>Consider accessibility as an organizational strategic goal.</strong>
 						<div>
 							<p><a href="Overview">Implementing Web Accessibility Across Organizations and Projects</a> outlines how to integrate accessibility throughout your web development. Ensure that when redesigns or updates are planned, accessibility is included from the start of the project. Accessibility is much less costly and time-consuming when tackled at the beginning of a project, rather than the end.</p>
 						</div>
 					</li>
-					<li><span class="f_panelHead">Develop an organizational policy on accessibility.</span>
+					<li><strong>Develop an organizational policy on accessibility.</strong>
 						<div>
 							<p>An organizational policy on web accessibility defines your goals for how your organization will support the creation of accessible web content and services.</p>
 						</div>
