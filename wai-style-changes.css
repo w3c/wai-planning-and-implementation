@@ -38,6 +38,9 @@
 #main {
   margin: 0;
 }
+#logos img {
+  max-width: none;
+}
 
 #main h2 {
   margin-top: 3em;
