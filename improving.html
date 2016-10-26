@@ -81,21 +81,20 @@
 	    <h2>Page contents</h2>
 	    <ul>
 		<li><a href="#intro" class="no-display">Introduction</a></li>
-		<li><a href="#resources">Important Resources</a></li>
+		<li><a href="#resources">Key Resources</a></li>
 		<li><a href="#understand">What is Accessibility?</a></li>
-		<li><a href="#explore">What are the Issues?</a></li>
-		<li><a href="#scope">What is your Scope?</a></li>
-		<li><a href="#target">What is your Target?</a></li>
-		<li><a href="#repair">What is your Strategy?</a></li>
+		<li><a href="#explore">Identify the Issues</a></li>
+		<li><a href="#scope">Consider the Scope</a></li>
+		<li><a href="#target">Set your Target</a></li>
+		<li><a href="#repair">Tips for Repair</a></li>
 		<li><a href="#plan">Longer Term: Planning and Managing</a></li>
 	    </ul>
 	  </div>
 
 	<h2 id="intro" class="no-display">Introduction</h2>
-	<p>Do you need to urgently address accessibility in an on-going web project? This guide provides guidance and pointers to resources to help you address the most critical issues. A more comprehensive guide to help you address accessibility more thoroughly during the design and development process is provided in <a href="https://www.w3.org/WAI/impl/Overview">Planning and Managing Web Accessibility</a>.</p>
+	<p>Do you need to urgently address accessibility in an on-going web project? This is a concise overview with pointers to help address the most critical issues. Find a more comprehensive accessibility approach for the entire design and development process in <a href="https://www.w3.org/WAI/impl/Overview">Planning and Managing Web Accessibility</a>.</p>
 
-	<h2 id="resources">Important Resources</h2>
-	<p>The following resources may be helpful right away to the designers and developers in your team:</p>
+	<h2 id="resources">Key Resources for Designers and Developers</h2>
 	<ul>
 		<li><a href="https://www.w3.org/WAI/gettingstarted/tips/">Tips for Getting Started</a> &mdash; Practical considerations with examples for designing, writing, and developing accessible web content.</li>
 		<li><a href="https://www.w3.org/WAI/tutorials/">Web Accessibility Tutorials</a> &mdash; Detailed information on specific topics with guidance on addressing accessibility requirements.</li>
@@ -103,33 +102,36 @@
 	</ul>
 
 	<h2 id="understand">What is Accessibility?</h2>
-	<p>If you are new to accessibility, it is often helpful to first get a basic idea of the topic. Here are some quick introductions:</p>
+	<p>If you are new to accessibility, it is often helpful to first get a basic idea:</p>
 	<ul>
 		<li><a href="https://www.w3.org/standards/webdesign/accessibility">W3C - Accessibility</a> &mdash; Introduces essential concepts, rationale, and resources.</li>
 		<li><a href="https://www.w3.org/WAI/perspectives">Web Accessibility Perspectives</a> &mdash; Short non-technical videos that introduce accessibility features and their benefits for everyone.</li>
 	</ul>
-	<p>If there is a need, more in-depth introductions and background is provided in <a href="https://www.w3.org/WAI/intro/people-use-web/">How People with Disabilities Use the Web</a>. Specifically the <a href="https://www.w3.org/WAI/intro/people-use-web/principles">Accessibility Principles</a> section of the resource introduces the accessibility requirements and guidelines.</p>
 
-	<h2 id="explore">What are the Issues?</h2>
-	<p>If you already know the specific issues you need to address, you can skip this section. If you are starting to address accessibility without background, the following manual helps you get a rough idea of the current situation on your web project:</p>
+	<h3 id="background">More Background</h3>
+	<p>If there is a need for more in-depth background:</p>
 	<ul>
-		<li><a href="https://www.w3.org/WAI/eval/preliminary.html">Easy Checks &mdash; A First Review of Web Accessibility</a> &mdash; Simple checks that can be carried out by anyone, regardless of technical skills and accessibility knowledge.</li>
+		<li><a href="https://www.w3.org/WAI/intro/people-use-web/">How People with Disabilities Use the Web</a> &mdash; Introduces experiences and terminology in accessibility and disability.</li>
+		<li><a href="https://www.w3.org/WAI/intro/people-use-web/principles">Accessibility Principles</a> &mdash; Introduces accessibility requirements defined by the W3C guidelines.</li>
 	</ul>
-	<p>Some web accessibility evaluation tools may help you further explore the accessibility on your website:</p>
+
+	<h2 id="explore">Identify the Issues</h2>
+	<p>Skip this section if you are already aware of your accessibility issues. But, if you need to identify potential issues, consider these resources:</p>
 	<ul>
+	        <li><a href="https://www.w3.org/WAI/eval/preliminary.html">Easy Checks &mdash; A First Review of Web Accessibility</a> &mdash; Simple checks that can be carried out by anyone, regardless of technical skills and accessibility knowledge.</li>
 		<li><a href="https://www.w3.org/WAI/ER/tools/">List of Web Accessibility Evaluation Tools</a> &mdash; Customizable list that allows you to search for different types of tools.</li>
 	</ul>
-	<p>Note: Some web accessibility evaluation tools may be complex and confusing to use for people new to accessibility. They typically only check a subset of issues, and their results may need to be interpreted to avoid being misleading.</p>
-	<p>To get a complete picture of the situation, a comprehensive evaluation may be needed. Such evaluations require accessibility expertise. The following resources help you evaluate your website:</p>
+
+	<h3 id="comprehensive">Detailed Review</h3>
 	<ul>
 		<li><a href="https://www.w3.org/WAI/eval/conformance.html">Website Accessibility Conformance Evaluation Methodology (WCAG-EM)</a> &mdash; Provides a structured approach to help evaluate websites for accessibility.</li>
 		<li><a href="https://www.w3.org/WAI/eval/report-tool/">WCAG-EM Report Tool</a> &mdash; Free online tool to help create evaluation reports following the WCAG-EM procedure.</li>
 	</ul>
 
-	<h2 id="scope">What is your Scope?</h2>
+	<h2 id="scope">Consider the Scope</h2>
 	<p>You may not be able to address all the issues on every part of your website at once. To determine which parts you may need to improve right away, and which to address in later stages, consider the following:</p>
 	<ul>
-		<li><strong>Key tasks</strong>, such as registration, purchase, or checkout processes. Include all steps involved to complete key tasks.</li>
+		<li><strong>Key tasks</strong>, such as registration, search, submit, or checkout processes. Include all steps involved to complete each task.</li>
 		<li><strong>Key content</strong>, such as frequently accessed content and content that is relevant to people with disabilities.</li>
 		<li><strong>Reported content</strong>, that has known barriers; for example, from user comments submitted through the website feedback form.</li>
 		<li><strong>In-development content</strong>, such as areas of the website that are currently being redesigned, to avoid the creation of new barriers.</li>
@@ -152,22 +154,21 @@
 		</li>
 	</ul>
 
-	<h2 id="target">What is your Target Level of Accessibility?</h2>
+	<h2 id="target">Set your Accessibility Target Level</h2>
 	<p>The generally accepted target for accessibility is <a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG) 2.0</a> Level AA. This may already be the standard specified in your organizational policy or it may be the legal requirement for your website.</p>
 	<p>You may need to define a phased approach with different dates for different levels. For example, meet particular WCAG 2.0 success criteria in the next release, and meet all <a href="https://www.w3.org/WAI/WCAG20/quickref/?currentsidebar=%23col_overview&levels=aaa">Level A and Level AA</a> success criteria in the following release.</p>
 	<p>Note that in some cases, some Level AAA success criteria may be fairly easy to meet. For example, refining appropriate link text (2.4.4, Level A) and heading structure (2.4.10, Level AAA) may be easy to address together when revising content.</p>
 
-	<h2 id="repair">What is your Strategy?</h2>
-	<p>Consider the following tips to help you implement accessibility repairs:</p>
+	<h2 id="repair">Tips for Efficient Repair</h2>
 	<ul>
 		<li><strong>Leverage the different skills in your team</strong> &mdash; While many tasks will be for developers, other roles have plenty to contribute. For example, designers can select better colors and content authors can improve the wording of links, headings, and text alternatives. The resource <a href="https://www.w3.org/WAI/eval/reviewteams.html">Using Combined Expertise to Evaluate Web Accessibility</a> may be helpful.</li>
 		<li><strong>Communicate requirements across your team</strong> &mdash; Ensure that everyone involved in repairs understands the basics of web accessibility and the specific requirements they need to address. Distribute the <a href="#resources">Important Resources</a> to the relevant members of your team.</li>
-		<li><strong>Validate solutions as early as possible</strong> &mdash; Ensure that any solutions adequately address the issues raised to avoid implementing changes that do not work in practice. If at all possible, it is important to involve people with disabilities in such validation. The resources <a href="https://www.w3.org/WAI/users/involving">Involving Users in Web Projects for Better, Easier Accessibility</a> and <a href="https://www.w3.org/WAI/eval/users.html">Involving Users in Evaluating Web Accessibility</a> provide more background.</li>
-		<li><strong>Optimize your Tools</strong> &mdash; Explore and configure accessibility settings in the authoring tools you use to create web content, such as your content management system (CMS). The resources <a href="https://www.w3.org/WAI/eval/selectingtools">Selecting Web Accessibility Evaluation Tools</a> and <a href="https://www.w3.org/WAI/impl/software">Selecting and Using Authoring Tools for Web Accessibility</a> may be helpful.</li>
+		<li><strong>Validate solutions as early as possible</strong> &mdash; Ensure that any solutions adequately address the issues raised to avoid implementing changes that do not work in practice. If at all possible, it is important to involve people with disabilities in such validation. The resources about <a href="https://www.w3.org/WAI/users/involving">involving users in web projects</a> and <a href="https://www.w3.org/WAI/eval/users.html">evaluating with users</a> provide more background.</li>
+		<li><strong>Optimize your Tools</strong> &mdash; Explore and configure accessibility settings in the authoring tools you use to create web content, such as your content management system (CMS). The resources about <a href="https://www.w3.org/WAI/eval/selectingtools">selecting evaluation tools</a> and <a href="https://www.w3.org/WAI/impl/software">selecting authoring tools</a> may be helpful.</li>
 	</ul>
 
 	<h2 id="plan">Longer Term: Planning and Managing</h2>
-	<p>Once you have addressed some of the most critical web accessibility issues on your website and begun to address the rest, it is essential you plan to integrate accessibility throughout the design and development process. The <a href="https://www.w3.org/WAI/impl/Overview">Planning and Managing Web Accessibility</a> guide can help you develop that plan.</p>
+	<p>Once you have addressed some of the most critical web accessibility issues on your web project, it is essential you plan to integrate accessibility throughout future design and development processes. The <a href="https://www.w3.org/WAI/impl/Overview">Planning and Managing Web Accessibility</a> guide can help you develop that plan.</p>
 
 		<aside class="side-box contribute" role="complementary">
 		  <h2 class="heading">Help improve this page</h2>
