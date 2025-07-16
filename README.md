@@ -1,5 +1,8 @@
 # WAI Planning and Implementation
 
+> [!IMPORTANT]
+> This repository has been archived 17 July 2025.
+
 This is the repository for the WAI Planning and Implementation materials review, see [current pages][LivePage]. This review is part of a larger, ongoing effort to [improve these resources][ProjectPage].
 
 The following draft documents are available in this project:
